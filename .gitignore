@@ -20,7 +20,7 @@ UnityGenerated/
 ExportedObj/
 *.svd
 *.userprefs
-*.csproj
+
 *.pidb
 *.suo
 
