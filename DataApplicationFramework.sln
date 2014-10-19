@@ -9,6 +9,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5 DataAccess", "5 DataAcces
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo", "Demo\Demo.csproj", "{F9F4600E-9F70-44F4-A078-6BF34C068044}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PornForm", "PornForm\PornForm.csproj", "{2B6F2340-E77A-46DE-8BBF-D9F1FA0CDBE8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{F9F4600E-9F70-44F4-A078-6BF34C068044}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F9F4600E-9F70-44F4-A078-6BF34C068044}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F9F4600E-9F70-44F4-A078-6BF34C068044}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B6F2340-E77A-46DE-8BBF-D9F1FA0CDBE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B6F2340-E77A-46DE-8BBF-D9F1FA0CDBE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B6F2340-E77A-46DE-8BBF-D9F1FA0CDBE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B6F2340-E77A-46DE-8BBF-D9F1FA0CDBE8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
