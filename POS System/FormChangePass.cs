@@ -1,0 +1,29 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Text;
+using System.Windows.Forms;
+using DevExpress.XtraEditors;
+
+namespace POS_System
+{
+    public partial class FormChangePass : DevExpress.XtraEditors.XtraForm
+    {
+        public FormChangePass()
+        {
+            InitializeComponent();
+        }
+
+        private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
+        {
+
+        }
+
+        private void FormChangePass_Load(object sender, EventArgs e)
+        {
+
+        }
+    }
+}
