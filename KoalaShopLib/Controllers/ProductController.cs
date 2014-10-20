@@ -57,7 +57,28 @@ namespace KoalaShopLib.Controllers
                     entities = entities.Where(filter);
                 }
                 //Load related data
-                return entities.Include(p => p.Category).Include(p => p.Stocks).ToList();
+                return entities
+                    .Include(p => p.Category)
+                    .Include(p => p.Stocks)
+                    .ToList();
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        public override Product GetByID(object id)
+        {
+            try
+            {
+                var entity = this.dbContext.Set<Product>()
+                    .Include(p => p.Category)
+                    .Include(p => p.Stocks)
+                    .Where(p => (object)p.ID == id)
+                    .SingleOrDefault();
+
+                return entity;
             }
             catch
             {

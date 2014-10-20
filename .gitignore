@@ -8,9 +8,8 @@ TestResults/*
 */*/obj/*
 Demo/bin/*
 Demo/obj/*
-Demo/bin/*
-KoalaShopLib/obj/*
-KoalaShopLib/bin/*
+KoalaShopLib/obj/*/*
+KoalaShopLib/bin/*/*
 KoalaShopPOS/obj/*
 KoalaShopPOS/bin/*
 
