@@ -9,17 +9,11 @@ using DevExpress.XtraEditors;
 
 namespace KoalaShopPOS
 {
-    public partial class FormLogin : DevExpress.XtraEditors.XtraForm
+    public partial class FormProductAdd : DevExpress.XtraEditors.XtraForm
     {
-        public FormLogin()
+        public FormProductAdd()
         {
             InitializeComponent();
-        }
-
-        private void simpleButton1_Click(object sender, EventArgs e)
-        {
-            FormProductStocks a = new FormProductStocks();
-            a.ShowDialog();
         }
     }
 }

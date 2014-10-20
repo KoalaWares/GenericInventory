@@ -21,6 +21,8 @@ namespace KoalaShopPOS
             FormUser a = new FormUser();
             this.Hide();
             a.Show();
+
+            
         }
 
         private void MenuView_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)

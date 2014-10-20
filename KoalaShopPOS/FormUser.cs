@@ -48,5 +48,10 @@ namespace KoalaShopPOS
             a.Show();
         }
 
+        private void FormUser_Load(object sender, EventArgs e)
+        {
+           
+        }
+
     }
 }
