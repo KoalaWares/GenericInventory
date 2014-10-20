@@ -22,7 +22,7 @@ namespace KoalaShopLib.EFRepositories
         public DataAppContext()
             : base("name=DataAppContext")
         {
-            //this.Configuration.LazyLoadingEnabled = false;
+            this.Configuration.LazyLoadingEnabled = false;
         }
 
 

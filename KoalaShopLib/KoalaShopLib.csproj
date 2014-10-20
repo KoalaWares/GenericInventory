@@ -54,12 +54,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ContextFactory.cs" />
+    <Compile Include="Factories\ContextFactory.cs" />
     <Compile Include="DALController.cs" />
-    <Compile Include="DALFactory.cs" />
+    <Compile Include="Factories\DALFactory.cs" />
     <Compile Include="Contracts\IControllerFactory.cs" />
     <Compile Include="Contracts\IKoalaShop.cs" />
-    <Compile Include="ControllerFactory.cs" />
+    <Compile Include="Factories\ControllerFactory.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="EFRepositories\AbstractRepository.cs" />
@@ -71,7 +71,7 @@
     <Compile Include="Contracts\IRepositoryFactory.cs" />
     <Compile Include="Contracts\IUnitOfWork.cs" />
     <Compile Include="KoalaShop.cs" />
-    <Compile Include="KoalaShopFactory.cs" />
+    <Compile Include="Factories\KoalaShopFactory.cs" />
     <Compile Include="Models\Account.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\Customer.cs" />

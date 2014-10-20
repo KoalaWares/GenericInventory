@@ -11,14 +11,14 @@ namespace KoalaShopLib.EFRepositories
 {
     internal abstract class AbstractRepository<TEntity> : IRepository<TEntity> where TEntity : class
     {
-        DataAppContext dbContext = null;
+        protected DataAppContext dbContext = null;
 
         public AbstractRepository(DataAppContext dbContext)
         {
             this.dbContext = dbContext;
         }
 
-        #region IRepository<TEntity> Members
+        #region IRepository<T> Members
 
         public virtual TEntity GetByID(object id)
         {

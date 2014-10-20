@@ -8,7 +8,7 @@ using KoalaShopLib.EFRepositories;
 using KoalaShopLib.Models;
 namespace KoalaShopLib.Controllers
 {
-    class CategoryController : GenericRepo<Category>, ICategoryController 
+    class CategoryController : AbstractRepository<Category>, ICategoryController 
     {
         public CategoryController(DataAppContext dbContext)
             :base(dbContext)

@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 
 namespace KoalaShopLib
 {
-    public interface IRepository<TEntity>
+    public interface IRepository<T>
     {
-        TEntity GetByID(object id);
-        List<TEntity> GetAll(Expression<Func<TEntity, bool>> filter = null);
-        bool Add(TEntity entity);
-        bool Update(TEntity entity);
-        bool Delete(TEntity entity);
+        T GetByID(object id);
+        List<T> GetAll(Expression<Func<T, bool>> filter = null);
+        bool Add(T entity);
+        bool Update(T entity);
+        bool Delete(T entity);
     }
 }
