@@ -1,9 +1,9 @@
 using System;
 using System.Data.Entity;
 using System.Linq;
-using DataAccessObjects.Models;
+using KoalaShopLib.Models;
 
-namespace DataAccessObjects.EFRepositories
+namespace KoalaShopLib.EFRepositories
 {
 
     internal class DataAppContext : DbContext
@@ -22,7 +22,7 @@ namespace DataAccessObjects.EFRepositories
         public DataAppContext()
             : base("name=DataAppContext")
         {
-            this.Configuration.LazyLoadingEnabled = false;
+            //this.Configuration.LazyLoadingEnabled = false;
         }
 
 

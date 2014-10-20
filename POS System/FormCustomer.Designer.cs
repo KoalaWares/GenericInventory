@@ -1,4 +1,4 @@
-﻿namespace POS_System
+﻿namespace KoalaShopPOS
 {
     partial class FormCustomer
     {
@@ -374,7 +374,7 @@
             this.MenuUpdate.Caption = "Update";
             this.MenuUpdate.Description = "Update Customer\'s Information.";
             this.MenuUpdate.Id = 62;
-            this.MenuUpdate.LargeGlyph = global::POS_System.Properties.Resources.CustomerEdit;
+            this.MenuUpdate.LargeGlyph = global::KoalaShopPOS.Properties.Resources.CustomerEdit;
             this.MenuUpdate.Name = "MenuUpdate";
             // 
             // MenuView
@@ -382,7 +382,7 @@
             this.MenuView.Caption = "View";
             this.MenuView.Description = "View Employee\'s Information.";
             this.MenuView.Id = 63;
-            this.MenuView.LargeGlyph = global::POS_System.Properties.Resources.UserView;
+            this.MenuView.LargeGlyph = global::KoalaShopPOS.Properties.Resources.UserView;
             this.MenuView.Name = "MenuView";
             // 
             // MenuAdd
@@ -390,7 +390,7 @@
             this.MenuAdd.Caption = "Add";
             this.MenuAdd.Description = "Add new Customer Information.";
             this.MenuAdd.Id = 65;
-            this.MenuAdd.LargeGlyph = global::POS_System.Properties.Resources.CustomerAdd;
+            this.MenuAdd.LargeGlyph = global::KoalaShopPOS.Properties.Resources.CustomerAdd;
             this.MenuAdd.Name = "MenuAdd";
             // 
             // iHelp

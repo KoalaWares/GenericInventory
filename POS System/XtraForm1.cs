@@ -7,7 +7,7 @@ using System.Text;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 
-namespace POS_System
+namespace KoalaShopPOS
 {
     public partial class XtraForm1 : DevExpress.XtraEditors.XtraForm
     {

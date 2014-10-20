@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DataAccessObjects;
-namespace DataAccessObjects.EFRepositories
+using KoalaShopLib;
+namespace KoalaShopLib.EFRepositories
 {
     internal class RepositoryFactory : IRepositoryFactory
     {

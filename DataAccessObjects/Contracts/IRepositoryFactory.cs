@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-using DataAccessObjects.Models;
-using DataAccessObjects.EFRepositories;
-namespace DataAccessObjects
+using KoalaShopLib.Models;
+using KoalaShopLib.EFRepositories;
+namespace KoalaShopLib
 {
     public interface IRepositoryFactory
     {

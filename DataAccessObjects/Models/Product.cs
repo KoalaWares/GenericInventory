@@ -1,4 +1,4 @@
-﻿namespace DataAccessObjects.Models
+﻿namespace KoalaShopLib.Models
 {
     using System;
     using System.Collections.Generic;

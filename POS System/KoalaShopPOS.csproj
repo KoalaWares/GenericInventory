@@ -8,7 +8,7 @@
     <ProjectGuid>{49580CBA-0792-486E-A178-563B11C099CA}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>POS_System</RootNamespace>
+    <RootNamespace>KoalaShopPOS</RootNamespace>
     <AssemblyName>POS System</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileUpgradeFlags>
@@ -49,16 +49,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AutoMapper">
+      <HintPath>..\packages\AutoMapper.3.2.1\lib\net40\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="AutoMapper.Net4">
+      <HintPath>..\packages\AutoMapper.3.2.1\lib\net40\AutoMapper.Net4.dll</HintPath>
+    </Reference>
     <Reference Include="DevExpress.BonusSkins.v12.2, Version=12.2.5.0, Culture=neutral, PublicKeyToken=95fc6c5621878f0a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Data.v12.2, Version=12.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    
     <Reference Include="DevExpress.Printing.v12.2.Core, Version=12.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    
     <Reference Include="DevExpress.Utils.v12.2, Version=12.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    
     <Reference Include="DevExpress.XtraBars.v12.2, Version=12.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraEditors.v12.2, Version=12.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    
     <Reference Include="DevExpress.XtraGrid.v12.2, Version=12.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraLayout.v12.2, Version=12.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraNavBar.v12.2, Version=12.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
@@ -70,66 +72,46 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FormChangePass.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="FormChangePass.cs" />
     <Compile Include="FormChangePass.Designer.cs">
       <DependentUpon>FormChangePass.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormCustomer.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="FormCustomer.cs" />
     <Compile Include="FormCustomer.Designer.cs">
       <DependentUpon>FormCustomer.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormCustomerView.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="FormCustomerView.cs" />
     <Compile Include="FormCustomerView.Designer.cs">
       <DependentUpon>FormCustomerView.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormLogin.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="FormLogin.cs" />
     <Compile Include="FormLogin.Designer.cs">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormSupplier.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="FormSupplier.cs" />
     <Compile Include="FormSupplier.Designer.cs">
       <DependentUpon>FormSupplier.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormSupplierView.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="FormSupplierView.cs" />
     <Compile Include="FormSupplierView.Designer.cs">
       <DependentUpon>FormSupplierView.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormUser.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="FormUser.cs" />
     <Compile Include="FormUser.Designer.cs">
       <DependentUpon>FormUser.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormUserSched.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="FormUserSched.cs" />
     <Compile Include="FormUserSched.Designer.cs">
       <DependentUpon>FormUserSched.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormUserView.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="FormUserView.cs" />
     <Compile Include="FormUserView.Designer.cs">
       <DependentUpon>FormUserView.cs</DependentUpon>
     </Compile>
     <Compile Include="Person.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="XtraForm1.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="XtraForm1.cs" />
     <Compile Include="XtraForm1.Designer.cs">
       <DependentUpon>XtraForm1.cs</DependentUpon>
     </Compile>
@@ -174,6 +156,7 @@
     <EmbeddedResource Include="XtraForm1.resx">
       <DependentUpon>XtraForm1.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -226,6 +209,7 @@
     <None Include="Resources\CustomerEdit.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\AutoMapper.3.2.1\tools\AutoMapper.targets" Condition="Exists('..\packages\AutoMapper.3.2.1\tools\AutoMapper.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

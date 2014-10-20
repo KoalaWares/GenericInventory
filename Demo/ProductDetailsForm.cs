@@ -7,15 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using DataAccessObjects;
+using KoalaShopLib;
 
-using DataAccessObjects.Models;
+using KoalaShopLib.Models;
 namespace Demo
 {
     public partial class ProductDetailsForm : Form
     {
         //FIELDS
-        IDALController db = null;
+        IKoalaShop koalaShop = null;
         Product product = null;
 
         public ProductDetailsForm()
@@ -27,7 +27,7 @@ namespace Demo
         {
             InitializeComponent();
             //INITIALIZE sa db
-            this.db = DALFactory.CreateDALController();
+            this.koalaShop = KoalaShopFactory.CreateKoalaShop();
             //Set Product
             this.product = product;
 
@@ -38,7 +38,7 @@ namespace Demo
         private void ProductDetailsForm_Load(object sender, EventArgs e)
         {
             //load categories to comboBox
-            this.comboBoxCategory.DataSource = this.db.CategoryRepo.GetAll();
+            this.comboBoxCategory.DataSource = this.koalaShop.CategoryController.GetAll();
             this.comboBoxCategory.ValueMember = "ID";
             this.comboBoxCategory.DisplayMember = "Name";
         }
@@ -54,7 +54,7 @@ namespace Demo
                 this.product.CategoryID = Convert.ToInt32(this.comboBoxCategory.SelectedValue);
 
                 //INSERT to DB
-                this.db.ProductRepo.Add(this.product);
+                this.koalaShop.ProductController.Add(this.product);
                 MessageBox.Show("Saved");
             }
             catch (Exception ex)

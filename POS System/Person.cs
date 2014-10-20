@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace POS_System {
+namespace KoalaShopPOS {
     class Person {
         string firstName;
         string secondName;

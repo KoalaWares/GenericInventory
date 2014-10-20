@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-using DataAccessObjects.EFRepositories;
-using DataAccessObjects.Models;
-namespace DataAccessObjects
+using KoalaShopLib.EFRepositories;
+using KoalaShopLib.Models;
+namespace KoalaShopLib
 {
     internal class DALController:IDALController
     {

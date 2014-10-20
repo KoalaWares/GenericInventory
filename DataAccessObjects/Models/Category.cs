@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataAccessObjects.Models
+namespace KoalaShopLib.Models
 {
     public class Category
     {

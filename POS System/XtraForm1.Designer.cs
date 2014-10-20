@@ -1,4 +1,4 @@
-﻿namespace POS_System
+﻿namespace KoalaShopPOS
 {
     partial class XtraForm1
     {

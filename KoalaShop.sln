@@ -1,15 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessObjects", "DataAccessObjects\DataAccessObjects.csproj", "{793A4CC6-D1F7-43F8-914C-B4DA54CF820D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KoalaShopLib", "DataAccessObjects\KoalaShopLib.csproj", "{793A4CC6-D1F7-43F8-914C-B4DA54CF820D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessObjects.Test", "DataAccessObjects.Test\DataAccessObjects.Test.csproj", "{9D6B6D6A-3822-4C0E-AD78-23DC09497343}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5 DataAccess", "5 DataAccess", "{3FEC8E5F-D3E4-4948-BDBE-EBEAA6BF6E84}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KoalaShopLib.Test", "DataAccessObjects.Test\KoalaShopLib.Test.csproj", "{9D6B6D6A-3822-4C0E-AD78-23DC09497343}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo", "Demo\Demo.csproj", "{F9F4600E-9F70-44F4-A078-6BF34C068044}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "POS System", "POS System\POS System.csproj", "{49580CBA-0792-486E-A178-563B11C099CA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KoalaShopPOS", "POS System\KoalaShopPOS.csproj", "{49580CBA-0792-486E-A178-563B11C099CA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -36,9 +34,5 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{9D6B6D6A-3822-4C0E-AD78-23DC09497343} = {3FEC8E5F-D3E4-4948-BDBE-EBEAA6BF6E84}
-		{793A4CC6-D1F7-43F8-914C-B4DA54CF820D} = {3FEC8E5F-D3E4-4948-BDBE-EBEAA6BF6E84}
 	EndGlobalSection
 EndGlobal

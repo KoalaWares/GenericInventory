@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DataAccessObjects;
-using DataAccessObjects.Models;
+using KoalaShopLib;
+using KoalaShopLib.Models;
 using System.Linq.Expressions;
 
-namespace DataAccessObjects.EFRepositories
+namespace KoalaShopLib.EFRepositories
 {
     internal abstract class AbstractRepository<TEntity> : IRepository<TEntity> where TEntity : class
     {
