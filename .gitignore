@@ -6,6 +6,13 @@ TestResults/*
 */*/bin/*
 */obj/*
 */*/obj/*
+Demo/bin/*
+Demo/obj/*
+Demo/bin/*
+KoalaShopLib/obj/*
+KoalaShopLib/bin/*
+KoalaShopPOS/obj/*
+KoalaShopPOS/bin/*
 
 # =============== #
 # Unity generated #
