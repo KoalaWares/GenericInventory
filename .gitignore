@@ -3,7 +3,9 @@
 *.suo
 TestResults/*
 */bin/*
+*/*/bin/*
 */obj/*
+*/*/obj/*
 
 # =============== #
 # Unity generated #
