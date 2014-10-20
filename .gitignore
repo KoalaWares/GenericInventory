@@ -3,7 +3,6 @@
 *.suo
 TestResults/*
 */bin/*
-packages/*
 */obj/*
 
 # =============== #
