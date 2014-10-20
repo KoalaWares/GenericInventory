@@ -35,14 +35,14 @@ C:\Users\jbebiro.ICOMM\Desktop\xxx\Demo\bin\Debug\AutoMapper.Net4.dll
 C:\Users\jbebiro.ICOMM\Desktop\xxx\Demo\bin\Debug\Demo.exe.config
 C:\Users\jbebiro.ICOMM\Desktop\xxx\Demo\bin\Debug\Demo.exe
 C:\Users\jbebiro.ICOMM\Desktop\xxx\Demo\bin\Debug\Demo.pdb
-C:\Users\jbebiro.ICOMM\Desktop\xxx\Demo\bin\Debug\AutoMapper.dll
 C:\Users\jbebiro.ICOMM\Desktop\xxx\Demo\bin\Debug\EntityFramework.dll
 C:\Users\jbebiro.ICOMM\Desktop\xxx\Demo\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\jbebiro.ICOMM\Desktop\xxx\Demo\bin\Debug\KoalaShopLib.dll
+C:\Users\jbebiro.ICOMM\Desktop\xxx\Demo\bin\Debug\AutoMapper.dll
 C:\Users\jbebiro.ICOMM\Desktop\xxx\Demo\bin\Debug\KoalaShopLib.pdb
-C:\Users\jbebiro.ICOMM\Desktop\xxx\Demo\bin\Debug\AutoMapper.xml
 C:\Users\jbebiro.ICOMM\Desktop\xxx\Demo\bin\Debug\EntityFramework.xml
 C:\Users\jbebiro.ICOMM\Desktop\xxx\Demo\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\jbebiro.ICOMM\Desktop\xxx\Demo\bin\Debug\AutoMapper.xml
 C:\Users\jbebiro.ICOMM\Desktop\xxx\Demo\obj\Debug\Demo.csprojResolveAssemblyReference.cache
 C:\Users\jbebiro.ICOMM\Desktop\xxx\Demo\obj\Debug\Demo.ProductDetailsForm.resources
 C:\Users\jbebiro.ICOMM\Desktop\xxx\Demo\obj\Debug\Demo.ProductForm.resources
