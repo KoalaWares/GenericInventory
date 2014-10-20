@@ -50,3 +50,6 @@ C:\Users\jbebiro.ICOMM\Desktop\xxx\Demo\obj\Debug\Demo.Properties.Resources.reso
 C:\Users\jbebiro.ICOMM\Desktop\xxx\Demo\obj\Debug\Demo.csproj.GenerateResource.Cache
 C:\Users\jbebiro.ICOMM\Desktop\xxx\Demo\obj\Debug\Demo.exe
 C:\Users\jbebiro.ICOMM\Desktop\xxx\Demo\obj\Debug\Demo.pdb
+C:\Users\Alingling\Desktop\genericInventory\genericInventory\Demo\bin\Debug\Demo.exe.config
+C:\Users\Alingling\Desktop\genericInventory\genericInventory\Demo\obj\Debug\Demo.exe
+C:\Users\Alingling\Desktop\genericInventory\genericInventory\Demo\obj\Debug\Demo.pdb

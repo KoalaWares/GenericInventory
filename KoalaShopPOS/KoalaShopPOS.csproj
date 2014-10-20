@@ -51,6 +51,9 @@
   <ItemGroup>
     <Reference Include="DevExpress.BonusSkins.v12.2, Version=12.2.5.0, Culture=neutral, PublicKeyToken=95fc6c5621878f0a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Data.v12.2, Version=12.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.DXCore.Controls.Data.v6.3, Version=12.1.4.0, Culture=neutral, PublicKeyToken=35c9f04b7764aa3d" />
+    <Reference Include="DevExpress.DXCore.Controls.Utils.v6.3, Version=12.1.4.0, Culture=neutral, PublicKeyToken=35c9f04b7764aa3d" />
+    <Reference Include="DevExpress.DXCore.Controls.XtraEditors.v6.3, Version=12.1.4.0, Culture=neutral, PublicKeyToken=35c9f04b7764aa3d, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Printing.v12.2.Core, Version=12.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Utils.v12.2, Version=12.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraBars.v12.2, Version=12.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
@@ -61,51 +64,78 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FormChangePass.cs" />
+    <Compile Include="FormChangePass.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FormChangePass.Designer.cs">
       <DependentUpon>FormChangePass.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormCustomer.cs" />
+    <Compile Include="FormCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FormCustomer.Designer.cs">
       <DependentUpon>FormCustomer.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormCustomerView.cs" />
+    <Compile Include="FormCustomerView.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FormCustomerView.Designer.cs">
       <DependentUpon>FormCustomerView.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormLogin.cs" />
+    <Compile Include="FormInventory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormInventory.Designer.cs">
+      <DependentUpon>FormInventory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FormLogin.Designer.cs">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormSupplier.cs" />
+    <Compile Include="FormSupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FormSupplier.Designer.cs">
       <DependentUpon>FormSupplier.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormSupplierView.cs" />
+    <Compile Include="FormSupplierView.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FormSupplierView.Designer.cs">
       <DependentUpon>FormSupplierView.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormUser.cs" />
+    <Compile Include="FormUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FormUser.Designer.cs">
       <DependentUpon>FormUser.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormUserSched.cs" />
+    <Compile Include="FormUserSched.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FormUserSched.Designer.cs">
       <DependentUpon>FormUserSched.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormUserView.cs" />
+    <Compile Include="FormUserView.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FormUserView.Designer.cs">
       <DependentUpon>FormUserView.cs</DependentUpon>
     </Compile>
     <Compile Include="Person.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="XtraForm1.cs" />
+    <Compile Include="XtraForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="XtraForm1.Designer.cs">
       <DependentUpon>XtraForm1.cs</DependentUpon>
     </Compile>
@@ -117,6 +147,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormCustomerView.resx">
       <DependentUpon>FormCustomerView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormInventory.resx">
+      <DependentUpon>FormInventory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
