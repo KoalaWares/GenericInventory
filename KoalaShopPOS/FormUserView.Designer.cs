@@ -130,6 +130,7 @@
             this.MenuUpdate.Id = 62;
             this.MenuUpdate.LargeGlyph = global::KoalaShopPOS.Properties.Resources.UserEdit;
             this.MenuUpdate.Name = "MenuUpdate";
+            this.MenuUpdate.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.MenuUpdate_ItemClick);
             // 
             // MenuViewSched
             // 

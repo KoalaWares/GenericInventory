@@ -180,6 +180,7 @@
             this.ribbonControl.Size = new System.Drawing.Size(1026, 144);
             this.ribbonControl.StatusBar = this.ribbonStatusBar;
             this.ribbonControl.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
+            this.ribbonControl.Click += new System.EventHandler(this.ribbonControl_Click);
             // 
             // appMenu
             // 
@@ -529,7 +530,6 @@
             // 
             this.GroupAdd.AppearanceCaption.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GroupAdd.AppearanceCaption.Options.UseFont = true;
-            this.GroupAdd.Controls.Add(this.GroupUpdate);
             this.GroupAdd.Controls.Add(this.cbPosition);
             this.GroupAdd.Controls.Add(this.BtnSave);
             this.GroupAdd.Controls.Add(this.labelControl8);
@@ -551,6 +551,7 @@
             this.GroupAdd.Size = new System.Drawing.Size(315, 352);
             this.GroupAdd.TabIndex = 0;
             this.GroupAdd.Text = "Add Employee";
+            this.GroupAdd.Paint += new System.Windows.Forms.PaintEventHandler(this.GroupAdd_Paint);
             // 
             // GroupUpdate
             // 
@@ -571,7 +572,7 @@
             this.GroupUpdate.Controls.Add(this.labelControl2);
             this.GroupUpdate.Controls.Add(this.txtIDU);
             this.GroupUpdate.Controls.Add(this.labelControl1);
-            this.GroupUpdate.Location = new System.Drawing.Point(0, 0);
+            this.GroupUpdate.Location = new System.Drawing.Point(6, 147);
             this.GroupUpdate.Name = "GroupUpdate";
             this.GroupUpdate.Size = new System.Drawing.Size(315, 352);
             this.GroupUpdate.TabIndex = 0;
@@ -586,6 +587,7 @@
             this.BtnUpdate.Size = new System.Drawing.Size(101, 41);
             this.BtnUpdate.TabIndex = 14;
             this.BtnUpdate.Text = "UPDATE";
+            this.BtnUpdate.Click += new System.EventHandler(this.BtnUpdate_Click);
             // 
             // cbPositionU
             // 
@@ -853,6 +855,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1026, 539);
+            this.Controls.Add(this.GroupUpdate);
             this.Controls.Add(this.splitContainerControl);
             this.Controls.Add(this.ribbonControl);
             this.Controls.Add(this.popupControlContainer1);
@@ -918,8 +921,6 @@
         private DevExpress.XtraGrid.GridControl gridControl;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraEditors.SplitContainerControl splitContainerControl;
-        private DevExpress.XtraEditors.GroupControl GroupAdd;
-        private DevExpress.XtraEditors.GroupControl GroupUpdate;
         private DevExpress.XtraEditors.SimpleButton BtnUpdate;
         private DevExpress.XtraEditors.ComboBoxEdit cbPositionU;
         private DevExpress.XtraEditors.LabelControl labelControl7;
@@ -976,6 +977,8 @@
         private DevExpress.XtraBars.Ribbon.RibbonPage helpRibbonPage;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup helpRibbonPageGroup;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        public DevExpress.XtraEditors.GroupControl GroupAdd;
+        public DevExpress.XtraEditors.GroupControl GroupUpdate;
 
 
 

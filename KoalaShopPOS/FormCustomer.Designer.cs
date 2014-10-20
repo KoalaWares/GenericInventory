@@ -240,22 +240,7 @@
             // 
             // ribbonImageCollection
             // 
-           
-            this.ribbonImageCollection.Images.SetKeyName(0, "Ribbon_New_16x16.png");
-            this.ribbonImageCollection.Images.SetKeyName(1, "Ribbon_Open_16x16.png");
-            this.ribbonImageCollection.Images.SetKeyName(2, "Ribbon_Close_16x16.png");
-            this.ribbonImageCollection.Images.SetKeyName(3, "Ribbon_Find_16x16.png");
-            this.ribbonImageCollection.Images.SetKeyName(4, "Ribbon_Save_16x16.png");
-            this.ribbonImageCollection.Images.SetKeyName(5, "Ribbon_SaveAs_16x16.png");
-            this.ribbonImageCollection.Images.SetKeyName(6, "Ribbon_Exit_16x16.png");
-            this.ribbonImageCollection.Images.SetKeyName(7, "Ribbon_Content_16x16.png");
-            this.ribbonImageCollection.Images.SetKeyName(8, "Ribbon_Info_16x16.png");
-            this.ribbonImageCollection.Images.SetKeyName(9, "Ribbon_Bold_16x16.png");
-            this.ribbonImageCollection.Images.SetKeyName(10, "Ribbon_Italic_16x16.png");
-            this.ribbonImageCollection.Images.SetKeyName(11, "Ribbon_Underline_16x16.png");
-            this.ribbonImageCollection.Images.SetKeyName(12, "Ribbon_AlignLeft_16x16.png");
-            this.ribbonImageCollection.Images.SetKeyName(13, "Ribbon_AlignCenter_16x16.png");
-            this.ribbonImageCollection.Images.SetKeyName(14, "Ribbon_AlignRight_16x16.png");
+            this.ribbonImageCollection.ImageStream = ((DevExpress.Utils.ImageCollectionStreamer)(resources.GetObject("ribbonImageCollection.ImageStream")));
             // 
             // iExit
             // 
@@ -404,16 +389,7 @@
             // ribbonImageCollectionLarge
             // 
             this.ribbonImageCollectionLarge.ImageSize = new System.Drawing.Size(32, 32);
-         
-            this.ribbonImageCollectionLarge.Images.SetKeyName(0, "Ribbon_New_32x32.png");
-            this.ribbonImageCollectionLarge.Images.SetKeyName(1, "Ribbon_Open_32x32.png");
-            this.ribbonImageCollectionLarge.Images.SetKeyName(2, "Ribbon_Close_32x32.png");
-            this.ribbonImageCollectionLarge.Images.SetKeyName(3, "Ribbon_Find_32x32.png");
-            this.ribbonImageCollectionLarge.Images.SetKeyName(4, "Ribbon_Save_32x32.png");
-            this.ribbonImageCollectionLarge.Images.SetKeyName(5, "Ribbon_SaveAs_32x32.png");
-            this.ribbonImageCollectionLarge.Images.SetKeyName(6, "Ribbon_Exit_32x32.png");
-            this.ribbonImageCollectionLarge.Images.SetKeyName(7, "Ribbon_Content_32x32.png");
-            this.ribbonImageCollectionLarge.Images.SetKeyName(8, "Ribbon_Info_32x32.png");
+            this.ribbonImageCollectionLarge.ImageStream = ((DevExpress.Utils.ImageCollectionStreamer)(resources.GetObject("ribbonImageCollectionLarge.ImageStream")));
             // 
             // homeRibbonPage
             // 
@@ -718,8 +694,6 @@
         private DevExpress.XtraBars.Ribbon.RibbonPage helpRibbonPage;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup helpRibbonPageGroup;
         private DevExpress.XtraBars.Ribbon.RibbonStatusBar ribbonStatusBar;
-        private DevExpress.XtraEditors.GroupControl GroupAdd;
-        private DevExpress.XtraEditors.GroupControl GroupUpdate;
         private DevExpress.XtraEditors.TextEdit txtAddressU;
         private DevExpress.XtraEditors.LabelControl labelControl6;
         private DevExpress.XtraEditors.TextEdit txtNameU;
@@ -737,5 +711,7 @@
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.ImageList navbarImageListLarge;
         private System.Windows.Forms.ImageList navbarImageList;
+        public DevExpress.XtraEditors.GroupControl GroupAdd;
+        public DevExpress.XtraEditors.GroupControl GroupUpdate;
     }
 }

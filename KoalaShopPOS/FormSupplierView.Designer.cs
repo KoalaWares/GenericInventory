@@ -82,21 +82,7 @@
             // ribbonImageCollection
             // 
          
-            this.ribbonImageCollection.Images.SetKeyName(0, "Ribbon_New_16x16.png");
-            this.ribbonImageCollection.Images.SetKeyName(1, "Ribbon_Open_16x16.png");
-            this.ribbonImageCollection.Images.SetKeyName(2, "Ribbon_Close_16x16.png");
-            this.ribbonImageCollection.Images.SetKeyName(3, "Ribbon_Find_16x16.png");
-            this.ribbonImageCollection.Images.SetKeyName(4, "Ribbon_Save_16x16.png");
-            this.ribbonImageCollection.Images.SetKeyName(5, "Ribbon_SaveAs_16x16.png");
-            this.ribbonImageCollection.Images.SetKeyName(6, "Ribbon_Exit_16x16.png");
-            this.ribbonImageCollection.Images.SetKeyName(7, "Ribbon_Content_16x16.png");
-            this.ribbonImageCollection.Images.SetKeyName(8, "Ribbon_Info_16x16.png");
-            this.ribbonImageCollection.Images.SetKeyName(9, "Ribbon_Bold_16x16.png");
-            this.ribbonImageCollection.Images.SetKeyName(10, "Ribbon_Italic_16x16.png");
-            this.ribbonImageCollection.Images.SetKeyName(11, "Ribbon_Underline_16x16.png");
-            this.ribbonImageCollection.Images.SetKeyName(12, "Ribbon_AlignLeft_16x16.png");
-            this.ribbonImageCollection.Images.SetKeyName(13, "Ribbon_AlignCenter_16x16.png");
-            this.ribbonImageCollection.Images.SetKeyName(14, "Ribbon_AlignRight_16x16.png");
+
             // 
             // ribbonImageCollectionLarge
             // 

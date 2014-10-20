@@ -53,5 +53,20 @@ namespace KoalaShopPOS
            
         }
 
+        private void BtnUpdate_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        public void GroupAdd_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void ribbonControl_Click(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }

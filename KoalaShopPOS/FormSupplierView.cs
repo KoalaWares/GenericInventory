@@ -26,6 +26,8 @@ namespace KoalaShopPOS
             FormSupplier a = new FormSupplier();
             this.Hide();
             a.Show();
+            a.GroupAdd.Visible = true;
+            a.GroupUpdate.Visible = false;
         }
 
         private void MenuUpdate_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -33,6 +35,7 @@ namespace KoalaShopPOS
             FormSupplier a = new FormSupplier();
             this.Hide();
             a.Show();
+           
         }
     }
 }

@@ -19,6 +19,8 @@ namespace KoalaShopPOS
         private void MenuAdd_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             FormUser a = new FormUser();
+            a.GroupAdd.Visible = true;
+            a.GroupUpdate.Visible = false;
             this.Hide();
             a.Show();
 
@@ -33,6 +35,15 @@ namespace KoalaShopPOS
         private void MenuView_ItemClick_1(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             GridEmployee.Refresh();
+        }
+
+        private void MenuUpdate_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            FormUser a = new FormUser();
+            a.GroupAdd.Visible = false;
+            a.GroupUpdate.Visible = true;
+            this.Hide();
+            a.Show();
         }
     }
 }

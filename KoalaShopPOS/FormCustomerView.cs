@@ -21,6 +21,7 @@ namespace KoalaShopPOS
             FormCustomer a = new FormCustomer();
             this.Hide();
             a.Show();
+            a.GroupUpdate.Visible = false;
         }
 
         private void MenuUpdate_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)

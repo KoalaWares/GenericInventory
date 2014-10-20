@@ -1,0 +1,57 @@
+xtragrid data
+
+POS:
+
+ID
+Name
+Price
+Quantity
+Subtotal = price * quantity
+
+
+Customer:
+ID
+Name
+Address
+
+Supplier:
+ID
+Name
+Address
+Contact Number
+
+Employee:
+ID
+First name
+Last name
+Address
+Contact Number
+Position
+
+
+Schedule:
+ID
+First Name
+Last Name
+TIme In
+Time out
+Date
+
+
+Product:
+ID
+Name
+Weight
+Variant
+
+
+View More Info:
+ID
+Product name
+Quantity
+Cost
+Total Cost
+DatePurchased
+ExpirationDate
+Purchaser
+SupplierName
