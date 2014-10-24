@@ -18,9 +18,24 @@ namespace KoalaShopPOS
 
         private void simpleButton1_Click(object sender, EventArgs e)
         {
-            FormProductStocks a = new FormProductStocks();
-            a.ShowDialog();
-
+            //if (Position == "Cashier")
+            //{
+            //    FormPOS a = new FormPOS();
+            //    this.Hide();
+            //    a.Show();
+            //}
+            //else if (Position == "Admin")
+            //{
+            //    FormInventory a = new FormInventory();
+            //    this.Hide();
+            //    a.Show();
+            //}
+            //else
+            //{
+            //    FormProduct a = new FormProduct();
+            //    this.Hide();
+            //    a.Show();
+            //}
            
         }
     }
