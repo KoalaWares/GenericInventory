@@ -56,6 +56,7 @@
             this.ribbonPage1});
             this.ribbon.Size = new System.Drawing.Size(875, 144);
             this.ribbon.StatusBar = this.ribbonStatusBar;
+            this.ribbon.Click += new System.EventHandler(this.ribbon_Click);
             // 
             // Add
             // 
@@ -63,6 +64,7 @@
             this.Add.Id = 1;
             this.Add.LargeGlyph = global::KoalaShopPOS.Properties.Resources._535577;
             this.Add.Name = "Add";
+            this.Add.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Add_ItemClick);
             // 
             // Exit
             // 
@@ -70,6 +72,7 @@
             this.Exit.Id = 3;
             this.Exit.LargeGlyph = global::KoalaShopPOS.Properties.Resources.Actions_application_exit_icon;
             this.Exit.Name = "Exit";
+            this.Exit.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Exit_ItemClick);
             // 
             // ribbonPage1
             // 
@@ -115,6 +118,7 @@
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsFind.AlwaysVisible = true;
+            this.gridView1.DoubleClick += new System.EventHandler(this.gridView1_DoubleClick);
             // 
             // FormProduct
             // 
@@ -128,6 +132,7 @@
             this.Ribbon = this.ribbon;
             this.StatusBar = this.ribbonStatusBar;
             this.Text = "FormProduct";
+            this.Load += new System.EventHandler(this.FormProduct_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();

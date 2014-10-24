@@ -71,7 +71,7 @@
             // 
             // ProductSave
             // 
-            this.ProductSave.Location = new System.Drawing.Point(150, 343);
+            this.ProductSave.Location = new System.Drawing.Point(156, 343);
             this.ProductSave.Name = "ProductSave";
             this.ProductSave.Size = new System.Drawing.Size(98, 47);
             this.ProductSave.TabIndex = 46;

@@ -1,6 +1,6 @@
-﻿namespace POS_System
+﻿namespace KoalaShopPOS
 {
-    partial class XtraForm1
+    partial class FormPOS
     {
         /// <summary>
         /// Required designer variable.
@@ -31,12 +31,13 @@
             this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
+            this.BtnLogout = new DevExpress.XtraEditors.SimpleButton();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.BtnChangePass = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
+            this.textEdit11 = new DevExpress.XtraEditors.TextEdit();
             this.groupControl5 = new DevExpress.XtraEditors.GroupControl();
             this.labelControl20 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl19 = new DevExpress.XtraEditors.LabelControl();
@@ -48,6 +49,8 @@
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
+            this.labelControl21 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl22 = new DevExpress.XtraEditors.LabelControl();
             this.textEdit9 = new DevExpress.XtraEditors.TextEdit();
             this.labelControl15 = new DevExpress.XtraEditors.LabelControl();
             this.textEdit10 = new DevExpress.XtraEditors.TextEdit();
@@ -69,14 +72,12 @@
             this.textEdit6 = new DevExpress.XtraEditors.TextEdit();
             this.labelControl13 = new DevExpress.XtraEditors.LabelControl();
             this.textEdit7 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit11 = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl21 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl22 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit11.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl5)).BeginInit();
             this.groupControl5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit8.Properties)).BeginInit();
@@ -95,7 +96,6 @@
             this.groupControl4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit6.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit7.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit11.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureEdit1
@@ -123,39 +123,41 @@
             this.labelControl2.TabIndex = 2;
             this.labelControl2.Text = "Staff:";
             // 
-            // simpleButton1
+            // BtnLogout
             // 
-            this.simpleButton1.Appearance.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.simpleButton1.Appearance.Options.UseFont = true;
-            this.simpleButton1.Location = new System.Drawing.Point(371, 91);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(88, 32);
-            this.simpleButton1.TabIndex = 4;
-            this.simpleButton1.Text = "Change Pass";
-            // 
-            // simpleButton2
-            // 
-            this.simpleButton2.Appearance.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.simpleButton2.Appearance.Options.UseFont = true;
-            this.simpleButton2.Location = new System.Drawing.Point(465, 91);
-            this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(88, 32);
-            this.simpleButton2.TabIndex = 5;
-            this.simpleButton2.Text = "Logout";
+            this.BtnLogout.Appearance.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnLogout.Appearance.Options.UseFont = true;
+            this.BtnLogout.Location = new System.Drawing.Point(484, 91);
+            this.BtnLogout.Name = "BtnLogout";
+            this.BtnLogout.Size = new System.Drawing.Size(88, 32);
+            this.BtnLogout.TabIndex = 5;
+            this.BtnLogout.Text = "Logout";
+            this.BtnLogout.Click += new System.EventHandler(this.BtnLogout_Click);
             // 
             // groupControl1
             // 
+            this.groupControl1.Controls.Add(this.BtnChangePass);
             this.groupControl1.Controls.Add(this.labelControl9);
             this.groupControl1.Controls.Add(this.labelControl3);
             this.groupControl1.Controls.Add(this.pictureEdit1);
-            this.groupControl1.Controls.Add(this.simpleButton2);
+            this.groupControl1.Controls.Add(this.BtnLogout);
             this.groupControl1.Controls.Add(this.labelControl1);
-            this.groupControl1.Controls.Add(this.simpleButton1);
             this.groupControl1.Controls.Add(this.labelControl2);
             this.groupControl1.Location = new System.Drawing.Point(1, 1);
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.Size = new System.Drawing.Size(592, 144);
             this.groupControl1.TabIndex = 6;
+            // 
+            // BtnChangePass
+            // 
+            this.BtnChangePass.Appearance.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnChangePass.Appearance.Options.UseFont = true;
+            this.BtnChangePass.Location = new System.Drawing.Point(364, 91);
+            this.BtnChangePass.Name = "BtnChangePass";
+            this.BtnChangePass.Size = new System.Drawing.Size(114, 32);
+            this.BtnChangePass.TabIndex = 8;
+            this.BtnChangePass.Text = "Change Password";
+            this.BtnChangePass.Click += new System.EventHandler(this.BtnChangePass_Click);
             // 
             // labelControl9
             // 
@@ -185,6 +187,15 @@
             this.groupControl2.Name = "groupControl2";
             this.groupControl2.Size = new System.Drawing.Size(663, 144);
             this.groupControl2.TabIndex = 7;
+            // 
+            // textEdit11
+            // 
+            this.textEdit11.Location = new System.Drawing.Point(23, 71);
+            this.textEdit11.Name = "textEdit11";
+            this.textEdit11.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textEdit11.Properties.Appearance.Options.UseFont = true;
+            this.textEdit11.Size = new System.Drawing.Size(271, 26);
+            this.textEdit11.TabIndex = 6;
             // 
             // groupControl5
             // 
@@ -309,6 +320,24 @@
             this.groupControl3.Size = new System.Drawing.Size(672, 236);
             this.groupControl3.TabIndex = 9;
             this.groupControl3.Text = "Item Info";
+            // 
+            // labelControl21
+            // 
+            this.labelControl21.Appearance.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl21.Location = new System.Drawing.Point(398, 218);
+            this.labelControl21.Name = "labelControl21";
+            this.labelControl21.Size = new System.Drawing.Size(95, 13);
+            this.labelControl21.TabIndex = 15;
+            this.labelControl21.Text = "labelControl21";
+            // 
+            // labelControl22
+            // 
+            this.labelControl22.Appearance.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl22.Location = new System.Drawing.Point(222, 217);
+            this.labelControl22.Name = "labelControl22";
+            this.labelControl22.Size = new System.Drawing.Size(170, 16);
+            this.labelControl22.TabIndex = 14;
+            this.labelControl22.Text = "Total Cash Transaction:";
             // 
             // textEdit9
             // 
@@ -518,45 +547,18 @@
             this.textEdit7.Size = new System.Drawing.Size(223, 26);
             this.textEdit7.TabIndex = 7;
             // 
-            // textEdit11
-            // 
-            this.textEdit11.Location = new System.Drawing.Point(23, 71);
-            this.textEdit11.Name = "textEdit11";
-            this.textEdit11.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textEdit11.Properties.Appearance.Options.UseFont = true;
-            this.textEdit11.Size = new System.Drawing.Size(271, 26);
-            this.textEdit11.TabIndex = 6;
-            // 
-            // labelControl21
-            // 
-            this.labelControl21.Appearance.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl21.Location = new System.Drawing.Point(398, 218);
-            this.labelControl21.Name = "labelControl21";
-            this.labelControl21.Size = new System.Drawing.Size(95, 13);
-            this.labelControl21.TabIndex = 15;
-            this.labelControl21.Text = "labelControl21";
-            // 
-            // labelControl22
-            // 
-            this.labelControl22.Appearance.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl22.Location = new System.Drawing.Point(222, 217);
-            this.labelControl22.Name = "labelControl22";
-            this.labelControl22.Size = new System.Drawing.Size(170, 16);
-            this.labelControl22.TabIndex = 14;
-            this.labelControl22.Text = "Total Cash Transaction:";
-            // 
-            // XtraForm1
+            // FormPOS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1257, 739);
+            this.ClientSize = new System.Drawing.Size(1257, 733);
             this.Controls.Add(this.groupControl4);
             this.Controls.Add(this.groupControl3);
             this.Controls.Add(this.gridControl1);
             this.Controls.Add(this.groupControl2);
             this.Controls.Add(this.groupControl1);
             this.MaximizeBox = false;
-            this.Name = "XtraForm1";
+            this.Name = "FormPOS";
             this.Text = "XtraForm1";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
@@ -566,6 +568,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
             this.groupControl2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit11.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl5)).EndInit();
             this.groupControl5.ResumeLayout(false);
             this.groupControl5.PerformLayout();
@@ -587,7 +590,6 @@
             this.groupControl4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit6.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit7.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit11.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -597,8 +599,7 @@
         private DevExpress.XtraEditors.PictureEdit pictureEdit1;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.LabelControl labelControl2;
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
-        private DevExpress.XtraEditors.SimpleButton simpleButton2;
+        private DevExpress.XtraEditors.SimpleButton BtnLogout;
         private DevExpress.XtraEditors.GroupControl groupControl1;
         private DevExpress.XtraEditors.LabelControl labelControl9;
         private DevExpress.XtraEditors.LabelControl labelControl3;
@@ -638,5 +639,6 @@
         private DevExpress.XtraEditors.TextEdit textEdit11;
         private DevExpress.XtraEditors.LabelControl labelControl21;
         private DevExpress.XtraEditors.LabelControl labelControl22;
+        private DevExpress.XtraEditors.SimpleButton BtnChangePass;
     }
 }

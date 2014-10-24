@@ -70,6 +70,21 @@
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.splitContainerControl = new DevExpress.XtraEditors.SplitContainerControl();
             this.GroupAdd = new DevExpress.XtraEditors.GroupControl();
+            this.cbPosition = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.BtnSave = new DevExpress.XtraEditors.SimpleButton();
+            this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
+            this.txtContact = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
+            this.txtAddress = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
+            this.txtLname = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
+            this.txtFname = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
+            this.txtPass = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl13 = new DevExpress.XtraEditors.LabelControl();
+            this.txtID = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl14 = new DevExpress.XtraEditors.LabelControl();
             this.GroupUpdate = new DevExpress.XtraEditors.GroupControl();
             this.BtnUpdate = new DevExpress.XtraEditors.SimpleButton();
             this.cbPositionU = new DevExpress.XtraEditors.ComboBoxEdit();
@@ -86,21 +101,6 @@
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.txtIDU = new DevExpress.XtraEditors.TextEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.cbPosition = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.BtnSave = new DevExpress.XtraEditors.SimpleButton();
-            this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
-            this.txtContact = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
-            this.txtAddress = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
-            this.txtLname = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
-            this.txtFname = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
-            this.txtPass = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl13 = new DevExpress.XtraEditors.LabelControl();
-            this.txtID = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl14 = new DevExpress.XtraEditors.LabelControl();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.appMenu)).BeginInit();
@@ -117,6 +117,13 @@
             this.splitContainerControl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GroupAdd)).BeginInit();
             this.GroupAdd.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cbPosition.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtContact.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAddress.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtLname.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtFname.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPass.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtID.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GroupUpdate)).BeginInit();
             this.GroupUpdate.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cbPositionU.Properties)).BeginInit();
@@ -126,13 +133,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtFnameU.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPassU.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtIDU.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbPosition.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtContact.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtAddress.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtLname.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtFname.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPass.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtID.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbonStatusBar
@@ -272,6 +272,7 @@
             this.iExit.ImageIndex = 6;
             this.iExit.LargeImageIndex = 6;
             this.iExit.Name = "iExit";
+            this.iExit.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.iExit_ItemClick);
             // 
             // iAbout
             // 
@@ -391,6 +392,7 @@
             this.MenuView.Id = 63;
             this.MenuView.LargeGlyph = global::KoalaShopPOS.Properties.Resources.UserView;
             this.MenuView.Name = "MenuView";
+            this.MenuView.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.MenuView_ItemClick_1);
             // 
             // MenuViewSched
             // 
@@ -399,6 +401,7 @@
             this.MenuViewSched.Id = 64;
             this.MenuViewSched.LargeGlyph = global::KoalaShopPOS.Properties.Resources.UserSchedule;
             this.MenuViewSched.Name = "MenuViewSched";
+            this.MenuViewSched.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.MenuViewSched_ItemClick);
             // 
             // MenuAdd
             // 
@@ -552,6 +555,141 @@
             this.GroupAdd.TabIndex = 0;
             this.GroupAdd.Text = "Add Employee";
             this.GroupAdd.Paint += new System.Windows.Forms.PaintEventHandler(this.GroupAdd_Paint);
+            // 
+            // cbPosition
+            // 
+            this.cbPosition.Location = new System.Drawing.Point(117, 248);
+            this.cbPosition.MenuManager = this.ribbonControl;
+            this.cbPosition.Name = "cbPosition";
+            this.cbPosition.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cbPosition.Properties.Items.AddRange(new object[] {
+            "Admin",
+            "Cashier",
+            "Purchaser"});
+            this.cbPosition.Size = new System.Drawing.Size(180, 20);
+            this.cbPosition.TabIndex = 27;
+            // 
+            // BtnSave
+            // 
+            this.BtnSave.Appearance.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnSave.Appearance.Options.UseFont = true;
+            this.BtnSave.Location = new System.Drawing.Point(196, 295);
+            this.BtnSave.Name = "BtnSave";
+            this.BtnSave.Size = new System.Drawing.Size(101, 41);
+            this.BtnSave.TabIndex = 1;
+            this.BtnSave.Text = "SAVE";
+            // 
+            // labelControl8
+            // 
+            this.labelControl8.Appearance.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl8.Location = new System.Drawing.Point(15, 251);
+            this.labelControl8.Name = "labelControl8";
+            this.labelControl8.Size = new System.Drawing.Size(49, 13);
+            this.labelControl8.TabIndex = 26;
+            this.labelControl8.Text = "Position:";
+            // 
+            // txtContact
+            // 
+            this.txtContact.Location = new System.Drawing.Point(117, 219);
+            this.txtContact.MenuManager = this.ribbonControl;
+            this.txtContact.Name = "txtContact";
+            this.txtContact.Size = new System.Drawing.Size(180, 20);
+            this.txtContact.TabIndex = 25;
+            // 
+            // labelControl9
+            // 
+            this.labelControl9.Appearance.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl9.Location = new System.Drawing.Point(15, 222);
+            this.labelControl9.Name = "labelControl9";
+            this.labelControl9.Size = new System.Drawing.Size(98, 13);
+            this.labelControl9.TabIndex = 24;
+            this.labelControl9.Text = "Contact Number:";
+            // 
+            // txtAddress
+            // 
+            this.txtAddress.Location = new System.Drawing.Point(117, 183);
+            this.txtAddress.MenuManager = this.ribbonControl;
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.Size = new System.Drawing.Size(180, 20);
+            this.txtAddress.TabIndex = 23;
+            // 
+            // labelControl10
+            // 
+            this.labelControl10.Appearance.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl10.Location = new System.Drawing.Point(15, 187);
+            this.labelControl10.Name = "labelControl10";
+            this.labelControl10.Size = new System.Drawing.Size(51, 13);
+            this.labelControl10.TabIndex = 22;
+            this.labelControl10.Text = "Address:";
+            // 
+            // txtLname
+            // 
+            this.txtLname.Location = new System.Drawing.Point(117, 148);
+            this.txtLname.MenuManager = this.ribbonControl;
+            this.txtLname.Name = "txtLname";
+            this.txtLname.Size = new System.Drawing.Size(180, 20);
+            this.txtLname.TabIndex = 21;
+            // 
+            // labelControl11
+            // 
+            this.labelControl11.Appearance.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl11.Location = new System.Drawing.Point(15, 152);
+            this.labelControl11.Name = "labelControl11";
+            this.labelControl11.Size = new System.Drawing.Size(65, 13);
+            this.labelControl11.TabIndex = 20;
+            this.labelControl11.Text = "Last Name:";
+            // 
+            // txtFname
+            // 
+            this.txtFname.Location = new System.Drawing.Point(117, 113);
+            this.txtFname.MenuManager = this.ribbonControl;
+            this.txtFname.Name = "txtFname";
+            this.txtFname.Size = new System.Drawing.Size(180, 20);
+            this.txtFname.TabIndex = 19;
+            // 
+            // labelControl12
+            // 
+            this.labelControl12.Appearance.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl12.Location = new System.Drawing.Point(15, 117);
+            this.labelControl12.Name = "labelControl12";
+            this.labelControl12.Size = new System.Drawing.Size(66, 13);
+            this.labelControl12.TabIndex = 18;
+            this.labelControl12.Text = "First Name:";
+            // 
+            // txtPass
+            // 
+            this.txtPass.Location = new System.Drawing.Point(117, 78);
+            this.txtPass.MenuManager = this.ribbonControl;
+            this.txtPass.Name = "txtPass";
+            this.txtPass.Size = new System.Drawing.Size(180, 20);
+            this.txtPass.TabIndex = 17;
+            // 
+            // labelControl13
+            // 
+            this.labelControl13.Appearance.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl13.Location = new System.Drawing.Point(15, 82);
+            this.labelControl13.Name = "labelControl13";
+            this.labelControl13.Size = new System.Drawing.Size(59, 13);
+            this.labelControl13.TabIndex = 16;
+            this.labelControl13.Text = "Password:";
+            // 
+            // txtID
+            // 
+            this.txtID.Location = new System.Drawing.Point(117, 43);
+            this.txtID.MenuManager = this.ribbonControl;
+            this.txtID.Name = "txtID";
+            this.txtID.Size = new System.Drawing.Size(180, 20);
+            this.txtID.TabIndex = 15;
+            // 
+            // labelControl14
+            // 
+            this.labelControl14.Appearance.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl14.Location = new System.Drawing.Point(15, 47);
+            this.labelControl14.Name = "labelControl14";
+            this.labelControl14.Size = new System.Drawing.Size(19, 13);
+            this.labelControl14.TabIndex = 14;
+            this.labelControl14.Text = "ID:";
             // 
             // GroupUpdate
             // 
@@ -714,141 +852,6 @@
             this.labelControl1.TabIndex = 0;
             this.labelControl1.Text = "ID:";
             // 
-            // cbPosition
-            // 
-            this.cbPosition.Location = new System.Drawing.Point(117, 248);
-            this.cbPosition.MenuManager = this.ribbonControl;
-            this.cbPosition.Name = "cbPosition";
-            this.cbPosition.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cbPosition.Properties.Items.AddRange(new object[] {
-            "Admin",
-            "Cashier",
-            "Purchaser"});
-            this.cbPosition.Size = new System.Drawing.Size(180, 20);
-            this.cbPosition.TabIndex = 27;
-            // 
-            // BtnSave
-            // 
-            this.BtnSave.Appearance.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnSave.Appearance.Options.UseFont = true;
-            this.BtnSave.Location = new System.Drawing.Point(196, 295);
-            this.BtnSave.Name = "BtnSave";
-            this.BtnSave.Size = new System.Drawing.Size(101, 41);
-            this.BtnSave.TabIndex = 1;
-            this.BtnSave.Text = "SAVE";
-            // 
-            // labelControl8
-            // 
-            this.labelControl8.Appearance.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl8.Location = new System.Drawing.Point(15, 251);
-            this.labelControl8.Name = "labelControl8";
-            this.labelControl8.Size = new System.Drawing.Size(49, 13);
-            this.labelControl8.TabIndex = 26;
-            this.labelControl8.Text = "Position:";
-            // 
-            // txtContact
-            // 
-            this.txtContact.Location = new System.Drawing.Point(117, 219);
-            this.txtContact.MenuManager = this.ribbonControl;
-            this.txtContact.Name = "txtContact";
-            this.txtContact.Size = new System.Drawing.Size(180, 20);
-            this.txtContact.TabIndex = 25;
-            // 
-            // labelControl9
-            // 
-            this.labelControl9.Appearance.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl9.Location = new System.Drawing.Point(15, 222);
-            this.labelControl9.Name = "labelControl9";
-            this.labelControl9.Size = new System.Drawing.Size(98, 13);
-            this.labelControl9.TabIndex = 24;
-            this.labelControl9.Text = "Contact Number:";
-            // 
-            // txtAddress
-            // 
-            this.txtAddress.Location = new System.Drawing.Point(117, 183);
-            this.txtAddress.MenuManager = this.ribbonControl;
-            this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(180, 20);
-            this.txtAddress.TabIndex = 23;
-            // 
-            // labelControl10
-            // 
-            this.labelControl10.Appearance.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl10.Location = new System.Drawing.Point(15, 187);
-            this.labelControl10.Name = "labelControl10";
-            this.labelControl10.Size = new System.Drawing.Size(51, 13);
-            this.labelControl10.TabIndex = 22;
-            this.labelControl10.Text = "Address:";
-            // 
-            // txtLname
-            // 
-            this.txtLname.Location = new System.Drawing.Point(117, 148);
-            this.txtLname.MenuManager = this.ribbonControl;
-            this.txtLname.Name = "txtLname";
-            this.txtLname.Size = new System.Drawing.Size(180, 20);
-            this.txtLname.TabIndex = 21;
-            // 
-            // labelControl11
-            // 
-            this.labelControl11.Appearance.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl11.Location = new System.Drawing.Point(15, 152);
-            this.labelControl11.Name = "labelControl11";
-            this.labelControl11.Size = new System.Drawing.Size(65, 13);
-            this.labelControl11.TabIndex = 20;
-            this.labelControl11.Text = "Last Name:";
-            // 
-            // txtFname
-            // 
-            this.txtFname.Location = new System.Drawing.Point(117, 113);
-            this.txtFname.MenuManager = this.ribbonControl;
-            this.txtFname.Name = "txtFname";
-            this.txtFname.Size = new System.Drawing.Size(180, 20);
-            this.txtFname.TabIndex = 19;
-            // 
-            // labelControl12
-            // 
-            this.labelControl12.Appearance.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl12.Location = new System.Drawing.Point(15, 117);
-            this.labelControl12.Name = "labelControl12";
-            this.labelControl12.Size = new System.Drawing.Size(66, 13);
-            this.labelControl12.TabIndex = 18;
-            this.labelControl12.Text = "First Name:";
-            // 
-            // txtPass
-            // 
-            this.txtPass.Location = new System.Drawing.Point(117, 78);
-            this.txtPass.MenuManager = this.ribbonControl;
-            this.txtPass.Name = "txtPass";
-            this.txtPass.Size = new System.Drawing.Size(180, 20);
-            this.txtPass.TabIndex = 17;
-            // 
-            // labelControl13
-            // 
-            this.labelControl13.Appearance.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl13.Location = new System.Drawing.Point(15, 82);
-            this.labelControl13.Name = "labelControl13";
-            this.labelControl13.Size = new System.Drawing.Size(59, 13);
-            this.labelControl13.TabIndex = 16;
-            this.labelControl13.Text = "Password:";
-            // 
-            // txtID
-            // 
-            this.txtID.Location = new System.Drawing.Point(117, 43);
-            this.txtID.MenuManager = this.ribbonControl;
-            this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(180, 20);
-            this.txtID.TabIndex = 15;
-            // 
-            // labelControl14
-            // 
-            this.labelControl14.Appearance.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl14.Location = new System.Drawing.Point(15, 47);
-            this.labelControl14.Name = "labelControl14";
-            this.labelControl14.Size = new System.Drawing.Size(19, 13);
-            this.labelControl14.TabIndex = 14;
-            this.labelControl14.Text = "ID:";
-            // 
             // FormUser
             // 
             this.AllowFormGlass = DevExpress.Utils.DefaultBoolean.False;
@@ -883,6 +886,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.GroupAdd)).EndInit();
             this.GroupAdd.ResumeLayout(false);
             this.GroupAdd.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cbPosition.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtContact.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAddress.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtLname.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtFname.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPass.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtID.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GroupUpdate)).EndInit();
             this.GroupUpdate.ResumeLayout(false);
             this.GroupUpdate.PerformLayout();
@@ -893,13 +903,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtFnameU.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPassU.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtIDU.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbPosition.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtContact.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtAddress.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtLname.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtFname.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPass.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtID.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }

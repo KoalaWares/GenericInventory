@@ -15,5 +15,34 @@ namespace KoalaShopPOS
         {
             InitializeComponent();
         }
+
+        private void Add_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FormProductAdd a = new FormProductAdd();
+            a.ShowDialog();
+        }
+
+        private void gridView1_DoubleClick(object sender, EventArgs e)
+        {
+            FormProductChoice a = new FormProductChoice();
+            a.ShowDialog();
+        }
+
+        private void ribbon_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FormProduct_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Exit_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FormLogin a = new FormLogin();
+            this.Hide();
+            a.Show();
+        }
     }
 }

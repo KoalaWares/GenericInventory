@@ -134,6 +134,7 @@
             this.iExit.ImageIndex = 6;
             this.iExit.LargeImageIndex = 6;
             this.iExit.Name = "iExit";
+            this.iExit.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.iExit_ItemClick);
             // 
             // MenuUpdate
             // 
@@ -142,6 +143,7 @@
             this.MenuUpdate.Id = 62;
             this.MenuUpdate.LargeGlyph = global::KoalaShopPOS.Properties.Resources.UserEdit;
             this.MenuUpdate.Name = "MenuUpdate";
+            this.MenuUpdate.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.MenuUpdate_ItemClick);
             // 
             // MenuViewSched
             // 
@@ -150,6 +152,7 @@
             this.MenuViewSched.Id = 64;
             this.MenuViewSched.LargeGlyph = global::KoalaShopPOS.Properties.Resources.UserSchedule;
             this.MenuViewSched.Name = "MenuViewSched";
+            this.MenuViewSched.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.MenuViewSched_ItemClick);
             // 
             // MenuAdd
             // 
@@ -174,6 +177,7 @@
             this.MenuView.Id = 67;
             this.MenuView.LargeGlyph = global::KoalaShopPOS.Properties.Resources.UserView;
             this.MenuView.Name = "MenuView";
+            this.MenuView.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.MenuView_ItemClick);
             // 
             // iAbout
             // 

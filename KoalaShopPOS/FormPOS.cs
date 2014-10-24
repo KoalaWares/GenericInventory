@@ -7,11 +7,11 @@ using System.Text;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 
-namespace POS_System
+namespace KoalaShopPOS
 {
-    public partial class XtraForm1 : DevExpress.XtraEditors.XtraForm
+    public partial class FormPOS : DevExpress.XtraEditors.XtraForm
     {
-        public XtraForm1()
+        public FormPOS()
         {
             InitializeComponent();
         }
@@ -29,6 +29,24 @@ namespace POS_System
         private void groupControl5_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void BtnChangePass_Click(object sender, EventArgs e)
+        {
+            FormChangePass a = new FormChangePass();
+            a.ShowDialog();
+        }
+
+        private void BtnLogout_Click(object sender, EventArgs e)
+        {
+            FormLogin a = new FormLogin();
+            this.Close();
+            a.Show();
         }
     }
 }

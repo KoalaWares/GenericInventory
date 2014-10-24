@@ -20,6 +20,8 @@ namespace KoalaShopPOS
         {
             FormProductStocks a = new FormProductStocks();
             a.ShowDialog();
+
+           
         }
     }
 }

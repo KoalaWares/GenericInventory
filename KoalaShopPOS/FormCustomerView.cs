@@ -30,5 +30,17 @@ namespace KoalaShopPOS
             this.Hide();
             a.Show();
         }
+
+        private void MenuView_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            gridCustView.Refresh();
+        }
+
+        private void iExit_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            FormLogin a = new FormLogin();
+            this.Close();
+            a.Show();
+        }
     }
 }

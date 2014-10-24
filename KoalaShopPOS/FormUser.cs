@@ -68,5 +68,26 @@ namespace KoalaShopPOS
 
         }
 
+        private void MenuView_ItemClick_1(object sender, ItemClickEventArgs e)
+        {
+            FormUserView a = new FormUserView();
+            this.Hide();
+            a.Show();
+        }
+
+        private void MenuViewSched_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FormUserSched a = new FormUserSched();
+            this.Hide();
+            a.Show();
+        }
+
+        private void iExit_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FormLogin a = new FormLogin();
+            this.Close();
+            a.Show();
+        }
+
     }
 }

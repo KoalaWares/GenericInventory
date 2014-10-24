@@ -18,7 +18,7 @@ namespace KoalaShopPOS
 
         private void MenuView_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            
+            GridSupplier.Refresh();
         }
 
         private void MenuAdd_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -36,6 +36,13 @@ namespace KoalaShopPOS
             this.Hide();
             a.Show();
            
+        }
+
+        private void iExit_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            FormLogin a = new FormLogin();
+            this.Close();
+            a.Show();
         }
     }
 }

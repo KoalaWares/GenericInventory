@@ -129,8 +129,11 @@
             this.iExit.Hint = "Closes this program after prompting you to save unsaved data";
             this.iExit.Id = 20;
             this.iExit.ImageIndex = 6;
+            this.iExit.ImageIndexDisabled = 6;
+            this.iExit.LargeGlyph = global::KoalaShopPOS.Properties.Resources.Actions_application_exit_icon;
             this.iExit.LargeImageIndex = 6;
             this.iExit.Name = "iExit";
+            this.iExit.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.iExit_ItemClick);
             // 
             // iAbout
             // 
@@ -250,6 +253,7 @@
             this.MenuView.Id = 63;
             this.MenuView.LargeGlyph = global::KoalaShopPOS.Properties.Resources.UserView;
             this.MenuView.Name = "MenuView";
+            this.MenuView.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.MenuView_ItemClick);
             // 
             // MenuAdd
             // 
@@ -271,8 +275,7 @@
             // ribbonImageCollectionLarge
             // 
             this.ribbonImageCollectionLarge.ImageSize = new System.Drawing.Size(32, 32);
-          
-
+            this.ribbonImageCollectionLarge.ImageStream = ((DevExpress.Utils.ImageCollectionStreamer)(resources.GetObject("ribbonImageCollectionLarge.ImageStream")));
             // 
             // homeRibbonPage
             // 
