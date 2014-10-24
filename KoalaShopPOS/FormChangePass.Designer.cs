@@ -164,8 +164,10 @@
             this.Controls.Add(this.simpleButton2);
             this.Controls.Add(this.pictureEdit1);
             this.Controls.Add(this.simpleButton1);
+            this.MaximizeBox = false;
             this.Name = "FormChangePass";
-            this.Text = "FormChangePass";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Change Password";
             this.Load += new System.EventHandler(this.FormChangePass_Load);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);

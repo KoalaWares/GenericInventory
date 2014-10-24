@@ -81,7 +81,8 @@
             // 
             this.txtSupplier.Location = new System.Drawing.Point(119, 306);
             this.txtSupplier.Name = "txtSupplier";
-            this.txtSupplier.Size = new System.Drawing.Size(239, 20);
+            this.txtSupplier.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
+            this.txtSupplier.Size = new System.Drawing.Size(239, 22);
             this.txtSupplier.TabIndex = 45;
             // 
             // labelControl11
@@ -96,7 +97,8 @@
             // 
             this.txtPurchaser.Location = new System.Drawing.Point(119, 274);
             this.txtPurchaser.Name = "txtPurchaser";
-            this.txtPurchaser.Size = new System.Drawing.Size(239, 20);
+            this.txtPurchaser.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
+            this.txtPurchaser.Size = new System.Drawing.Size(239, 22);
             this.txtPurchaser.TabIndex = 43;
             // 
             // labelControl10
@@ -112,11 +114,12 @@
             this.datePurchased.EditValue = null;
             this.datePurchased.Location = new System.Drawing.Point(119, 237);
             this.datePurchased.Name = "datePurchased";
+            this.datePurchased.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
             this.datePurchased.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.datePurchased.Properties.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.datePurchased.Size = new System.Drawing.Size(239, 20);
+            this.datePurchased.Size = new System.Drawing.Size(239, 22);
             this.datePurchased.TabIndex = 41;
             // 
             // labelControl9
@@ -132,11 +135,12 @@
             this.dateExpiration.EditValue = null;
             this.dateExpiration.Location = new System.Drawing.Point(119, 201);
             this.dateExpiration.Name = "dateExpiration";
+            this.dateExpiration.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
             this.dateExpiration.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dateExpiration.Properties.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.dateExpiration.Size = new System.Drawing.Size(239, 20);
+            this.dateExpiration.Size = new System.Drawing.Size(239, 22);
             this.dateExpiration.TabIndex = 39;
             // 
             // labelControl7
@@ -151,9 +155,10 @@
             // 
             this.txtTotalCost.Location = new System.Drawing.Point(119, 166);
             this.txtTotalCost.Name = "txtTotalCost";
+            this.txtTotalCost.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
             this.txtTotalCost.Properties.Mask.EditMask = "c";
             this.txtTotalCost.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.txtTotalCost.Size = new System.Drawing.Size(239, 20);
+            this.txtTotalCost.Size = new System.Drawing.Size(239, 22);
             this.txtTotalCost.TabIndex = 37;
             // 
             // labelControl8
@@ -168,9 +173,10 @@
             // 
             this.txtCost.Location = new System.Drawing.Point(119, 127);
             this.txtCost.Name = "txtCost";
+            this.txtCost.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
             this.txtCost.Properties.Mask.EditMask = "c";
             this.txtCost.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.txtCost.Size = new System.Drawing.Size(239, 20);
+            this.txtCost.Size = new System.Drawing.Size(239, 22);
             this.txtCost.TabIndex = 35;
             // 
             // labelControl5
@@ -185,9 +191,10 @@
             // 
             this.txtQuantity.Location = new System.Drawing.Point(119, 92);
             this.txtQuantity.Name = "txtQuantity";
+            this.txtQuantity.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
             this.txtQuantity.Properties.Mask.EditMask = "d";
             this.txtQuantity.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.txtQuantity.Size = new System.Drawing.Size(239, 20);
+            this.txtQuantity.Size = new System.Drawing.Size(239, 22);
             this.txtQuantity.TabIndex = 33;
             // 
             // labelControl6
@@ -203,7 +210,8 @@
             this.txtName.Enabled = false;
             this.txtName.Location = new System.Drawing.Point(119, 57);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(239, 20);
+            this.txtName.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
+            this.txtName.Size = new System.Drawing.Size(239, 22);
             this.txtName.TabIndex = 27;
             // 
             // labelControl2
@@ -219,7 +227,8 @@
             this.txtID.Enabled = false;
             this.txtID.Location = new System.Drawing.Point(119, 22);
             this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(239, 20);
+            this.txtID.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
+            this.txtID.Size = new System.Drawing.Size(239, 22);
             this.txtID.TabIndex = 25;
             // 
             // labelControl1
@@ -260,7 +269,8 @@
             this.HelpButton = true;
             this.MaximizeBox = false;
             this.Name = "FormProductStocks";
-            this.Text = "FormProductStocks";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Add New Stocks";
             this.TopMost = true;
             ((System.ComponentModel.ISupportInitialize)(this.txtSupplier.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPurchaser.Properties)).EndInit();

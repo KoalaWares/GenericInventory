@@ -44,6 +44,7 @@
             // 
             // UpdateInfo
             // 
+            this.UpdateInfo.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.UpdateInfo.Location = new System.Drawing.Point(130, 15);
             this.UpdateInfo.Name = "UpdateInfo";
             this.UpdateInfo.Size = new System.Drawing.Size(127, 48);
@@ -68,8 +69,9 @@
             this.Controls.Add(this.ViewMore);
             this.Controls.Add(this.UpdateInfo);
             this.Controls.Add(this.AddStock);
+            this.MaximizeBox = false;
             this.Name = "FormProductChoice";
-            this.Text = "FormProductChoice";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.ResumeLayout(false);
 
         }

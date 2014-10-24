@@ -147,8 +147,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(366, 247);
             this.Controls.Add(this.ProductAdd);
+            this.MaximizeBox = false;
             this.Name = "FormProductInfo";
-            this.Text = "FormProductInfo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Update Product Info";
             ((System.ComponentModel.ISupportInitialize)(this.txtVariant.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtWeight.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtName.Properties)).EndInit();

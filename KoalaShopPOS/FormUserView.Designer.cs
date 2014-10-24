@@ -257,7 +257,6 @@
             this.ViewEmployee.Name = "ViewEmployee";
             this.ViewEmployee.Size = new System.Drawing.Size(1091, 462);
             this.ViewEmployee.TabIndex = 11;
-            this.ViewEmployee.Text = "View Employee";
             // 
             // GridEmployee
             // 
@@ -286,8 +285,11 @@
             this.Controls.Add(this.ViewEmployee);
             this.Controls.Add(this.ribbonStatusBar);
             this.Controls.Add(this.ribbonControl);
+            this.MaximizeBox = false;
             this.Name = "FormUserView";
-            this.Text = "FormUserView";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Employee";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonImageCollection)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonImageCollectionLarge)).EndInit();

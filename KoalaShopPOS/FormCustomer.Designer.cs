@@ -451,7 +451,6 @@
             this.GroupAdd.Controls.Add(this.labelControl12);
             this.GroupAdd.Controls.Add(this.txtID);
             this.GroupAdd.Controls.Add(this.labelControl14);
-            this.GroupAdd.Dock = System.Windows.Forms.DockStyle.Fill;
             this.GroupAdd.Location = new System.Drawing.Point(0, 0);
             this.GroupAdd.Name = "GroupAdd";
             this.GroupAdd.Size = new System.Drawing.Size(315, 352);
@@ -630,8 +629,11 @@
             this.Controls.Add(this.popupControlContainer2);
             this.Controls.Add(this.ribbonStatusBar);
             this.Controls.Add(this.ribbonControl);
+            this.MaximizeBox = false;
             this.Name = "FormCustomer";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormCustomer";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GridCustomer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).EndInit();

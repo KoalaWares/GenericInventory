@@ -418,7 +418,6 @@
             this.ViewEmployee.Name = "ViewEmployee";
             this.ViewEmployee.Size = new System.Drawing.Size(1092, 414);
             this.ViewEmployee.TabIndex = 24;
-            this.ViewEmployee.Text = "View Supplier";
             // 
             // GridSupplier
             // 
@@ -448,8 +447,11 @@
             this.Controls.Add(this.ribbonStatusBar1);
             this.Controls.Add(this.ribbonControl);
             this.Controls.Add(this.ribbonStatusBar);
+            this.MaximizeBox = false;
             this.Name = "FormSupplierView";
-            this.Text = "FormSupplierView";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "View Supplier";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.ribbonImageCollection)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonImageCollectionLarge)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).EndInit();

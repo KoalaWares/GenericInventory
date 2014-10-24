@@ -30,8 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormUserSched));
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.GridSchedule = new DevExpress.XtraGrid.GridControl();
             this.ribbonControl = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.ribbonImageCollection = new DevExpress.Utils.ImageCollection(this.components);
             this.iExit = new DevExpress.XtraBars.BarButtonItem();
@@ -51,34 +49,17 @@
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.navbarImageList = new System.Windows.Forms.ImageList(this.components);
             this.navbarImageListLarge = new System.Windows.Forms.ImageList(this.components);
+            this.GridSchedule = new DevExpress.XtraGrid.GridControl();
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.ViewEmployee = new DevExpress.XtraEditors.GroupControl();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.GridSchedule)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonImageCollection)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonImageCollectionLarge)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GridSchedule)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ViewEmployee)).BeginInit();
             this.ViewEmployee.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // gridView1
-            // 
-            this.gridView1.GridControl = this.GridSchedule;
-            this.gridView1.Name = "gridView1";
-            this.gridView1.OptionsBehavior.Editable = false;
-            this.gridView1.OptionsFind.AlwaysVisible = true;
-            // 
-            // GridSchedule
-            // 
-            this.GridSchedule.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.GridSchedule.Location = new System.Drawing.Point(2, 26);
-            this.GridSchedule.MainView = this.gridView1;
-            this.GridSchedule.MenuManager = this.ribbonControl;
-            this.GridSchedule.Name = "GridSchedule";
-            this.GridSchedule.Size = new System.Drawing.Size(1087, 418);
-            this.GridSchedule.TabIndex = 0;
-            this.GridSchedule.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
             // 
             // ribbonControl
             // 
@@ -268,17 +249,35 @@
             this.navbarImageListLarge.Images.SetKeyName(0, "Mail_16x16.png");
             this.navbarImageListLarge.Images.SetKeyName(1, "Organizer_16x16.png");
             // 
+            // GridSchedule
+            // 
+            this.GridSchedule.Location = new System.Drawing.Point(0, 0);
+            this.GridSchedule.MainView = this.gridView1;
+            this.GridSchedule.MenuManager = this.ribbonControl;
+            this.GridSchedule.Name = "GridSchedule";
+            this.GridSchedule.Size = new System.Drawing.Size(1091, 446);
+            this.GridSchedule.TabIndex = 0;
+            this.GridSchedule.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView1});
+            // 
+            // gridView1
+            // 
+            this.gridView1.GridControl = this.GridSchedule;
+            this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsBehavior.Editable = false;
+            this.gridView1.OptionsFind.AlwaysVisible = true;
+            // 
             // ViewEmployee
             // 
             this.ViewEmployee.AppearanceCaption.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ViewEmployee.AppearanceCaption.Options.UseFont = true;
+            this.ViewEmployee.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.ViewEmployee.Controls.Add(this.GridSchedule);
             this.ViewEmployee.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ViewEmployee.Location = new System.Drawing.Point(0, 117);
             this.ViewEmployee.Name = "ViewEmployee";
             this.ViewEmployee.Size = new System.Drawing.Size(1091, 446);
             this.ViewEmployee.TabIndex = 14;
-            this.ViewEmployee.Text = "Schedule";
             // 
             // FormUserSched
             // 
@@ -289,12 +288,12 @@
             this.Controls.Add(this.ribbonStatusBar);
             this.Controls.Add(this.ribbonControl);
             this.Name = "FormUserSched";
-            this.Text = "FormUserSched";
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.GridSchedule)).EndInit();
+            this.Text = "Employee\'s Schedule";
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonImageCollection)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonImageCollectionLarge)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GridSchedule)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ViewEmployee)).EndInit();
             this.ViewEmployee.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -303,8 +302,6 @@
 
         #endregion
 
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private DevExpress.XtraGrid.GridControl GridSchedule;
         private DevExpress.XtraBars.Ribbon.RibbonControl ribbonControl;
         private DevExpress.Utils.ImageCollection ribbonImageCollection;
         private DevExpress.XtraBars.BarButtonItem iExit;
@@ -324,6 +321,8 @@
         private DevExpress.XtraBars.Ribbon.RibbonStatusBar ribbonStatusBar;
         private System.Windows.Forms.ImageList navbarImageList;
         private System.Windows.Forms.ImageList navbarImageListLarge;
+        private DevExpress.XtraGrid.GridControl GridSchedule;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraEditors.GroupControl ViewEmployee;
     }
 }

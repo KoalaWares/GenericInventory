@@ -140,8 +140,10 @@
             this.Controls.Add(this.pictureEdit1);
             this.Controls.Add(this.simpleButton2);
             this.Controls.Add(this.simpleButton1);
+            this.MaximizeBox = false;
             this.Name = "FormLogin";
-            this.Text = "FormLogin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Innovation";
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();

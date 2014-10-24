@@ -350,8 +350,11 @@
             this.ClientSize = new System.Drawing.Size(1105, 589);
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.ribbonControl);
+            this.MaximizeBox = false;
             this.Name = "FormCustomerView";
-            this.Text = "FormCustomerView";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Employee";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonImageCollection)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonImageCollectionLarge)).EndInit();
