@@ -42,7 +42,7 @@ namespace Demo
         //Since gamitun ni xa sa pag load sa form, ge stub out na nko xa as method/
         void RefreshDataGrid()
         {
-            this.dataGridView1.DataSource = this.koalaShop.ProductController.GetAllProductViews();
+            this.dataGridView1.DataSource = this.koalaShop.GetProductsForView();
         }
     }
 }

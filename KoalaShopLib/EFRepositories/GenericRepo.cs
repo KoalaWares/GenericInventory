@@ -12,6 +12,7 @@ namespace KoalaShopLib.EFRepositories
         public GenericRepo(DataAppContext dbContext)
             :base(dbContext)
         {
+
         }
     }
 }

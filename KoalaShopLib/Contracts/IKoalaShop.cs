@@ -5,24 +5,46 @@ using System.Text;
 using System.Threading.Tasks;
 
 using KoalaShopLib.Models;
+using KoalaShopLib.Models.ViewModel;
+using KoalaShopLib.EFRepositories;
 namespace KoalaShopLib
 {
-    public interface IKoalaShop
+    public interface IKoalaShop : IInventory, IAuthentication
     {
-        IProductController ProductController { get; }
-        ICategoryController CategoryController { get;}
+        IRepository<Account> AccountRepo { get;}
+        IRepository<Category> CategoryRepo { get; }
+        IRepository<Customer> CustomerRepo { get; }
+        IRepository<Employee> EmployeeRepo { get; }
+        IRepository<Invoice> InvoiceRepo { get; }
+        IRepository<InvoiceItem> InvoiceItemRepo { get; }
+        IRepository<Stock> StockRepo { get; }
+        IRepository<StocksRequest> StocksRequestRepo { get; }
+        IRepository<Supplier> SupplierRepo { get; }
 
+        IRepository<Product> ProductRepo { get; }
+        //TODO: add more if needed
+
+    }
+
+    public interface IProductController : IRepository<Product>
+    {
+        List<ProductView> GetAllProductViews();
         //TODO: add more if needed
     }
 
-    public interface IProductController:IRepository<Product>
+    public interface IInventory
     {
-        List<Models.ViewModel.ProductView> GetAllProductViews();
-        //TODO: add more if needed
+        //product
+        List<ProductView> GetProductsForView();
+
+
+        //category
+
+        //vendor
     }
 
-    public interface ICategoryController:IRepository<Category>
+    public interface IAuthentication
     {
-        //TODO: add more if needed
+        Account Login(string username, string password);
     }
 }

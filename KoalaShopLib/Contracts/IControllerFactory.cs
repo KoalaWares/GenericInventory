@@ -9,7 +9,6 @@ namespace KoalaShopLib
     interface IControllerFactory
     {
         IProductController CreateProductController();
-        ICategoryController CreateCategoryController();
 
     }
 }

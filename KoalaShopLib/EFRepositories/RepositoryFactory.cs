@@ -4,7 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using KoalaShopLib;
-namespace KoalaShopLib.EFRepositories
+using KoalaShopLib.Models;
+using KoalaShopLib.EFRepositories;
+namespace KoalaShopLib
 {
     internal class RepositoryFactory : IRepositoryFactory
     {
@@ -19,7 +21,14 @@ namespace KoalaShopLib.EFRepositories
 
         public IRepository<T> CreateRepo<T>() where T:class
         {
-            return new GenericRepo<T>(this.dbContext);
+            //return new GenericRepo<T>(this.dbContext);
+            return new GenericRepo<T>(ContextFactory.CraeteContext());
+        }
+
+        public IRepository<Product> CreateProductRepo()
+        {
+            //return new ProductRepo(this.dbContext);
+            return new ProductRepo(ContextFactory.CraeteContext());
         }
 
         #endregion

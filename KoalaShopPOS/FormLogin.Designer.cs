@@ -32,16 +32,16 @@
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.checkEdit1 = new DevExpress.XtraEditors.CheckEdit();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
-            this.username = new DevExpress.XtraEditors.TextEdit();
+            this.textEditPassword = new DevExpress.XtraEditors.TextEdit();
+            this.textEditUsername = new DevExpress.XtraEditors.TextEdit();
             this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButtonLogin = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.username.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEditPassword.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEditUsername.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
             this.SuspendLayout();
             // 
@@ -52,8 +52,8 @@
             this.groupControl1.Controls.Add(this.linkLabel1);
             this.groupControl1.Controls.Add(this.labelControl1);
             this.groupControl1.Controls.Add(this.checkEdit1);
-            this.groupControl1.Controls.Add(this.textEdit1);
-            this.groupControl1.Controls.Add(this.username);
+            this.groupControl1.Controls.Add(this.textEditPassword);
+            this.groupControl1.Controls.Add(this.textEditUsername);
             this.groupControl1.Location = new System.Drawing.Point(12, 109);
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.Size = new System.Drawing.Size(354, 151);
@@ -86,26 +86,26 @@
             this.checkEdit1.Size = new System.Drawing.Size(105, 19);
             this.checkEdit1.TabIndex = 2;
             // 
-            // textEdit1
+            // textEditPassword
             // 
-            this.textEdit1.EditValue = "";
-            this.textEdit1.Location = new System.Drawing.Point(70, 69);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Properties.Appearance.Options.UseImage = true;
-            this.textEdit1.Properties.NullText = "Username";
-            this.textEdit1.Properties.PasswordChar = '*';
-            this.textEdit1.Size = new System.Drawing.Size(216, 20);
-            this.textEdit1.TabIndex = 1;
+            this.textEditPassword.EditValue = "toor";
+            this.textEditPassword.Location = new System.Drawing.Point(70, 69);
+            this.textEditPassword.Name = "textEditPassword";
+            this.textEditPassword.Properties.Appearance.Options.UseImage = true;
+            this.textEditPassword.Properties.NullText = "Username";
+            this.textEditPassword.Properties.PasswordChar = '*';
+            this.textEditPassword.Size = new System.Drawing.Size(216, 20);
+            this.textEditPassword.TabIndex = 1;
             // 
-            // username
+            // textEditUsername
             // 
-            this.username.EditValue = "";
-            this.username.Location = new System.Drawing.Point(70, 43);
-            this.username.Name = "username";
-            this.username.Properties.Appearance.Options.UseImage = true;
-            this.username.Properties.NullText = "Username";
-            this.username.Size = new System.Drawing.Size(216, 20);
-            this.username.TabIndex = 0;
+            this.textEditUsername.EditValue = "root";
+            this.textEditUsername.Location = new System.Drawing.Point(70, 43);
+            this.textEditUsername.Name = "textEditUsername";
+            this.textEditUsername.Properties.Appearance.Options.UseImage = true;
+            this.textEditUsername.Properties.NullText = "Username";
+            this.textEditUsername.Size = new System.Drawing.Size(216, 20);
+            this.textEditUsername.TabIndex = 0;
             // 
             // pictureEdit1
             // 
@@ -122,14 +122,14 @@
             this.simpleButton2.TabIndex = 7;
             this.simpleButton2.Text = "Cancel";
             // 
-            // simpleButton1
+            // simpleButtonLogin
             // 
-            this.simpleButton1.Location = new System.Drawing.Point(201, 278);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(75, 23);
-            this.simpleButton1.TabIndex = 6;
-            this.simpleButton1.Text = "OK";
-            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
+            this.simpleButtonLogin.Location = new System.Drawing.Point(201, 278);
+            this.simpleButtonLogin.Name = "simpleButtonLogin";
+            this.simpleButtonLogin.Size = new System.Drawing.Size(75, 23);
+            this.simpleButtonLogin.TabIndex = 6;
+            this.simpleButtonLogin.Text = "OK";
+            this.simpleButtonLogin.Click += new System.EventHandler(this.simpleButtonLogin_Click);
             // 
             // FormLogin
             // 
@@ -139,7 +139,7 @@
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.pictureEdit1);
             this.Controls.Add(this.simpleButton2);
-            this.Controls.Add(this.simpleButton1);
+            this.Controls.Add(this.simpleButtonLogin);
             this.MaximizeBox = false;
             this.Name = "FormLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -148,8 +148,8 @@
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.username.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEditPassword.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEditUsername.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
             this.ResumeLayout(false);
 
@@ -161,10 +161,10 @@
         private System.Windows.Forms.LinkLabel linkLabel1;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.CheckEdit checkEdit1;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
-        private DevExpress.XtraEditors.TextEdit username;
+        private DevExpress.XtraEditors.TextEdit textEditPassword;
+        private DevExpress.XtraEditors.TextEdit textEditUsername;
         private DevExpress.XtraEditors.PictureEdit pictureEdit1;
         private DevExpress.XtraEditors.SimpleButton simpleButton2;
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private DevExpress.XtraEditors.SimpleButton simpleButtonLogin;
     }
 }

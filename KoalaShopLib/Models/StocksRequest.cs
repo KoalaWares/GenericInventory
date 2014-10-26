@@ -16,10 +16,14 @@ namespace KoalaShopLib.Models
         public decimal TotalCost { get; set; }
         public System.DateTime Date { get; set; }
         public System.DateTime ExpiresOn { get; set; }
+
+        public bool IsRecieved { get; set; }
+        public bool QuantityRecieved { get; set; }
+
         public int ProductID { get; set; }
         public int EmployeeID { get; set; }
         public int SuppliersID { get; set; }
-    
+
         //public virtual ICollection<Stock> Stocks { get; set; }
         public virtual Product Product { get; set; }
         public virtual Employee Employee { get; set; }
