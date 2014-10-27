@@ -38,7 +38,7 @@ namespace Demo
         private void ProductDetailsForm_Load(object sender, EventArgs e)
         {
             //load categories to comboBox
-            this.comboBoxCategory.DataSource = this.koalaShop.CategoryController.GetAll();
+            this.comboBoxCategory.DataSource = this.koalaShop.GetProductsForView();
             this.comboBoxCategory.ValueMember = "ID";
             this.comboBoxCategory.DisplayMember = "Name";
         }
@@ -54,7 +54,7 @@ namespace Demo
                 this.product.CategoryID = Convert.ToInt32(this.comboBoxCategory.SelectedValue);
 
                 //INSERT to DB
-                this.koalaShop.ProductController.Add(this.product);
+                this.koalaShop.ProductRepo.Add(this.product);
                 MessageBox.Show("Saved");
             }
             catch (Exception ex)

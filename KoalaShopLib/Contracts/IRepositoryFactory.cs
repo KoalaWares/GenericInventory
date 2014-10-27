@@ -12,6 +12,6 @@ namespace KoalaShopLib
     {
         IRepository<T> CreateRepo<T>() where T : class;
 
-
+        IRepository<Product> CreateProductRepo();
     }
 }

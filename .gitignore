@@ -1,18 +1,7 @@
-*.suo 
 *.cache 
-*.suo
 TestResults/*
 */bin/*
-*/*/bin/*
 */obj/*
-*/*/obj/*
-Demo/bin/*
-Demo/obj/*
-KoalaShopLib/obj/*/*
-KoalaShopLib/bin/*/*
-KoalaShopPOS/obj/*
-KoalaShopPOS/bin/*
-
 # =============== #
 # Unity generated #
 # =============== #
@@ -25,16 +14,11 @@ UnityGenerated/
 # Visual Studio / MonoDevelop generated #
 # ===================================== #
 ExportedObj/
-*.svd
 *.userprefs
-
 *.pidb
 *.suo
-
 *.user
-*.unityproj
-*.booproj
-
+*.unit
 # ============ #
 # OS generated #
 # ============ #

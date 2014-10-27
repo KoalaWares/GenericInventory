@@ -8,42 +8,14 @@ using KoalaShopLib.Models;
 using KoalaShopLib.Models.ViewModel;
 using KoalaShopLib.EFRepositories;
 using System.Linq.Expressions;
-namespace KoalaShopLib.Controllers
+namespace KoalaShopLib.EFRepositories
 {
-    class ProductController: AbstractRepository<Product>, IProductController
+    class ProductRepo: AbstractRepository<Product>//, IProductController
     {
-        public ProductController(DataAppContext dbContext)
+        public ProductRepo(DataAppContext dbContext)
             : base(dbContext)
         {
-            AutoMapper.Mapper.CreateMap<Product, ProductView>();
-        }
-
-        public List<Models.ViewModel.ProductView> GetAllProductViews()
-        {
-            List<Models.ViewModel.ProductView> products = new List<Models.ViewModel.ProductView>();
-            var rawProducts = this.GetAll();
-
-            foreach (Product i in rawProducts)
-            {
-                ProductView p = AutoMapper.Mapper.Map<ProductView>(i);
-                p.Category = i.Category.Name;
-
-                if (i.Stocks.Count > 0)
-                {
-                    int quantity = 0;
-
-                    foreach (var item in i.Stocks)
-                    {
-                        quantity = quantity + item.Quantity;
-                    }
-
-                    p.Quantity = quantity;
-                }
-
-                products.Add(p);
-            }
-
-            return products;
+            
         }
 
         public override List<Product> GetAll(Expression<Func<Product, bool>> filter = null)
