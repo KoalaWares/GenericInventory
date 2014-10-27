@@ -632,7 +632,7 @@
             this.MaximizeBox = false;
             this.Name = "FormCustomer";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormCustomer";
+            this.Text = "Customer";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GridCustomer)).EndInit();

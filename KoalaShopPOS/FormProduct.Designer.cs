@@ -133,7 +133,7 @@
             this.Ribbon = this.ribbon;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.StatusBar = this.ribbonStatusBar;
-            this.Text = "FormProduct";
+            this.Text = "Products";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FormProduct_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).EndInit();

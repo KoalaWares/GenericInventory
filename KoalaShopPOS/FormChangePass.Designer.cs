@@ -32,19 +32,19 @@
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
+            this.txtVerifyPassword = new DevExpress.XtraEditors.TextEdit();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
-            this.username = new DevExpress.XtraEditors.TextEdit();
+            this.txtNewPassword = new DevExpress.XtraEditors.TextEdit();
+            this.txtOldPassword = new DevExpress.XtraEditors.TextEdit();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.username.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtVerifyPassword.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNewPassword.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtOldPassword.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,10 +55,10 @@
             this.groupControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
             this.groupControl1.Controls.Add(this.labelControl2);
             this.groupControl1.Controls.Add(this.labelControl1);
-            this.groupControl1.Controls.Add(this.textEdit2);
+            this.groupControl1.Controls.Add(this.txtVerifyPassword);
             this.groupControl1.Controls.Add(this.labelControl3);
-            this.groupControl1.Controls.Add(this.textEdit1);
-            this.groupControl1.Controls.Add(this.username);
+            this.groupControl1.Controls.Add(this.txtNewPassword);
+            this.groupControl1.Controls.Add(this.txtOldPassword);
             this.groupControl1.Location = new System.Drawing.Point(14, 126);
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.Size = new System.Drawing.Size(354, 151);
@@ -81,17 +81,17 @@
             this.labelControl1.TabIndex = 8;
             this.labelControl1.Text = "Verify Password:";
             // 
-            // textEdit2
+            // txtVerifyPassword
             // 
-            this.textEdit2.EditValue = "";
-            this.textEdit2.Location = new System.Drawing.Point(89, 99);
-            this.textEdit2.Name = "textEdit2";
-            this.textEdit2.Properties.Appearance.Options.UseImage = true;
-            this.textEdit2.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
-            this.textEdit2.Properties.NullText = "Username";
-            this.textEdit2.Properties.PasswordChar = '*';
-            this.textEdit2.Size = new System.Drawing.Size(241, 22);
-            this.textEdit2.TabIndex = 7;
+            this.txtVerifyPassword.EditValue = "";
+            this.txtVerifyPassword.Location = new System.Drawing.Point(89, 99);
+            this.txtVerifyPassword.Name = "txtVerifyPassword";
+            this.txtVerifyPassword.Properties.Appearance.Options.UseImage = true;
+            this.txtVerifyPassword.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
+            this.txtVerifyPassword.Properties.NullText = "Username";
+            this.txtVerifyPassword.Properties.PasswordChar = '*';
+            this.txtVerifyPassword.Size = new System.Drawing.Size(241, 22);
+            this.txtVerifyPassword.TabIndex = 7;
             // 
             // labelControl3
             // 
@@ -101,30 +101,30 @@
             this.labelControl3.TabIndex = 6;
             this.labelControl3.Text = "New Password:";
             // 
-            // textEdit1
+            // txtNewPassword
             // 
-            this.textEdit1.EditValue = "";
-            this.textEdit1.Location = new System.Drawing.Point(89, 71);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Properties.Appearance.Options.UseImage = true;
-            this.textEdit1.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
-            this.textEdit1.Properties.NullText = "Username";
-            this.textEdit1.Properties.PasswordChar = '*';
-            this.textEdit1.Size = new System.Drawing.Size(241, 22);
-            this.textEdit1.TabIndex = 1;
+            this.txtNewPassword.EditValue = "";
+            this.txtNewPassword.Location = new System.Drawing.Point(89, 71);
+            this.txtNewPassword.Name = "txtNewPassword";
+            this.txtNewPassword.Properties.Appearance.Options.UseImage = true;
+            this.txtNewPassword.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
+            this.txtNewPassword.Properties.NullText = "Username";
+            this.txtNewPassword.Properties.PasswordChar = '*';
+            this.txtNewPassword.Size = new System.Drawing.Size(241, 22);
+            this.txtNewPassword.TabIndex = 1;
             // 
-            // username
+            // txtOldPassword
             // 
-            this.username.Cursor = System.Windows.Forms.Cursors.Default;
-            this.username.EditValue = "";
-            this.username.Location = new System.Drawing.Point(89, 43);
-            this.username.Name = "username";
-            this.username.Properties.Appearance.Options.UseImage = true;
-            this.username.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
-            this.username.Properties.NullText = "Username";
-            this.username.Properties.PasswordChar = '*';
-            this.username.Size = new System.Drawing.Size(241, 22);
-            this.username.TabIndex = 0;
+            this.txtOldPassword.Cursor = System.Windows.Forms.Cursors.Default;
+            this.txtOldPassword.EditValue = "";
+            this.txtOldPassword.Location = new System.Drawing.Point(89, 43);
+            this.txtOldPassword.Name = "txtOldPassword";
+            this.txtOldPassword.Properties.Appearance.Options.UseImage = true;
+            this.txtOldPassword.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
+            this.txtOldPassword.Properties.NullText = "Username";
+            this.txtOldPassword.Properties.PasswordChar = '*';
+            this.txtOldPassword.Size = new System.Drawing.Size(241, 22);
+            this.txtOldPassword.TabIndex = 0;
             // 
             // simpleButton2
             // 
@@ -133,6 +133,7 @@
             this.simpleButton2.Size = new System.Drawing.Size(75, 23);
             this.simpleButton2.TabIndex = 11;
             this.simpleButton2.Text = "Cancel";
+            this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
             // 
             // pictureEdit1
             // 
@@ -172,9 +173,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.username.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtVerifyPassword.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNewPassword.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtOldPassword.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
             this.ResumeLayout(false);
 
@@ -185,10 +186,10 @@
         private DevExpress.XtraEditors.GroupControl groupControl1;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.LabelControl labelControl1;
-        private DevExpress.XtraEditors.TextEdit textEdit2;
+        private DevExpress.XtraEditors.TextEdit txtVerifyPassword;
         private DevExpress.XtraEditors.LabelControl labelControl3;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
-        private DevExpress.XtraEditors.TextEdit username;
+        private DevExpress.XtraEditors.TextEdit txtNewPassword;
+        private DevExpress.XtraEditors.TextEdit txtOldPassword;
         private DevExpress.XtraEditors.SimpleButton simpleButton2;
         private DevExpress.XtraEditors.PictureEdit pictureEdit1;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;

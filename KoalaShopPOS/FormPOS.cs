@@ -44,9 +44,19 @@ namespace KoalaShopPOS
 
         private void BtnLogout_Click(object sender, EventArgs e)
         {
-            FormLogin a = new FormLogin();
-            this.Close();
-            a.Show();
+            //if (User == admin)
+            //{
+            //    FormInventory a = new FormInventory();
+            //    this.Close();
+            //    a.Show();
+            //}
+
+            //else
+            //{
+            //    FormLogin a = new FormLogin();
+            //    this.Close();
+            //    a.Show();
+            //}
         }
     }
 }

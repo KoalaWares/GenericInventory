@@ -15,5 +15,10 @@ namespace KoalaShopPOS
         {
             InitializeComponent();
         }
+
+        private void ProductCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -54,6 +54,7 @@
             this.ProductCancel.Size = new System.Drawing.Size(98, 47);
             this.ProductCancel.TabIndex = 23;
             this.ProductCancel.Text = "CANCEL";
+            this.ProductCancel.Click += new System.EventHandler(this.ProductCancel_Click);
             // 
             // ProductSave
             // 

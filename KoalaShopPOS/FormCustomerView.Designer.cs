@@ -353,7 +353,7 @@
             this.MaximizeBox = false;
             this.Name = "FormCustomerView";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Employee";
+            this.Text = "View Customer";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonImageCollection)).EndInit();

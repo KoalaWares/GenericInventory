@@ -38,5 +38,12 @@ namespace KoalaShopPOS
             this.Hide();
             a.Show();
         }
+
+        private void iExit_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            FormInventory a = new FormInventory();
+            this.Close();
+            a.Show();
+        }
     }
 }

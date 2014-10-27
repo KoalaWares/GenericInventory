@@ -40,7 +40,7 @@ namespace KoalaShopPOS
 
         private void Exit_ItemClick(object sender, ItemClickEventArgs e)
         {
-            FormLogin a = new FormLogin();
+            FormInventory a = new FormInventory();
             this.Hide();
             a.Show();
         }
