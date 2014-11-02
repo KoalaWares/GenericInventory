@@ -170,5 +170,10 @@ namespace KoalaShopLib
         }
 
         #endregion
+
+        public void Dispose()
+        {
+            this.dbContext.Dispose();
+        }
     }
 }

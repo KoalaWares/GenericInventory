@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo", "Demo\Demo.csproj", "{F9F4600E-9F70-44F4-A078-6BF34C068044}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KoalaShopLib", "KoalaShopLib\KoalaShopLib.csproj", "{793A4CC6-D1F7-43F8-914C-B4DA54CF820D}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KoalaShopLib.Test", "KoalaShopLib.Test\KoalaShopLib.Test.csproj", "{9D6B6D6A-3822-4C0E-AD78-23DC09497343}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KoalaShopPOS", "KoalaShopPOS\KoalaShopPOS.csproj", "{49580CBA-0792-486E-A178-563B11C099CA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KoalaShopLib", "KoalaShopLib\KoalaShopLib.csproj", "{793A4CC6-D1F7-43F8-914C-B4DA54CF820D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KoalaShop", "KoalaShop\KoalaShop.csproj", "{6CCFE58B-B2B5-4616-A855-0F4340E6FFF2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,10 +21,6 @@ Global
 		{F9F4600E-9F70-44F4-A078-6BF34C068044}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F9F4600E-9F70-44F4-A078-6BF34C068044}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F9F4600E-9F70-44F4-A078-6BF34C068044}.Release|Any CPU.Build.0 = Release|Any CPU
-		{793A4CC6-D1F7-43F8-914C-B4DA54CF820D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{793A4CC6-D1F7-43F8-914C-B4DA54CF820D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{793A4CC6-D1F7-43F8-914C-B4DA54CF820D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{793A4CC6-D1F7-43F8-914C-B4DA54CF820D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{9D6B6D6A-3822-4C0E-AD78-23DC09497343}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{9D6B6D6A-3822-4C0E-AD78-23DC09497343}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9D6B6D6A-3822-4C0E-AD78-23DC09497343}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -31,6 +29,14 @@ Global
 		{49580CBA-0792-486E-A178-563B11C099CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{49580CBA-0792-486E-A178-563B11C099CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{49580CBA-0792-486E-A178-563B11C099CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{793A4CC6-D1F7-43F8-914C-B4DA54CF820D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{793A4CC6-D1F7-43F8-914C-B4DA54CF820D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{793A4CC6-D1F7-43F8-914C-B4DA54CF820D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{793A4CC6-D1F7-43F8-914C-B4DA54CF820D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6CCFE58B-B2B5-4616-A855-0F4340E6FFF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CCFE58B-B2B5-4616-A855-0F4340E6FFF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CCFE58B-B2B5-4616-A855-0F4340E6FFF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CCFE58B-B2B5-4616-A855-0F4340E6FFF2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

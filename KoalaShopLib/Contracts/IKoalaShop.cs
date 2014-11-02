@@ -9,7 +9,7 @@ using KoalaShopLib.Models.ViewModel;
 using KoalaShopLib.EFRepositories;
 namespace KoalaShopLib
 {
-    public interface IKoalaShop : IInventory, IAuthentication
+    public interface IKoalaShop : IInventory, IAuthentication,IDisposable
     {
         IRepository<Account> AccountRepo { get;}
         IRepository<Category> CategoryRepo { get; }
