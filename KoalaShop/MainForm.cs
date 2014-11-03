@@ -63,17 +63,48 @@ namespace KoalaShop
             category.Show();
         }
 
-
+        void KillChildren()
+        {
+            foreach (var i in this.MdiChildren)
+            {
+                i.Dispose();
+            }
+        }
         #endregion
 
         private void MainForm_Load(object sender, EventArgs e)
         {
+            this.KillChildren();
+        }
+
+        private void barButtonItemSuppliers_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            this.KillChildren();
+            MessageBox.Show("Implement");
+        }
+
+        private void barButtonItemCategories_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            this.KillChildren();
+            CategoriesForm form = new CategoriesForm();
+            form.MdiParent = this;
+            form.Show();
 
         }
 
-        private void MainForm_Shown(object sender, EventArgs e)
+        private void barButtonItemProducts_ItemClick(object sender, ItemClickEventArgs e)
         {
+            this.KillChildren();
+            ProductsForm form = new ProductsForm();
+            form.MdiParent = this;
+            form.Show();
 
+        }
+
+        private void barButtonItemStocks_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            this.KillChildren();
+            MessageBox.Show("Implement");
         }
 
 
