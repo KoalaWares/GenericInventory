@@ -42,6 +42,11 @@ namespace KoalaShop
 
         public void MapSelectedObjectToDetailsPane()
         {
+            using (var koalaShop = KoalaShopFactory.CreateKoalaShop())
+            {
+                
+            }
+
             var selectedObject = (Category)gridView1.GetFocusedRow();
             this.textEditName.Text = selectedObject.Name;
         }
@@ -91,23 +96,32 @@ namespace KoalaShop
             RefreshList();
         }
 
+        public string GetSelectedObjectID()
+        {
+            return gridView1.GetFocusedDataRow()["ID"].ToString();
+        }
+
         #endregion
 
 
         private void simpleButtonSave_Click(object sender, EventArgs e)
         {
-
             RefreshList();
         }
 
         private void checkButtonIsNew_CheckedChanged(object sender, EventArgs e)
         {
-
+            ToggleNewObjectButton();
         }
 
         private void gridView1_MouseDown(object sender, MouseEventArgs e)
         {
             RefreshList();
         }
+
+        #region IDataGridForm Members
+
+
+        #endregion
     }
 }

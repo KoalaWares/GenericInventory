@@ -13,5 +13,6 @@ namespace KoalaShop
         void MapSelectedObjectToDetailsPane();
         void ToggleNewObjectButton();
         void SaveObjectToDB();
+        string GetSelectedObjectID();
     }
 }

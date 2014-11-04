@@ -63,12 +63,18 @@ namespace KoalaShop
             simpleButtonSave.Text = saveButtonText;
         }
 
+        public string GetSelectedObjectID()
+        {
+            return gridView1.GetFocusedDataRow()["ID"].ToString();
+        }
+
         /// <summary>
         /// Save sa object sa db.
         /// </summary>
         public void SaveObjectToDB()
         {
-            Category category = (Category)gridView1.GetFocusedRow();
+            Category category = new Category();
+            category.ID = int.Parse(gridView1.GetFocusedDataRow()["ID"].ToString());
             category.Name = textEditName.Text;
 
             //Validation
@@ -87,8 +93,7 @@ namespace KoalaShop
                 }
                 else
                 {
-                    MessageBox.Show("Naa pa problem");
-                    //koala.CategoryRepo.Update(category);
+                    koala.CategoryRepo.Update(category);
                 }
             }
             //Refresh list to update view.
