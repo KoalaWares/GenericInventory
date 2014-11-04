@@ -29,31 +29,31 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, null, true, true);
+            this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::KoalaShop.WaitForm1), true, true);
             this.ribbon = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.barMdiChildrenListItem1 = new DevExpress.XtraBars.BarMdiChildrenListItem();
             this.barButtonItemProducts = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItemCategories = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItemSuppliers = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItemStocks = new DevExpress.XtraBars.BarButtonItem();
-            this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.ribbonPage3 = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.ribbonPageSales = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.ribbonPage5 = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.ribbonPage6 = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
-            this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
-            this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.barButtonItemPOS = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItemCustomers = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItemExpiredProducts = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItemOrders = new DevExpress.XtraBars.BarButtonItem();
+            this.ribbonPageInventory = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPagePOS = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageCRM = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageReports = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageEmployeeManagement = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageAccount = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
+            this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
+            this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
             this.SuspendLayout();
@@ -77,12 +77,12 @@
             this.ribbon.Name = "ribbon";
             this.ribbon.PageHeaderItemLinks.Add(this.barMdiChildrenListItem1);
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
-            this.ribbonPage1,
-            this.ribbonPage2,
-            this.ribbonPage3,
-            this.ribbonPageSales,
-            this.ribbonPage5,
-            this.ribbonPage6});
+            this.ribbonPageInventory,
+            this.ribbonPagePOS,
+            this.ribbonPageCRM,
+            this.ribbonPageReports,
+            this.ribbonPageEmployeeManagement,
+            this.ribbonPageAccount});
             this.ribbon.ShowApplicationButton = DevExpress.Utils.DefaultBoolean.False;
             this.ribbon.ShowExpandCollapseButton = DevExpress.Utils.DefaultBoolean.True;
             this.ribbon.ShowPageHeadersMode = DevExpress.XtraBars.Ribbon.ShowPageHeadersMode.Show;
@@ -129,75 +129,6 @@
             this.barButtonItemStocks.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             this.barButtonItemStocks.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItemStocks_ItemClick);
             // 
-            // ribbonPage1
-            // 
-            this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup1,
-            this.ribbonPageGroup3});
-            this.ribbonPage1.Name = "ribbonPage1";
-            this.ribbonPage1.Text = "Inventory";
-            // 
-            // ribbonPageGroup1
-            // 
-            this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItemSuppliers);
-            this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItemCategories);
-            this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItemProducts);
-            this.ribbonPageGroup1.Name = "ribbonPageGroup1";
-            this.ribbonPageGroup1.Text = "Details";
-            // 
-            // ribbonPageGroup3
-            // 
-            this.ribbonPageGroup3.ItemLinks.Add(this.barButtonItemStocks);
-            this.ribbonPageGroup3.Name = "ribbonPageGroup3";
-            this.ribbonPageGroup3.Text = "Stocks";
-            // 
-            // ribbonPage2
-            // 
-            this.ribbonPage2.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup4});
-            this.ribbonPage2.Name = "ribbonPage2";
-            this.ribbonPage2.Text = "POS";
-            // 
-            // ribbonPage3
-            // 
-            this.ribbonPage3.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup5});
-            this.ribbonPage3.Name = "ribbonPage3";
-            this.ribbonPage3.Text = "CRM";
-            // 
-            // ribbonPageSales
-            // 
-            this.ribbonPageSales.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup6});
-            this.ribbonPageSales.Name = "ribbonPageSales";
-            this.ribbonPageSales.Text = "Reports";
-            // 
-            // ribbonPage5
-            // 
-            this.ribbonPage5.Name = "ribbonPage5";
-            this.ribbonPage5.Text = "Employee MGT";
-            // 
-            // ribbonPage6
-            // 
-            this.ribbonPage6.Name = "ribbonPage6";
-            this.ribbonPage6.Text = "Account";
-            // 
-            // ribbonStatusBar
-            // 
-            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 418);
-            this.ribbonStatusBar.Name = "ribbonStatusBar";
-            this.ribbonStatusBar.Ribbon = this.ribbon;
-            this.ribbonStatusBar.Size = new System.Drawing.Size(690, 31);
-            // 
-            // xtraTabbedMdiManager1
-            // 
-            this.xtraTabbedMdiManager1.MdiParent = this;
-            // 
-            // ribbonPageGroup2
-            // 
-            this.ribbonPageGroup2.Name = "ribbonPageGroup2";
-            this.ribbonPageGroup2.Text = "ribbonPageGroup1";
-            // 
             // barButtonItemPOS
             // 
             this.barButtonItemPOS.Caption = "POS";
@@ -222,11 +153,47 @@
             this.barButtonItemOrders.Id = 14;
             this.barButtonItemOrders.Name = "barButtonItemOrders";
             // 
+            // ribbonPageInventory
+            // 
+            this.ribbonPageInventory.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroup1,
+            this.ribbonPageGroup3});
+            this.ribbonPageInventory.Name = "ribbonPageInventory";
+            this.ribbonPageInventory.Text = "Inventory";
+            // 
+            // ribbonPageGroup1
+            // 
+            this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItemSuppliers);
+            this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItemCategories);
+            this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItemProducts);
+            this.ribbonPageGroup1.Name = "ribbonPageGroup1";
+            this.ribbonPageGroup1.Text = "Details";
+            // 
+            // ribbonPageGroup3
+            // 
+            this.ribbonPageGroup3.ItemLinks.Add(this.barButtonItemStocks);
+            this.ribbonPageGroup3.Name = "ribbonPageGroup3";
+            this.ribbonPageGroup3.Text = "Stocks";
+            // 
+            // ribbonPagePOS
+            // 
+            this.ribbonPagePOS.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroup4});
+            this.ribbonPagePOS.Name = "ribbonPagePOS";
+            this.ribbonPagePOS.Text = "POS";
+            // 
             // ribbonPageGroup4
             // 
             this.ribbonPageGroup4.ItemLinks.Add(this.barButtonItemPOS);
             this.ribbonPageGroup4.Name = "ribbonPageGroup4";
             this.ribbonPageGroup4.Text = "ribbonPageGroup4";
+            // 
+            // ribbonPageCRM
+            // 
+            this.ribbonPageCRM.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroup5});
+            this.ribbonPageCRM.Name = "ribbonPageCRM";
+            this.ribbonPageCRM.Text = "CRM";
             // 
             // ribbonPageGroup5
             // 
@@ -234,12 +201,45 @@
             this.ribbonPageGroup5.Name = "ribbonPageGroup5";
             this.ribbonPageGroup5.Text = "ribbonPageGroup5";
             // 
+            // ribbonPageReports
+            // 
+            this.ribbonPageReports.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroup6});
+            this.ribbonPageReports.Name = "ribbonPageReports";
+            this.ribbonPageReports.Text = "Reports";
+            // 
             // ribbonPageGroup6
             // 
             this.ribbonPageGroup6.ItemLinks.Add(this.barButtonItemExpiredProducts);
             this.ribbonPageGroup6.ItemLinks.Add(this.barButtonItemOrders);
             this.ribbonPageGroup6.Name = "ribbonPageGroup6";
             this.ribbonPageGroup6.Text = "ribbonPageGroup6";
+            // 
+            // ribbonPageEmployeeManagement
+            // 
+            this.ribbonPageEmployeeManagement.Name = "ribbonPageEmployeeManagement";
+            this.ribbonPageEmployeeManagement.Text = "Employee MGT";
+            // 
+            // ribbonPageAccount
+            // 
+            this.ribbonPageAccount.Name = "ribbonPageAccount";
+            this.ribbonPageAccount.Text = "Account";
+            // 
+            // ribbonStatusBar
+            // 
+            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 418);
+            this.ribbonStatusBar.Name = "ribbonStatusBar";
+            this.ribbonStatusBar.Ribbon = this.ribbon;
+            this.ribbonStatusBar.Size = new System.Drawing.Size(690, 31);
+            // 
+            // xtraTabbedMdiManager1
+            // 
+            this.xtraTabbedMdiManager1.MdiParent = this;
+            // 
+            // ribbonPageGroup2
+            // 
+            this.ribbonPageGroup2.Name = "ribbonPageGroup2";
+            this.ribbonPageGroup2.Text = "ribbonPageGroup1";
             // 
             // MainForm
             // 
@@ -254,6 +254,7 @@
             this.StatusBar = this.ribbonStatusBar;
             this.Text = "Koala Shop";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.MainForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).EndInit();
             this.ResumeLayout(false);
@@ -263,22 +264,22 @@
         #endregion
 
         private DevExpress.XtraBars.Ribbon.RibbonControl ribbon;
-        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage1;
+        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPageInventory;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
         private DevExpress.XtraBars.Ribbon.RibbonStatusBar ribbonStatusBar;
         private DevExpress.XtraTabbedMdi.XtraTabbedMdiManager xtraTabbedMdiManager1;
         private DevExpress.XtraBars.BarMdiChildrenListItem barMdiChildrenListItem1;
-        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage2;
-        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage3;
+        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPagePOS;
+        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPageCRM;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
         private DevExpress.XtraBars.BarButtonItem barButtonItemProducts;
         private DevExpress.XtraBars.BarButtonItem barButtonItemCategories;
         private DevExpress.XtraBars.BarButtonItem barButtonItemSuppliers;
         private DevExpress.XtraBars.BarButtonItem barButtonItemStocks;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup3;
-        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPageSales;
-        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage5;
-        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage6;
+        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPageReports;
+        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPageEmployeeManagement;
+        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPageAccount;
         private DevExpress.XtraBars.BarButtonItem barButtonItemPOS;
         private DevExpress.XtraBars.BarButtonItem barButtonItemCustomers;
         private DevExpress.XtraBars.BarButtonItem barButtonItemExpiredProducts;
@@ -286,5 +287,6 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup4;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup5;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup6;
+        private DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1;
     }
 }

@@ -35,6 +35,7 @@ namespace KoalaShopLib
                     Contact = "1111",
                     Address = "root"
                 });
+
                 this.dbContext.SaveChanges();
             }
 
@@ -47,14 +48,38 @@ namespace KoalaShopLib
                     Password = "toor",
                     AccountType = AccountType.Admin
                 });
+
+                this.dbContext.Accounts.Add(new Account()
+                {
+                    EmployeeID = 1,
+                    Username = "cashier",
+                    Password = "cashier",
+                    AccountType = AccountType.Cashier
+                });
+
+                this.dbContext.Accounts.Add(new Account()
+                {
+                    EmployeeID = 1,
+                    Username = "purchaser",
+                    Password = "purchaser",
+                    AccountType = AccountType.Purchaser
+                });
                 this.dbContext.SaveChanges();
             }
 
             //SEED Category
             if (!(this.dbContext.Categories.Count() > 0))
             {
-                this.dbContext.Categories.Add(new Category() { Name = "Foods" });
-                this.dbContext.Categories.Add(new Category() { Name = "Condoms" });
+                this.dbContext.Categories.Add(new Category() { Name = "NA" });
+                this.dbContext.Categories.Add(new Category() { Name = "Food" });
+                this.dbContext.SaveChanges();
+            }
+
+            //seed Suppliers
+            //SEED Category
+            if (!(this.dbContext.Suppliers.Count() > 0))
+            {
+                this.dbContext.Suppliers.Add(new Supplier() { Name = "NA",Contact="NA" });
                 this.dbContext.SaveChanges();
             }
 

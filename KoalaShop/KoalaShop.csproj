@@ -79,14 +79,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataGridFormController.cs" />
+    <Compile Include="Enums\FormTypes.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="IDataGridForm.cs" />
-    <Compile Include="IMainForm.cs" />
+    <Compile Include="Contracts\IDataGridForm.cs" />
+    <Compile Include="Contracts\IMainForm.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -192,6 +193,9 @@
       <Project>{793a4cc6-d1f7-43f8-914c-b4da54cf820d}</Project>
       <Name>KoalaShopLib</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Orders\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
