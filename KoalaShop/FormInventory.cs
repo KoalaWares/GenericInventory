@@ -23,37 +23,37 @@ namespace KoalaShop
 
         private void simpleButton1_Click(object sender, EventArgs e)
         {
-            FormProduct a = new FormProduct();
-            this.Hide();
-            a.Show();
+            //FormProduct a = new FormProduct();
+            //this.Hide();
+            //a.Show();
         }
 
         private void simpleButton2_Click(object sender, EventArgs e)
         {
-            FormUser a = new FormUser();
-            this.Hide();
-            a.Show();
+            //FormUser a = new FormUser();
+            //this.Hide();
+            //a.Show();
         }
 
         private void simpleButton3_Click(object sender, EventArgs e)
         {
-            FormCustomer a = new FormCustomer();
-            this.Hide();
-            a.Show();
+            //FormCustomer a = new FormCustomer();
+            //this.Hide();
+            //a.Show();
         }
 
         private void simpleButton4_Click(object sender, EventArgs e)
         {
-            FormSupplier a = new FormSupplier();
-            this.Hide();
-            a.Show();
+            //FormSupplier a = new FormSupplier();
+            //this.Hide();
+            //a.Show();
         }
 
         private void simpleButton5_Click(object sender, EventArgs e)
         {
-            FormPOS a = new FormPOS();
-            this.Hide();
-            a.Show();
+            //FormPOS a = new FormPOS();
+            //this.Hide();
+            //a.Show();
         }
 
         private void tileControl1_Click(object sender, EventArgs e)
@@ -73,37 +73,37 @@ namespace KoalaShop
 
         private void tileItem4_ItemDoubleClick(object sender, TileItemEventArgs e)
         {
-            FormProduct a = new FormProduct();
-            this.Hide();
-            a.Show();
+            //FormProduct a = new FormProduct();
+            //this.Hide();
+            //a.Show();
         }
 
         private void tileItem6_ItemDoubleClick(object sender, TileItemEventArgs e)
         {
-            FormUser a = new FormUser();
-            this.Hide();
-            a.Show();
+            //FormUser a = new FormUser();
+            //this.Hide();
+            //a.Show();
         }
 
         private void tileItem3_ItemDoubleClick(object sender, TileItemEventArgs e)
         {
-            FormSupplier a = new FormSupplier();
-            this.Hide();
-            a.Show();
+            //FormSupplier a = new FormSupplier();
+            //this.Hide();
+            //a.Show();
         }
 
         private void tileItem2_ItemDoubleClick(object sender, TileItemEventArgs e)
         {
-            FormPOS a = new FormPOS();
-            this.Hide();
-            a.Show();
+            //FormPOS a = new FormPOS();
+            //this.Hide();
+            //a.Show();
         }
 
         private void tileSales_ItemDoubleClick(object sender, TileItemEventArgs e)
         {
-            FormSales a = new FormSales();
-            this.Hide();
-            a.Show();
+            //FormSales a = new FormSales();
+            //this.Hide();
+            //a.Show();
         }
     }
 }

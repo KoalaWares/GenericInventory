@@ -43,11 +43,12 @@ namespace KoalaShop
             switch (this.CurrenUser.AccountType)
             {
                 case AccountType.Admin:
-                    this.ribbon.Pages.GetPageByName("ribbonPageInventory").Visible = true;
-                    this.ribbon.Pages.GetPageByName("ribbonPageCRM").Visible = true;
-                    this.ribbon.Pages.GetPageByName("ribbonPageReports").Visible = true;
-                    this.ribbon.Pages.GetPageByName("ribbonPageEmployeeManagement").Visible = true;
-                    this.ribbon.Pages.GetPageByName("ribbonPageAccount").Visible = true;
+                    //this.ribbon.Pages.GetPageByName("ribbonPageInventory").Visible = true;
+                    //this.ribbon.Pages.GetPageByName("ribbonPageCRM").Visible = true;
+                    //this.ribbon.Pages.GetPageByName("ribbonPageReports").Visible = true;
+                    //this.ribbon.Pages.GetPageByName("ribbonPageEmployeeManagement").Visible = true;
+                    //this.ribbon.Pages.GetPageByName("ribbonPageAccount").Visible = true;
+                    ChildFormInitializer(FormTypes.Inventory);
                     break;
                 case AccountType.Cashier:
                     this.ribbon.Pages.GetPageByName("ribbonPagePOS").Visible = true;
@@ -76,6 +77,12 @@ namespace KoalaShop
             CategoriesForm category = new CategoriesForm();
             category.MdiParent = this;
             category.Show();
+
+            
+            //Add Inventory Form
+            FormInventory inventory = new FormInventory();
+            inventory.MdiParent = this;
+            inventory.Show();
         }
 
         /// <summary>
@@ -120,9 +127,13 @@ namespace KoalaShop
                     break;
                 case FormTypes.Supplier:
                     break;
+                case FormTypes.Inventory:
+                    form = new FormInventory();
+                    break;
                 default:
                     form = new DevExpress.XtraEditors.XtraForm();
                     break;
+                   
             }
 
             this.KillChildren();
