@@ -1,4 +1,4 @@
-﻿namespace KoalaShopPOS
+﻿namespace KoalaShop
 {
     partial class FormSupplier
     {
@@ -255,7 +255,7 @@
             this.iExit.Hint = "Closes this program after prompting you to save unsaved data";
             this.iExit.Id = 20;
             this.iExit.ImageIndex = 6;
-            this.iExit.LargeGlyph = global::KoalaShopPOS.Properties.Resources.Actions_application_exit_icon;
+            this.iExit.LargeGlyph = global::KoalaShop.Properties.Resources.Actions_application_exit_icon;
             this.iExit.LargeImageIndex = 6;
             this.iExit.Name = "iExit";
             this.iExit.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.iExit_ItemClick);
@@ -367,7 +367,7 @@
             this.MenuUpdate.Caption = "Update";
             this.MenuUpdate.Description = "Update Supplier\'s Information.";
             this.MenuUpdate.Id = 62;
-            this.MenuUpdate.LargeGlyph = global::KoalaShopPOS.Properties.Resources.SupplierEdit;
+            this.MenuUpdate.LargeGlyph = global::KoalaShop.Properties.Resources.SupplierEdit;
             this.MenuUpdate.Name = "MenuUpdate";
             this.MenuUpdate.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.MenuUpdate_ItemClick);
             // 
@@ -376,7 +376,7 @@
             this.MenuView.Caption = "View";
             this.MenuView.Description = "View Employee\'s Information.";
             this.MenuView.Id = 63;
-            this.MenuView.LargeGlyph = global::KoalaShopPOS.Properties.Resources.UserView;
+            this.MenuView.LargeGlyph = global::KoalaShop.Properties.Resources.UserView;
             this.MenuView.Name = "MenuView";
             this.MenuView.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.MenuView_ItemClick);
             // 
@@ -385,7 +385,7 @@
             this.MenuAdd.Caption = "Add";
             this.MenuAdd.Description = "Add new Supplier\'s Information.";
             this.MenuAdd.Id = 65;
-            this.MenuAdd.LargeGlyph = global::KoalaShopPOS.Properties.Resources.SupplierAdd;
+            this.MenuAdd.LargeGlyph = global::KoalaShop.Properties.Resources.SupplierAdd;
             this.MenuAdd.Name = "MenuAdd";
             this.MenuAdd.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.MenuAdd_ItemClick);
             // 

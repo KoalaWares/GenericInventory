@@ -1,4 +1,4 @@
-﻿namespace KoalaShopPOS
+﻿namespace KoalaShop
 {
     partial class FormProductStocks
     {

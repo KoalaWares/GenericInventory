@@ -124,3 +124,6 @@ F:\_KOALAWARES\KoalaShoGitHub\Demo\bin\Debug\KoalaShopLib.pdb
 F:\_KOALAWARES\KoalaShoGitHub\Demo\bin\Debug\EntityFramework.xml
 F:\_KOALAWARES\KoalaShoGitHub\Demo\bin\Debug\EntityFramework.SqlServer.xml
 F:\_KOALAWARES\KoalaShoGitHub\Demo\bin\Debug\AutoMapper.xml
+C:\Users\reykobai\Desktop\AJR V1.1\KoalaApp\Demo\bin\Debug\Demo.exe.config
+C:\Users\reykobai\Desktop\AJR V1.1\KoalaApp\Demo\obj\Debug\Demo.exe
+C:\Users\reykobai\Desktop\AJR V1.1\KoalaApp\Demo\obj\Debug\Demo.pdb

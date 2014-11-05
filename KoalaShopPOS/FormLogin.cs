@@ -8,7 +8,7 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using KoalaShopLib.Models;
 using KoalaShopLib;
-namespace KoalaShopPOS
+namespace KoalaShop
 {
     public partial class FormLogin : DevExpress.XtraEditors.XtraForm
     {

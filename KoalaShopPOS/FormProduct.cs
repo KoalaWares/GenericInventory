@@ -7,7 +7,7 @@ using System.Text;
 using System.Windows.Forms;
 using DevExpress.XtraBars;
 
-namespace KoalaShopPOS
+namespace KoalaShop
 {
     public partial class FormProduct : DevExpress.XtraBars.Ribbon.RibbonForm
     {

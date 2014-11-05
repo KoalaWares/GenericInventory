@@ -1,4 +1,4 @@
-﻿namespace KoalaShopPOS
+﻿namespace KoalaShop
 {
     partial class FormSales
     {
@@ -187,7 +187,7 @@
             // 
             this.iExit.Caption = "Exit";
             this.iExit.Id = 1;
-            this.iExit.LargeGlyph = global::KoalaShopPOS.Properties.Resources.Actions_application_exit_icon;
+            this.iExit.LargeGlyph = global::KoalaShop.Properties.Resources.Actions_application_exit_icon;
             this.iExit.Name = "iExit";
             this.iExit.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.iExit_ItemClick);
             // 

@@ -1,4 +1,4 @@
-﻿namespace KoalaShopPOS
+﻿namespace KoalaShop
 {
     partial class FormUserView
     {
@@ -129,7 +129,7 @@
             this.MenuUpdate.Caption = "Update";
             this.MenuUpdate.Description = "Update Employee\'s Information.";
             this.MenuUpdate.Id = 62;
-            this.MenuUpdate.LargeGlyph = global::KoalaShopPOS.Properties.Resources.UserEdit;
+            this.MenuUpdate.LargeGlyph = global::KoalaShop.Properties.Resources.UserEdit;
             this.MenuUpdate.Name = "MenuUpdate";
             this.MenuUpdate.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.MenuUpdate_ItemClick);
             // 
@@ -138,7 +138,7 @@
             this.MenuViewSched.Caption = "View Schedule";
             this.MenuViewSched.Description = "View Employee\'s Schedule.";
             this.MenuViewSched.Id = 64;
-            this.MenuViewSched.LargeGlyph = global::KoalaShopPOS.Properties.Resources.UserSchedule;
+            this.MenuViewSched.LargeGlyph = global::KoalaShop.Properties.Resources.UserSchedule;
             this.MenuViewSched.Name = "MenuViewSched";
             // 
             // MenuAdd
@@ -146,7 +146,7 @@
             this.MenuAdd.Caption = "Add";
             this.MenuAdd.Description = "Add Employee Information.";
             this.MenuAdd.Id = 65;
-            this.MenuAdd.LargeGlyph = global::KoalaShopPOS.Properties.Resources.UserAdd;
+            this.MenuAdd.LargeGlyph = global::KoalaShop.Properties.Resources.UserAdd;
             this.MenuAdd.Name = "MenuAdd";
             this.MenuAdd.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.MenuAdd_ItemClick);
             // 
@@ -162,7 +162,7 @@
             // 
             this.MenuView.Caption = "View";
             this.MenuView.Id = 67;
-            this.MenuView.LargeGlyph = global::KoalaShopPOS.Properties.Resources.UserView;
+            this.MenuView.LargeGlyph = global::KoalaShop.Properties.Resources.UserView;
             this.MenuView.Name = "MenuView";
             this.MenuView.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.MenuView_ItemClick_1);
             // 

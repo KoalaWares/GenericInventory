@@ -13,7 +13,7 @@ using DevExpress.LookAndFeel;
 using DevExpress.UserSkins;
 
 
-namespace KoalaShopPOS
+namespace KoalaShop
 {
     public partial class FormUser : RibbonForm
     {

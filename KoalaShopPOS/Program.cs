@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Windows.Forms;
 using DevExpress.LookAndFeel;
 
-namespace KoalaShopPOS
+namespace KoalaShop
 {
     static class Program
     {

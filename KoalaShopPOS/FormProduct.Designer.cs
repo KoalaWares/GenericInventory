@@ -1,4 +1,4 @@
-﻿namespace KoalaShopPOS
+﻿namespace KoalaShop
 {
     partial class FormProduct
     {
@@ -62,7 +62,7 @@
             // 
             this.Add.Caption = "Add";
             this.Add.Id = 1;
-            this.Add.LargeGlyph = global::KoalaShopPOS.Properties.Resources._535577;
+            this.Add.LargeGlyph = global::KoalaShop.Properties.Resources._535577;
             this.Add.Name = "Add";
             this.Add.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Add_ItemClick);
             // 
@@ -70,7 +70,7 @@
             // 
             this.Exit.Caption = "Exit";
             this.Exit.Id = 3;
-            this.Exit.LargeGlyph = global::KoalaShopPOS.Properties.Resources.Actions_application_exit_icon;
+            this.Exit.LargeGlyph = global::KoalaShop.Properties.Resources.Actions_application_exit_icon;
             this.Exit.Name = "Exit";
             this.Exit.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Exit_ItemClick);
             // 
