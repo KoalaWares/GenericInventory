@@ -59,5 +59,15 @@ namespace KoalaShop.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _1415256608_sales_report {
+            get {
+                object obj = ResourceManager.GetObject("1415256608_sales-report", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
