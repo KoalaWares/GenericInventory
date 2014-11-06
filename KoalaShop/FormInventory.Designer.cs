@@ -40,6 +40,8 @@
             this.applicationMenu1 = new DevExpress.XtraBars.Ribbon.ApplicationMenu(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.tileControl1 = new DevExpress.XtraEditors.TileControl();
             this.tileMain = new DevExpress.XtraEditors.TileGroup();
             this.tileSales = new DevExpress.XtraEditors.TileItem();
@@ -50,8 +52,6 @@
             this.tileStock = new DevExpress.XtraEditors.TileItem();
             this.tileExpenses = new DevExpress.XtraEditors.TileItem();
             this.tileOptions = new DevExpress.XtraEditors.TileItem();
-            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.applicationMenu1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -86,6 +86,24 @@
             this.splitContainer1.Size = new System.Drawing.Size(655, 485);
             this.splitContainer1.SplitterDistance = 111;
             this.splitContainer1.TabIndex = 6;
+            // 
+            // labelControl2
+            // 
+            this.labelControl2.Appearance.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl2.Location = new System.Drawing.Point(479, 79);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(126, 18);
+            this.labelControl2.TabIndex = 7;
+            this.labelControl2.Text = "Welcome User";
+            // 
+            // labelControl1
+            // 
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl1.Location = new System.Drawing.Point(88, 92);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(96, 18);
+            this.labelControl1.TabIndex = 6;
+            this.labelControl1.Text = "Date/Time";
             // 
             // tileControl1
             // 
@@ -151,6 +169,7 @@
             this.tilePos.Elements.Add(tileItemElement2);
             this.tilePos.Id = 25;
             this.tilePos.Name = "tilePos";
+            this.tilePos.ItemDoubleClick += new DevExpress.XtraEditors.TileItemClickEventHandler(this.tilePos_ItemDoubleClick);
             // 
             // tileEmployee
             // 
@@ -253,24 +272,6 @@
             this.tileOptions.Elements.Add(tileItemElement8);
             this.tileOptions.Id = 31;
             this.tileOptions.Name = "tileOptions";
-            // 
-            // labelControl2
-            // 
-            this.labelControl2.Appearance.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl2.Location = new System.Drawing.Point(479, 79);
-            this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(126, 18);
-            this.labelControl2.TabIndex = 7;
-            this.labelControl2.Text = "Welcome User";
-            // 
-            // labelControl1
-            // 
-            this.labelControl1.Appearance.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl1.Location = new System.Drawing.Point(88, 92);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(96, 18);
-            this.labelControl1.TabIndex = 6;
-            this.labelControl1.Text = "Date/Time";
             // 
             // FormInventory
             // 

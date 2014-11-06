@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Windows.Forms;
 using DevExpress.LookAndFeel;
+using System.Runtime.InteropServices;
 
 namespace KoalaShop
 {
@@ -20,7 +21,7 @@ namespace KoalaShop
             DevExpress.UserSkins.BonusSkins.Register();
             UserLookAndFeel.Default.SetSkinStyle("DevExpress Style");
 
-            Application.Run(new FormInventory());
+            Application.Run(new MainForm());
         }
     }
 }

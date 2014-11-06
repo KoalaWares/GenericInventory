@@ -51,8 +51,9 @@ namespace KoalaShop
                     ChildFormInitializer(FormTypes.Inventory);
                     break;
                 case AccountType.Cashier:
-                    this.ribbon.Pages.GetPageByName("ribbonPagePOS").Visible = true;
-                    this.ribbon.Pages.GetPageByName("ribbonPageAccount").Visible = true;
+                    //this.ribbon.Pages.GetPageByName("ribbonPagePOS").Visible = true;
+                    //this.ribbon.Pages.GetPageByName("ribbonPageAccount").Visible = true;
+                    ChildFormInitializer(FormTypes.POS);
                     break;
                 case AccountType.Purchaser:
                     this.ribbon.Pages.GetPageByName("ribbonPageInventory").Visible = true;
@@ -83,6 +84,13 @@ namespace KoalaShop
             FormInventory inventory = new FormInventory();
             inventory.MdiParent = this;
             inventory.Show();
+            
+            //Add POS Form
+            FormPOS POS = new FormPOS();
+            POS.MdiParent = this;
+            POS.Show();
+
+
         }
 
         /// <summary>
@@ -129,6 +137,9 @@ namespace KoalaShop
                     break;
                 case FormTypes.Inventory:
                     form = new FormInventory();
+                    break;
+                case FormTypes.POS  :
+                    form = new FormPOS();
                     break;
                 default:
                     form = new DevExpress.XtraEditors.XtraForm();
