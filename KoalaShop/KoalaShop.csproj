@@ -100,7 +100,9 @@
     <Compile Include="FormPOS.Designer.cs">
       <DependentUpon>FormPOS.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormProductStocks.cs" />
+    <Compile Include="FormProductStocks.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FormProductStocks.Designer.cs">
       <DependentUpon>FormProductStocks.cs</DependentUpon>
     </Compile>

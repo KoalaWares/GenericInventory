@@ -38,8 +38,8 @@ namespace KoalaShop
 
         private void BtnChangePass_Click(object sender, EventArgs e)
         {
-            //FormChangePass a = new FormChangePass();
-            //a.ShowDialog();
+            FormChangePass a = new FormChangePass();
+            a.ShowDialog();
         }
 
         private void BtnLogout_Click(object sender, EventArgs e)
