@@ -112,17 +112,89 @@
     <Compile Include="FormInventory.designer.cs">
       <DependentUpon>FormInventory.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormPOS.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormPOS.Designer.cs">
       <DependentUpon>FormPOS.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormProduct.Designer.cs">
+      <DependentUpon>FormProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormProductAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormProductAdd.Designer.cs">
+      <DependentUpon>FormProductAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormProductChoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormProductChoice.Designer.cs">
+      <DependentUpon>FormProductChoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormProductInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormProductInfo.Designer.cs">
+      <DependentUpon>FormProductInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormProductMore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormProductMore.Designer.cs">
+      <DependentUpon>FormProductMore.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormProductStocks.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormProductStocks.Designer.cs">
       <DependentUpon>FormProductStocks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSales.Designer.cs">
+      <DependentUpon>FormSales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSupplier.Designer.cs">
+      <DependentUpon>FormSupplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSupplierView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSupplierView.Designer.cs">
+      <DependentUpon>FormSupplierView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUser.Designer.cs">
+      <DependentUpon>FormUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormUserSched.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUserSched.Designer.cs">
+      <DependentUpon>FormUserSched.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormUserView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUserView.Designer.cs">
+      <DependentUpon>FormUserView.cs</DependentUpon>
     </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
@@ -178,11 +250,47 @@
     <EmbeddedResource Include="FormInventory.resx">
       <DependentUpon>FormInventory.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormPOS.resx">
       <DependentUpon>FormPOS.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormProduct.resx">
+      <DependentUpon>FormProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormProductAdd.resx">
+      <DependentUpon>FormProductAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormProductChoice.resx">
+      <DependentUpon>FormProductChoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormProductInfo.resx">
+      <DependentUpon>FormProductInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormProductMore.resx">
+      <DependentUpon>FormProductMore.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormProductStocks.resx">
       <DependentUpon>FormProductStocks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSales.resx">
+      <DependentUpon>FormSales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSupplier.resx">
+      <DependentUpon>FormSupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSupplierView.resx">
+      <DependentUpon>FormSupplierView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUser.resx">
+      <DependentUpon>FormUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUserSched.resx">
+      <DependentUpon>FormUserSched.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUserView.resx">
+      <DependentUpon>FormUserView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
