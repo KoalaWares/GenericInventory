@@ -146,3 +146,6 @@ C:\Users\Alingling\Desktop\genericInventory\KoalaApp\Demo\obj\Debug\Demo.Product
 C:\Users\Alingling\Desktop\genericInventory\KoalaApp\Demo\obj\Debug\Demo.ProductForm.resources
 C:\Users\Alingling\Desktop\genericInventory\KoalaApp\Demo\obj\Debug\Demo.Properties.Resources.resources
 C:\Users\Alingling\Desktop\genericInventory\KoalaApp\Demo\obj\Debug\Demo.csproj.GenerateResource.Cache
+C:\Users\Alingling\Desktop\genericInventory\POS\Demo\bin\Debug\Demo.exe.config
+C:\Users\Alingling\Desktop\genericInventory\POS\Demo\obj\Debug\Demo.exe
+C:\Users\Alingling\Desktop\genericInventory\POS\Demo\obj\Debug\Demo.pdb
