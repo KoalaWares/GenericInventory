@@ -32,8 +32,6 @@
             this.ProductSave = new DevExpress.XtraEditors.SimpleButton();
             this.txtSupplier = new DevExpress.XtraEditors.TextEdit();
             this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
-            this.txtPurchaser = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
             this.datePurchased = new DevExpress.XtraEditors.DateEdit();
             this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
             this.dateExpiration = new DevExpress.XtraEditors.DateEdit();
@@ -49,7 +47,6 @@
             this.txtID = new DevExpress.XtraEditors.TextEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.txtSupplier.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPurchaser.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.datePurchased.Properties.VistaTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.datePurchased.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateExpiration.Properties.VistaTimeProperties)).BeginInit();
@@ -63,7 +60,7 @@
             // 
             // ProductCancel
             // 
-            this.ProductCancel.Location = new System.Drawing.Point(260, 343);
+            this.ProductCancel.Location = new System.Drawing.Point(260, 317);
             this.ProductCancel.Name = "ProductCancel";
             this.ProductCancel.Size = new System.Drawing.Size(98, 47);
             this.ProductCancel.TabIndex = 47;
@@ -72,7 +69,7 @@
             // 
             // ProductSave
             // 
-            this.ProductSave.Location = new System.Drawing.Point(156, 343);
+            this.ProductSave.Location = new System.Drawing.Point(156, 317);
             this.ProductSave.Name = "ProductSave";
             this.ProductSave.Size = new System.Drawing.Size(98, 47);
             this.ProductSave.TabIndex = 46;
@@ -80,7 +77,7 @@
             // 
             // txtSupplier
             // 
-            this.txtSupplier.Location = new System.Drawing.Point(119, 306);
+            this.txtSupplier.Location = new System.Drawing.Point(119, 274);
             this.txtSupplier.Name = "txtSupplier";
             this.txtSupplier.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
             this.txtSupplier.Size = new System.Drawing.Size(239, 22);
@@ -88,27 +85,11 @@
             // 
             // labelControl11
             // 
-            this.labelControl11.Location = new System.Drawing.Point(21, 306);
+            this.labelControl11.Location = new System.Drawing.Point(21, 274);
             this.labelControl11.Name = "labelControl11";
             this.labelControl11.Size = new System.Drawing.Size(42, 13);
             this.labelControl11.TabIndex = 44;
             this.labelControl11.Text = "Supplier:";
-            // 
-            // txtPurchaser
-            // 
-            this.txtPurchaser.Location = new System.Drawing.Point(119, 274);
-            this.txtPurchaser.Name = "txtPurchaser";
-            this.txtPurchaser.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
-            this.txtPurchaser.Size = new System.Drawing.Size(239, 22);
-            this.txtPurchaser.TabIndex = 43;
-            // 
-            // labelControl10
-            // 
-            this.labelControl10.Location = new System.Drawing.Point(21, 274);
-            this.labelControl10.Name = "labelControl10";
-            this.labelControl10.Size = new System.Drawing.Size(52, 13);
-            this.labelControl10.TabIndex = 42;
-            this.labelControl10.Text = "Purchaser:";
             // 
             // datePurchased
             // 
@@ -250,8 +231,6 @@
             this.Controls.Add(this.ProductSave);
             this.Controls.Add(this.txtSupplier);
             this.Controls.Add(this.labelControl11);
-            this.Controls.Add(this.txtPurchaser);
-            this.Controls.Add(this.labelControl10);
             this.Controls.Add(this.datePurchased);
             this.Controls.Add(this.labelControl9);
             this.Controls.Add(this.dateExpiration);
@@ -274,7 +253,6 @@
             this.Text = "Add New Stocks";
             this.TopMost = true;
             ((System.ComponentModel.ISupportInitialize)(this.txtSupplier.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPurchaser.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.datePurchased.Properties.VistaTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.datePurchased.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateExpiration.Properties.VistaTimeProperties)).EndInit();
@@ -295,8 +273,6 @@
         private DevExpress.XtraEditors.SimpleButton ProductSave;
         private DevExpress.XtraEditors.TextEdit txtSupplier;
         private DevExpress.XtraEditors.LabelControl labelControl11;
-        private DevExpress.XtraEditors.TextEdit txtPurchaser;
-        private DevExpress.XtraEditors.LabelControl labelControl10;
         private DevExpress.XtraEditors.DateEdit datePurchased;
         private DevExpress.XtraEditors.LabelControl labelControl9;
         private DevExpress.XtraEditors.DateEdit dateExpiration;

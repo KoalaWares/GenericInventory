@@ -4,6 +4,6 @@ namespace KoalaShop
 {
     public enum FormTypes
     {
-        Category, Account, Customer, Employee,Invoice,InvoiceItem,Product,Stock,StockRequest,Supplier, Inventory, POS
+        Category, Account, Customer, Employee,Invoice,InvoiceItem,Product,Stock,StockRequest,Supplier, Inventory, POS, Sales
     }
 }

@@ -18,29 +18,29 @@ namespace KoalaShop
 
         private void MenuAdd_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            FormCustomer a = new FormCustomer();
-            this.Hide();
-            a.Show();
-            a.GroupUpdate.Visible = false;
+            //FormCustomer a = new FormCustomer();
+            //this.Hide();
+            //a.Show();
+            //a.GroupUpdate.Visible = false;
         }
 
         private void MenuUpdate_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            FormCustomer a = new FormCustomer();
-            this.Hide();
-            a.Show();
+            //FormCustomer a = new FormCustomer();
+            //this.Hide();
+            //a.Show();
         }
 
         private void MenuView_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            gridCustView.Refresh();
+            //gridCustView.Refresh();
         }
 
         private void iExit_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            FormInventory a = new FormInventory();
-            this.Close();
-            a.Show();
+            //FormInventory a = new FormInventory();
+            //this.Close();
+            //a.Show();
         }
     }
 }

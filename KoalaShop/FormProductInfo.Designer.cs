@@ -68,7 +68,8 @@
             // 
             this.txtVariant.Location = new System.Drawing.Point(110, 141);
             this.txtVariant.Name = "txtVariant";
-            this.txtVariant.Size = new System.Drawing.Size(239, 20);
+            this.txtVariant.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
+            this.txtVariant.Size = new System.Drawing.Size(239, 22);
             this.txtVariant.TabIndex = 7;
             // 
             // labelControl3
@@ -83,7 +84,8 @@
             // 
             this.txtWeight.Location = new System.Drawing.Point(110, 106);
             this.txtWeight.Name = "txtWeight";
-            this.txtWeight.Size = new System.Drawing.Size(239, 20);
+            this.txtWeight.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
+            this.txtWeight.Size = new System.Drawing.Size(239, 22);
             this.txtWeight.TabIndex = 5;
             // 
             // labelControl4
@@ -96,9 +98,11 @@
             // 
             // txtName
             // 
+            this.txtName.Enabled = false;
             this.txtName.Location = new System.Drawing.Point(110, 68);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(239, 20);
+            this.txtName.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
+            this.txtName.Size = new System.Drawing.Size(239, 22);
             this.txtName.TabIndex = 3;
             // 
             // labelControl2
@@ -111,9 +115,11 @@
             // 
             // txtID
             // 
+            this.txtID.Enabled = false;
             this.txtID.Location = new System.Drawing.Point(110, 33);
             this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(239, 20);
+            this.txtID.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
+            this.txtID.Size = new System.Drawing.Size(239, 22);
             this.txtID.TabIndex = 1;
             // 
             // labelControl1

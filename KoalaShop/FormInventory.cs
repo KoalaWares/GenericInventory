@@ -33,12 +33,29 @@ namespace KoalaShop
             category.Show();
 
 
-
-
             //Add POS Form
             FormPOS POS = new FormPOS();
             POS.MdiParent = this;
             POS.Show();
+
+            //Add Sales Form
+            FormSales sales = new FormSales();
+            sales.MdiParent = this;
+            sales.Show();
+
+            //Add Supplier Form
+            FormSupplierView supplier = new FormSupplierView();
+            supplier.MdiParent = this;
+            supplier.Show();
+
+            //Add User FOrm
+            FormUserView employee = new FormUserView();
+            employee.MdiParent = this;
+            employee.Show();
+
+
+
+
 
 
         }
@@ -71,6 +88,7 @@ namespace KoalaShop
                 case FormTypes.Customer:
                     break;
                 case FormTypes.Employee:
+                    form = new FormUserView();
                     break;
                 case FormTypes.Invoice:
                     break;
@@ -84,8 +102,11 @@ namespace KoalaShop
                 case FormTypes.StockRequest:
                     break;
                 case FormTypes.Supplier:
+                    form = new FormSupplierView();
                     break;
-                
+                case FormTypes.Sales:
+                    form = new FormSales();
+                    break;
                 case FormTypes.POS:
                     form = new FormPOS();
                     break;
@@ -195,6 +216,21 @@ namespace KoalaShop
         private void tilePos_ItemDoubleClick(object sender, TileItemEventArgs e)
         {
             ChildFormInitializer(FormTypes.POS);
+        }
+
+        private void tileSales_ItemDoubleClick_1(object sender, TileItemEventArgs e)
+        {
+            ChildFormInitializer(FormTypes.Sales);
+        }
+
+        private void tileSupplier_ItemDoubleClick(object sender, TileItemEventArgs e)
+        {
+            ChildFormInitializer(FormTypes.Supplier);
+        }
+
+        private void tileEmployee_ItemDoubleClick(object sender, TileItemEventArgs e)
+        {
+            ChildFormInitializer(FormTypes.Employee);
         }
     }
 }

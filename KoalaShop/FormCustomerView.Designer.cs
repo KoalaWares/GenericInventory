@@ -45,16 +45,11 @@
             this.iCenterTextAlign = new DevExpress.XtraBars.BarButtonItem();
             this.iRightTextAlign = new DevExpress.XtraBars.BarButtonItem();
             this.rgbiSkins = new DevExpress.XtraBars.RibbonGalleryBarItem();
-            this.MenuUpdate = new DevExpress.XtraBars.BarButtonItem();
-            this.MenuView = new DevExpress.XtraBars.BarButtonItem();
             this.MenuAdd = new DevExpress.XtraBars.BarButtonItem();
             this.iHelp = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonImageCollectionLarge = new DevExpress.Utils.ImageCollection(this.components);
             this.homeRibbonPage = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.fileRibbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.exitRibbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.helpRibbonPage = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.helpRibbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.gridCustView = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -87,8 +82,6 @@
             this.iCenterTextAlign,
             this.iRightTextAlign,
             this.rgbiSkins,
-            this.MenuUpdate,
-            this.MenuView,
             this.MenuAdd,
             this.iHelp});
             this.ribbonControl.LargeImages = this.ribbonImageCollectionLarge;
@@ -97,8 +90,7 @@
             this.ribbonControl.Name = "ribbonControl";
             this.ribbonControl.PageHeaderItemLinks.Add(this.iAbout);
             this.ribbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
-            this.homeRibbonPage,
-            this.helpRibbonPage});
+            this.homeRibbonPage});
             this.ribbonControl.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2010;
             this.ribbonControl.Size = new System.Drawing.Size(1105, 117);
             this.ribbonControl.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
@@ -131,7 +123,6 @@
             this.iExit.ImageIndex = 6;
             this.iExit.ImageIndexDisabled = 6;
             this.iExit.LargeGlyph = global::KoalaShop.Properties.Resources.Actions_application_exit_icon;
-            this.iExit.LargeImageIndex = 6;
             this.iExit.Name = "iExit";
             this.iExit.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.iExit_ItemClick);
             // 
@@ -237,24 +228,6 @@
             this.rgbiSkins.Id = 60;
             this.rgbiSkins.Name = "rgbiSkins";
             // 
-            // MenuUpdate
-            // 
-            this.MenuUpdate.Caption = "Update";
-            this.MenuUpdate.Description = "Update Customer\'s Information.";
-            this.MenuUpdate.Id = 62;
-            this.MenuUpdate.LargeGlyph = global::KoalaShop.Properties.Resources.CustomerEdit;
-            this.MenuUpdate.Name = "MenuUpdate";
-            this.MenuUpdate.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.MenuUpdate_ItemClick);
-            // 
-            // MenuView
-            // 
-            this.MenuView.Caption = "View";
-            this.MenuView.Description = "View Employee\'s Information.";
-            this.MenuView.Id = 63;
-            this.MenuView.LargeGlyph = global::KoalaShop.Properties.Resources.UserView;
-            this.MenuView.Name = "MenuView";
-            this.MenuView.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.MenuView_ItemClick);
-            // 
             // MenuAdd
             // 
             this.MenuAdd.Caption = "Add";
@@ -280,38 +253,16 @@
             // homeRibbonPage
             // 
             this.homeRibbonPage.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.fileRibbonPageGroup,
-            this.exitRibbonPageGroup});
+            this.fileRibbonPageGroup});
             this.homeRibbonPage.Name = "homeRibbonPage";
             this.homeRibbonPage.Text = "Home";
             // 
             // fileRibbonPageGroup
             // 
             this.fileRibbonPageGroup.ItemLinks.Add(this.MenuAdd);
-            this.fileRibbonPageGroup.ItemLinks.Add(this.MenuUpdate);
-            this.fileRibbonPageGroup.ItemLinks.Add(this.MenuView);
+            this.fileRibbonPageGroup.ItemLinks.Add(this.iExit);
             this.fileRibbonPageGroup.Name = "fileRibbonPageGroup";
             this.fileRibbonPageGroup.Text = "File";
-            // 
-            // exitRibbonPageGroup
-            // 
-            this.exitRibbonPageGroup.ItemLinks.Add(this.iExit);
-            this.exitRibbonPageGroup.Name = "exitRibbonPageGroup";
-            this.exitRibbonPageGroup.Text = "Exit";
-            // 
-            // helpRibbonPage
-            // 
-            this.helpRibbonPage.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.helpRibbonPageGroup});
-            this.helpRibbonPage.Name = "helpRibbonPage";
-            this.helpRibbonPage.Text = "Help";
-            // 
-            // helpRibbonPageGroup
-            // 
-            this.helpRibbonPageGroup.ItemLinks.Add(this.iHelp);
-            this.helpRibbonPageGroup.ItemLinks.Add(this.iAbout);
-            this.helpRibbonPageGroup.Name = "helpRibbonPageGroup";
-            this.helpRibbonPageGroup.Text = "Help";
             // 
             // groupControl1
             // 
@@ -383,16 +334,11 @@
         private DevExpress.XtraBars.BarButtonItem iCenterTextAlign;
         private DevExpress.XtraBars.BarButtonItem iRightTextAlign;
         private DevExpress.XtraBars.RibbonGalleryBarItem rgbiSkins;
-        private DevExpress.XtraBars.BarButtonItem MenuUpdate;
-        private DevExpress.XtraBars.BarButtonItem MenuView;
         private DevExpress.XtraBars.BarButtonItem MenuAdd;
         private DevExpress.XtraBars.BarButtonItem iHelp;
         private DevExpress.Utils.ImageCollection ribbonImageCollectionLarge;
         private DevExpress.XtraBars.Ribbon.RibbonPage homeRibbonPage;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup fileRibbonPageGroup;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup exitRibbonPageGroup;
-        private DevExpress.XtraBars.Ribbon.RibbonPage helpRibbonPage;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup helpRibbonPageGroup;
         private DevExpress.XtraEditors.GroupControl groupControl1;
         private DevExpress.XtraGrid.GridControl gridCustView;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;

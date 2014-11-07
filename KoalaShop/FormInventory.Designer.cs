@@ -40,6 +40,7 @@
             this.applicationMenu1 = new DevExpress.XtraBars.Ribbon.ApplicationMenu(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.tileControl1 = new DevExpress.XtraEditors.TileControl();
@@ -52,7 +53,6 @@
             this.tileStock = new DevExpress.XtraEditors.TileItem();
             this.tileExpenses = new DevExpress.XtraEditors.TileItem();
             this.tileOptions = new DevExpress.XtraEditors.TileItem();
-            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.applicationMenu1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -89,10 +89,18 @@
             this.splitContainer1.SplitterDistance = 111;
             this.splitContainer1.TabIndex = 6;
             // 
+            // labelControl3
+            // 
+            this.labelControl3.Location = new System.Drawing.Point(262, 50);
+            this.labelControl3.Name = "labelControl3";
+            this.labelControl3.Size = new System.Drawing.Size(107, 13);
+            this.labelControl3.TabIndex = 8;
+            this.labelControl3.Text = "Gwapa kaau ko, bitch!";
+            // 
             // labelControl2
             // 
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl2.Location = new System.Drawing.Point(479, 79);
+            this.labelControl2.Location = new System.Drawing.Point(480, 90);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(126, 18);
             this.labelControl2.TabIndex = 7;
@@ -101,7 +109,7 @@
             // labelControl1
             // 
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl1.Location = new System.Drawing.Point(88, 92);
+            this.labelControl1.Location = new System.Drawing.Point(88, 90);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(96, 18);
             this.labelControl1.TabIndex = 6;
@@ -154,6 +162,7 @@
             this.tileSales.Elements.Add(tileItemElement1);
             this.tileSales.Id = 24;
             this.tileSales.Name = "tileSales";
+            this.tileSales.ItemDoubleClick += new DevExpress.XtraEditors.TileItemClickEventHandler(this.tileSales_ItemDoubleClick_1);
             // 
             // tilePos
             // 
@@ -189,6 +198,7 @@
             this.tileEmployee.Elements.Add(tileItemElement3);
             this.tileEmployee.Id = 26;
             this.tileEmployee.Name = "tileEmployee";
+            this.tileEmployee.ItemDoubleClick += new DevExpress.XtraEditors.TileItemClickEventHandler(this.tileEmployee_ItemDoubleClick);
             // 
             // tileReport
             // 
@@ -223,6 +233,7 @@
             this.tileSupplier.Elements.Add(tileItemElement5);
             this.tileSupplier.Id = 28;
             this.tileSupplier.Name = "tileSupplier";
+            this.tileSupplier.ItemDoubleClick += new DevExpress.XtraEditors.TileItemClickEventHandler(this.tileSupplier_ItemDoubleClick);
             // 
             // tileStock
             // 
@@ -274,14 +285,6 @@
             this.tileOptions.Elements.Add(tileItemElement8);
             this.tileOptions.Id = 31;
             this.tileOptions.Name = "tileOptions";
-            // 
-            // labelControl3
-            // 
-            this.labelControl3.Location = new System.Drawing.Point(262, 50);
-            this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(104, 13);
-            this.labelControl3.TabIndex = 8;
-            this.labelControl3.Text = "Gwapa kaau ko,bitch!";
             // 
             // FormInventory
             // 

@@ -34,16 +34,13 @@
             this.ribbonControl = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.ribbonImageCollection = new DevExpress.Utils.ImageCollection(this.components);
             this.iExit = new DevExpress.XtraBars.BarButtonItem();
-            this.MenuUpdate = new DevExpress.XtraBars.BarButtonItem();
             this.MenuViewSched = new DevExpress.XtraBars.BarButtonItem();
             this.MenuAdd = new DevExpress.XtraBars.BarButtonItem();
             this.iHelp = new DevExpress.XtraBars.BarButtonItem();
-            this.MenuView = new DevExpress.XtraBars.BarButtonItem();
             this.iAbout = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonImageCollectionLarge = new DevExpress.Utils.ImageCollection(this.components);
             this.homeRibbonPage = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.fileRibbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.exitRibbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.helpRibbonPage = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.helpRibbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -76,11 +73,9 @@
             this.ribbonControl.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.ribbonControl.ExpandCollapseItem,
             this.iExit,
-            this.MenuUpdate,
             this.MenuViewSched,
             this.MenuAdd,
             this.iHelp,
-            this.MenuView,
             this.iAbout});
             this.ribbonControl.LargeImages = this.ribbonImageCollectionLarge;
             this.ribbonControl.Location = new System.Drawing.Point(0, 0);
@@ -124,21 +119,11 @@
             this.iExit.Name = "iExit";
             this.iExit.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.iExit_ItemClick);
             // 
-            // MenuUpdate
-            // 
-            this.MenuUpdate.Caption = "Update";
-            this.MenuUpdate.Description = "Update Employee\'s Information.";
-            this.MenuUpdate.Id = 62;
-            this.MenuUpdate.LargeGlyph = global::KoalaShop.Properties.Resources.UserEdit;
-            this.MenuUpdate.Name = "MenuUpdate";
-            this.MenuUpdate.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.MenuUpdate_ItemClick);
-            // 
             // MenuViewSched
             // 
             this.MenuViewSched.Caption = "View Schedule";
             this.MenuViewSched.Description = "View Employee\'s Schedule.";
             this.MenuViewSched.Id = 64;
-            this.MenuViewSched.LargeGlyph = global::KoalaShop.Properties.Resources.UserSchedule;
             this.MenuViewSched.Name = "MenuViewSched";
             // 
             // MenuAdd
@@ -146,7 +131,7 @@
             this.MenuAdd.Caption = "Add";
             this.MenuAdd.Description = "Add Employee Information.";
             this.MenuAdd.Id = 65;
-            this.MenuAdd.LargeGlyph = global::KoalaShop.Properties.Resources.UserAdd;
+            this.MenuAdd.LargeGlyph = global::KoalaShop.Properties.Resources.SupplierAdd;
             this.MenuAdd.Name = "MenuAdd";
             this.MenuAdd.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.MenuAdd_ItemClick);
             // 
@@ -157,14 +142,6 @@
             this.iHelp.Id = 66;
             this.iHelp.LargeImageIndex = 7;
             this.iHelp.Name = "iHelp";
-            // 
-            // MenuView
-            // 
-            this.MenuView.Caption = "View";
-            this.MenuView.Id = 67;
-            this.MenuView.LargeGlyph = global::KoalaShop.Properties.Resources.UserView;
-            this.MenuView.Name = "MenuView";
-            this.MenuView.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.MenuView_ItemClick_1);
             // 
             // iAbout
             // 
@@ -191,7 +168,6 @@
             // 
             this.homeRibbonPage.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.fileRibbonPageGroup,
-            this.ribbonPageGroup1,
             this.exitRibbonPageGroup});
             this.homeRibbonPage.Name = "homeRibbonPage";
             this.homeRibbonPage.Text = "Home";
@@ -199,16 +175,8 @@
             // fileRibbonPageGroup
             // 
             this.fileRibbonPageGroup.ItemLinks.Add(this.MenuAdd);
-            this.fileRibbonPageGroup.ItemLinks.Add(this.MenuUpdate);
-            this.fileRibbonPageGroup.ItemLinks.Add(this.MenuView);
             this.fileRibbonPageGroup.Name = "fileRibbonPageGroup";
             this.fileRibbonPageGroup.Text = "File";
-            // 
-            // ribbonPageGroup1
-            // 
-            this.ribbonPageGroup1.ItemLinks.Add(this.MenuViewSched);
-            this.ribbonPageGroup1.Name = "ribbonPageGroup1";
-            this.ribbonPageGroup1.Text = "Schedule";
             // 
             // exitRibbonPageGroup
             // 
@@ -313,15 +281,12 @@
         private DevExpress.XtraBars.Ribbon.RibbonControl ribbonControl;
         private DevExpress.Utils.ImageCollection ribbonImageCollection;
         private DevExpress.XtraBars.BarButtonItem iExit;
-        private DevExpress.XtraBars.BarButtonItem MenuUpdate;
         private DevExpress.XtraBars.BarButtonItem MenuViewSched;
         private DevExpress.XtraBars.BarButtonItem MenuAdd;
         private DevExpress.XtraBars.BarButtonItem iHelp;
-        private DevExpress.XtraBars.BarButtonItem MenuView;
         private DevExpress.Utils.ImageCollection ribbonImageCollectionLarge;
         private DevExpress.XtraBars.Ribbon.RibbonPage homeRibbonPage;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup fileRibbonPageGroup;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup exitRibbonPageGroup;
         private DevExpress.XtraBars.Ribbon.RibbonPage helpRibbonPage;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup helpRibbonPageGroup;

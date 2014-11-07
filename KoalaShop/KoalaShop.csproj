@@ -50,7 +50,11 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="DevExpress.BonusSkins.v12.2, Version=12.2.5.0, Culture=neutral, PublicKeyToken=95fc6c5621878f0a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.CodeRush.Common, Version=12.1.4.0, Culture=neutral, PublicKeyToken=35c9f04b7764aa3d" />
+    <Reference Include="DevExpress.CodeRush.Core, Version=12.1.4.0, Culture=neutral, PublicKeyToken=35c9f04b7764aa3d" />
+    <Reference Include="DevExpress.CodeRush.Extensions, Version=12.1.4.0, Culture=neutral, PublicKeyToken=35c9f04b7764aa3d, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Data.v12.2, Version=12.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.DXCore.Parser, Version=12.1.4.0, Culture=neutral, PublicKeyToken=35c9f04b7764aa3d" />
     <Reference Include="DevExpress.Office.v12.2.Core, Version=12.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Printing.v12.2.Core, Version=12.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.RichEdit.v12.2.Core, Version=12.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
@@ -67,10 +71,14 @@
     <Reference Include="EntityFramework.SqlServer">
       <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="EnvDTE, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
@@ -94,17 +102,29 @@
     <Compile Include="FormChangePass.Designer.cs">
       <DependentUpon>FormChangePass.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormCustomer.cs">
+    <Compile Include="FormCustomerAdd.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormCustomer.Designer.cs">
-      <DependentUpon>FormCustomer.cs</DependentUpon>
+    <Compile Include="FormCustomerAdd.Designer.cs">
+      <DependentUpon>FormCustomerAdd.cs</DependentUpon>
     </Compile>
     <Compile Include="FormCustomerView.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormCustomerView.Designer.cs">
       <DependentUpon>FormCustomerView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormExpensesAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormExpensesAdd.Designer.cs">
+      <DependentUpon>FormExpensesAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormExpensesView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormExpensesView.Designer.cs">
+      <DependentUpon>FormExpensesView.cs</DependentUpon>
     </Compile>
     <Compile Include="FormInventory.cs">
       <SubType>Form</SubType>
@@ -160,17 +180,11 @@
     <Compile Include="FormProductStocks.Designer.cs">
       <DependentUpon>FormProductStocks.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormSales.cs">
+    <Compile Include="FormSupplierAdd.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormSales.Designer.cs">
-      <DependentUpon>FormSales.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormSupplier.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormSupplier.Designer.cs">
-      <DependentUpon>FormSupplier.cs</DependentUpon>
+    <Compile Include="FormSupplierAdd.Designer.cs">
+      <DependentUpon>FormSupplierAdd.cs</DependentUpon>
     </Compile>
     <Compile Include="FormSupplierView.cs">
       <SubType>Form</SubType>
@@ -178,11 +192,11 @@
     <Compile Include="FormSupplierView.Designer.cs">
       <DependentUpon>FormSupplierView.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormUser.cs">
+    <Compile Include="FormUserAdd.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormUser.Designer.cs">
-      <DependentUpon>FormUser.cs</DependentUpon>
+    <Compile Include="FormUserAdd.Designer.cs">
+      <DependentUpon>FormUserAdd.cs</DependentUpon>
     </Compile>
     <Compile Include="FormUserSched.cs">
       <SubType>Form</SubType>
@@ -241,11 +255,17 @@
     <EmbeddedResource Include="FormChangePass.resx">
       <DependentUpon>FormChangePass.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormCustomer.resx">
-      <DependentUpon>FormCustomer.cs</DependentUpon>
+    <EmbeddedResource Include="FormCustomerAdd.resx">
+      <DependentUpon>FormCustomerAdd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormCustomerView.resx">
       <DependentUpon>FormCustomerView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormExpensesAdd.resx">
+      <DependentUpon>FormExpensesAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormExpensesView.resx">
+      <DependentUpon>FormExpensesView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormInventory.resx">
       <DependentUpon>FormInventory.cs</DependentUpon>
@@ -274,17 +294,14 @@
     <EmbeddedResource Include="FormProductStocks.resx">
       <DependentUpon>FormProductStocks.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormSales.resx">
-      <DependentUpon>FormSales.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormSupplier.resx">
-      <DependentUpon>FormSupplier.cs</DependentUpon>
+    <EmbeddedResource Include="FormSupplierAdd.resx">
+      <DependentUpon>FormSupplierAdd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormSupplierView.resx">
       <DependentUpon>FormSupplierView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormUser.resx">
-      <DependentUpon>FormUser.cs</DependentUpon>
+    <EmbeddedResource Include="FormUserAdd.resx">
+      <DependentUpon>FormUserAdd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormUserSched.resx">
       <DependentUpon>FormUserSched.cs</DependentUpon>
@@ -361,6 +378,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\1415256608_sales-report.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Actions-application-exit-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CustomerAdd.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SupplierAdd.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\535577.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\expensesAdd.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
