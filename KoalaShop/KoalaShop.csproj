@@ -88,127 +88,13 @@
   <ItemGroup>
     <Compile Include="DataGridFormController.cs" />
     <Compile Include="Enums\FormTypes.cs" />
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
     <Compile Include="Contracts\IDataGridForm.cs" />
     <Compile Include="Contracts\IMainForm.cs" />
-    <Compile Include="FormChangePass.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormChangePass.Designer.cs">
-      <DependentUpon>FormChangePass.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormCustomerAdd.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormCustomerAdd.Designer.cs">
-      <DependentUpon>FormCustomerAdd.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormCustomerView.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormCustomerView.Designer.cs">
-      <DependentUpon>FormCustomerView.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormExpensesAdd.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormExpensesAdd.Designer.cs">
-      <DependentUpon>FormExpensesAdd.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormExpensesView.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormExpensesView.Designer.cs">
-      <DependentUpon>FormExpensesView.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormInventory.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormInventory.designer.cs">
       <DependentUpon>FormInventory.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormLogin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormLogin.Designer.cs">
-      <DependentUpon>FormLogin.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormPOS.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormPOS.Designer.cs">
-      <DependentUpon>FormPOS.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormProduct.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormProduct.Designer.cs">
-      <DependentUpon>FormProduct.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormProductAdd.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormProductAdd.Designer.cs">
-      <DependentUpon>FormProductAdd.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormProductChoice.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormProductChoice.Designer.cs">
-      <DependentUpon>FormProductChoice.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormProductInfo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormProductInfo.Designer.cs">
-      <DependentUpon>FormProductInfo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormProductMore.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormProductMore.Designer.cs">
-      <DependentUpon>FormProductMore.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormProductStocks.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormProductStocks.Designer.cs">
-      <DependentUpon>FormProductStocks.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormSupplierAdd.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormSupplierAdd.Designer.cs">
-      <DependentUpon>FormSupplierAdd.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormSupplierView.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormSupplierView.Designer.cs">
-      <DependentUpon>FormSupplierView.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormUserAdd.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormUserAdd.Designer.cs">
-      <DependentUpon>FormUserAdd.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormUserSched.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormUserSched.Designer.cs">
-      <DependentUpon>FormUserSched.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormUserView.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormUserView.Designer.cs">
-      <DependentUpon>FormUserView.cs</DependentUpon>
     </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
@@ -216,7 +102,6 @@
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Person.cs" />
     <Compile Include="ProductsForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -249,65 +134,8 @@
     <Compile Include="LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormChangePass.resx">
-      <DependentUpon>FormChangePass.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormCustomerAdd.resx">
-      <DependentUpon>FormCustomerAdd.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormCustomerView.resx">
-      <DependentUpon>FormCustomerView.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormExpensesAdd.resx">
-      <DependentUpon>FormExpensesAdd.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormExpensesView.resx">
-      <DependentUpon>FormExpensesView.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FormInventory.resx">
       <DependentUpon>FormInventory.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormLogin.resx">
-      <DependentUpon>FormLogin.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormPOS.resx">
-      <DependentUpon>FormPOS.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormProduct.resx">
-      <DependentUpon>FormProduct.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormProductAdd.resx">
-      <DependentUpon>FormProductAdd.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormProductChoice.resx">
-      <DependentUpon>FormProductChoice.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormProductInfo.resx">
-      <DependentUpon>FormProductInfo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormProductMore.resx">
-      <DependentUpon>FormProductMore.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormProductStocks.resx">
-      <DependentUpon>FormProductStocks.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormSupplierAdd.resx">
-      <DependentUpon>FormSupplierAdd.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormSupplierView.resx">
-      <DependentUpon>FormSupplierView.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormUserAdd.resx">
-      <DependentUpon>FormUserAdd.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormUserSched.resx">
-      <DependentUpon>FormUserSched.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormUserView.resx">
-      <DependentUpon>FormUserView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>

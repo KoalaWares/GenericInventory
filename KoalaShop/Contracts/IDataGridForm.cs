@@ -8,11 +8,11 @@ namespace KoalaShop
 {
     public interface IDataGridForm
     {
-        bool IsNew { get; set; }
+        //bool IsNew { get; set; }
         void RefreshList();
         void MapSelectedObjectToDetailsPane();
-        void ToggleNewObjectButton();
+        //void ToggleNewObjectButton();
         void SaveObjectToDB();
-        string GetSelectedObjectID();
+        //string GetSelectedObjectID();
     }
 }

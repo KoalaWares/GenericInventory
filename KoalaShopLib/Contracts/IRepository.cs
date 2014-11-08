@@ -9,7 +9,7 @@ namespace KoalaShopLib
 {
     public interface IRepository<T>
     {
-        T GetByID(object id);
+        //T GetByID(object id);
         List<T> GetAll(Expression<Func<T, bool>> filter = null);
         bool Add(T entity);
         bool Update(T entity);

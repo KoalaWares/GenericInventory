@@ -68,27 +68,27 @@ namespace KoalaShop
         /// <summary>
         /// Creates Child forms for inventory users
         /// </summary>
-        private void CreateInventoryForms()
+        public void CreateInventoryForms()
         {
-            ProductsForm products = new ProductsForm();
-            products.MdiParent = this;
-            products.Show();
+            //ProductsForm products = new ProductsForm();
+            //products.MdiParent = this;
+            //products.Show();
 
             //Add Category form
-            CategoriesForm category = new CategoriesForm();
-            category.MdiParent = this;
-            category.Show();
+            //CategoriesForm category = new CategoriesForm();
+            //category.MdiParent = this;
+            //category.Show();
 
             
             //Add Inventory Form
-            FormInventory inventory = new FormInventory();
-            inventory.MdiParent = this;
-            inventory.Show();
+            //FormInventory inventory = new FormInventory(this);
+            //inventory.MdiParent = this;
+            //inventory.Show();
             
             //Add POS Form
-            FormPOS POS = new FormPOS();
-            POS.MdiParent = this;
-            POS.Show();
+            //FormPOS POS = new FormPOS();
+            //POS.MdiParent = this;
+            //POS.Show();
 
 
         }
@@ -96,18 +96,21 @@ namespace KoalaShop
         /// <summary>
         /// Dispose all child forms.
         /// </summary>
-        void KillChildren()
+        private void KillChildren()
         {
             foreach (var i in this.MdiChildren)
             {
-                i.Dispose();
+                if (i.GetType() != typeof(FormInventory))
+                {
+                    i.Dispose();
+                }
             }
         }
 
         /// <summary>
         /// Initializes and displays specified child form.
         /// </summary>
-        private void ChildFormInitializer(FormTypes formType)
+        public void ChildFormInitializer(FormTypes formType)
         {
             DevExpress.XtraEditors.XtraForm form = null;
 
@@ -136,10 +139,7 @@ namespace KoalaShop
                 case FormTypes.Supplier:
                     break;
                 case FormTypes.Inventory:
-                    form = new FormInventory();
-                    break;
-                case FormTypes.POS  :
-                    form = new FormPOS();
+                    form = new FormInventory(this);
                     break;
                 default:
                     form = new DevExpress.XtraEditors.XtraForm();

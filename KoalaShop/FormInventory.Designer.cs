@@ -29,14 +29,15 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.XtraEditors.TileItemElement tileItemElement1 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement2 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement3 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement4 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement5 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement6 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement7 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement8 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement10 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement11 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement12 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement13 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement14 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement15 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement16 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement17 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement18 = new DevExpress.XtraEditors.TileItemElement();
             this.applicationMenu1 = new DevExpress.XtraBars.Ribbon.ApplicationMenu(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
@@ -53,6 +54,7 @@
             this.tileStock = new DevExpress.XtraEditors.TileItem();
             this.tileExpenses = new DevExpress.XtraEditors.TileItem();
             this.tileOptions = new DevExpress.XtraEditors.TileItem();
+            this.tileItemCategory = new DevExpress.XtraEditors.TileItem();
             ((System.ComponentModel.ISupportInitialize)(this.applicationMenu1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -93,9 +95,9 @@
             // 
             this.labelControl3.Location = new System.Drawing.Point(262, 50);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(107, 13);
+            this.labelControl3.Size = new System.Drawing.Size(180, 13);
             this.labelControl3.TabIndex = 8;
-            this.labelControl3.Text = "Gwapa kaau ko, bitch!";
+            this.labelControl3.Text = "BATI A Ani Gud UI, Engun si TITA Neil";
             // 
             // labelControl2
             // 
@@ -125,7 +127,7 @@
             this.tileControl1.Groups.Add(this.tileMain);
             this.tileControl1.ItemSize = 135;
             this.tileControl1.Location = new System.Drawing.Point(0, 0);
-            this.tileControl1.MaxId = 32;
+            this.tileControl1.MaxId = 33;
             this.tileControl1.Name = "tileControl1";
             this.tileControl1.Size = new System.Drawing.Size(655, 370);
             this.tileControl1.TabIndex = 3;
@@ -133,6 +135,7 @@
             // 
             // tileMain
             // 
+            this.tileMain.Items.Add(this.tileItemCategory);
             this.tileMain.Items.Add(this.tileSales);
             this.tileMain.Items.Add(this.tilePos);
             this.tileMain.Items.Add(this.tileEmployee);
@@ -157,12 +160,11 @@
             this.tileSales.AppearanceItem.Normal.Options.UseForeColor = true;
             this.tileSales.BackgroundImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
             this.tileSales.BackgroundImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomInside;
-            tileItemElement1.Text = "Sales";
-            tileItemElement1.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
-            this.tileSales.Elements.Add(tileItemElement1);
+            tileItemElement10.Text = "Sales";
+            tileItemElement10.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
+            this.tileSales.Elements.Add(tileItemElement10);
             this.tileSales.Id = 24;
             this.tileSales.Name = "tileSales";
-            this.tileSales.ItemDoubleClick += new DevExpress.XtraEditors.TileItemClickEventHandler(this.tileSales_ItemDoubleClick_1);
             // 
             // tilePos
             // 
@@ -175,12 +177,11 @@
             this.tilePos.AppearanceItem.Normal.Options.UseBorderColor = true;
             this.tilePos.AppearanceItem.Normal.Options.UseFont = true;
             this.tilePos.AppearanceItem.Normal.Options.UseForeColor = true;
-            tileItemElement2.Text = "POS";
-            tileItemElement2.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
-            this.tilePos.Elements.Add(tileItemElement2);
+            tileItemElement11.Text = "POS";
+            tileItemElement11.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
+            this.tilePos.Elements.Add(tileItemElement11);
             this.tilePos.Id = 25;
             this.tilePos.Name = "tilePos";
-            this.tilePos.ItemDoubleClick += new DevExpress.XtraEditors.TileItemClickEventHandler(this.tilePos_ItemDoubleClick);
             // 
             // tileEmployee
             // 
@@ -193,12 +194,11 @@
             this.tileEmployee.AppearanceItem.Normal.Options.UseBorderColor = true;
             this.tileEmployee.AppearanceItem.Normal.Options.UseFont = true;
             this.tileEmployee.AppearanceItem.Normal.Options.UseForeColor = true;
-            tileItemElement3.Text = "Employee";
-            tileItemElement3.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
-            this.tileEmployee.Elements.Add(tileItemElement3);
+            tileItemElement12.Text = "Employee";
+            tileItemElement12.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
+            this.tileEmployee.Elements.Add(tileItemElement12);
             this.tileEmployee.Id = 26;
             this.tileEmployee.Name = "tileEmployee";
-            this.tileEmployee.ItemDoubleClick += new DevExpress.XtraEditors.TileItemClickEventHandler(this.tileEmployee_ItemDoubleClick);
             // 
             // tileReport
             // 
@@ -211,9 +211,9 @@
             this.tileReport.AppearanceItem.Normal.Options.UseBorderColor = true;
             this.tileReport.AppearanceItem.Normal.Options.UseFont = true;
             this.tileReport.AppearanceItem.Normal.Options.UseForeColor = true;
-            tileItemElement4.Text = "Report";
-            tileItemElement4.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
-            this.tileReport.Elements.Add(tileItemElement4);
+            tileItemElement13.Text = "Report";
+            tileItemElement13.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
+            this.tileReport.Elements.Add(tileItemElement13);
             this.tileReport.Id = 27;
             this.tileReport.Name = "tileReport";
             // 
@@ -228,12 +228,11 @@
             this.tileSupplier.AppearanceItem.Normal.Options.UseBorderColor = true;
             this.tileSupplier.AppearanceItem.Normal.Options.UseFont = true;
             this.tileSupplier.AppearanceItem.Normal.Options.UseForeColor = true;
-            tileItemElement5.Text = "Supplier";
-            tileItemElement5.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
-            this.tileSupplier.Elements.Add(tileItemElement5);
+            tileItemElement14.Text = "Supplier";
+            tileItemElement14.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
+            this.tileSupplier.Elements.Add(tileItemElement14);
             this.tileSupplier.Id = 28;
             this.tileSupplier.Name = "tileSupplier";
-            this.tileSupplier.ItemDoubleClick += new DevExpress.XtraEditors.TileItemClickEventHandler(this.tileSupplier_ItemDoubleClick);
             // 
             // tileStock
             // 
@@ -246,9 +245,9 @@
             this.tileStock.AppearanceItem.Normal.Options.UseBorderColor = true;
             this.tileStock.AppearanceItem.Normal.Options.UseFont = true;
             this.tileStock.AppearanceItem.Normal.Options.UseForeColor = true;
-            tileItemElement6.Text = "Stock";
-            tileItemElement6.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
-            this.tileStock.Elements.Add(tileItemElement6);
+            tileItemElement15.Text = "Stock";
+            tileItemElement15.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
+            this.tileStock.Elements.Add(tileItemElement15);
             this.tileStock.Id = 29;
             this.tileStock.Name = "tileStock";
             // 
@@ -263,9 +262,9 @@
             this.tileExpenses.AppearanceItem.Normal.Options.UseBorderColor = true;
             this.tileExpenses.AppearanceItem.Normal.Options.UseFont = true;
             this.tileExpenses.AppearanceItem.Normal.Options.UseForeColor = true;
-            tileItemElement7.Text = "Expenses";
-            tileItemElement7.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
-            this.tileExpenses.Elements.Add(tileItemElement7);
+            tileItemElement16.Text = "Expenses";
+            tileItemElement16.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
+            this.tileExpenses.Elements.Add(tileItemElement16);
             this.tileExpenses.Id = 30;
             this.tileExpenses.Name = "tileExpenses";
             // 
@@ -280,11 +279,19 @@
             this.tileOptions.AppearanceItem.Normal.Options.UseBorderColor = true;
             this.tileOptions.AppearanceItem.Normal.Options.UseFont = true;
             this.tileOptions.AppearanceItem.Normal.Options.UseForeColor = true;
-            tileItemElement8.Text = "Options";
-            tileItemElement8.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
-            this.tileOptions.Elements.Add(tileItemElement8);
+            tileItemElement17.Text = "Options";
+            tileItemElement17.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
+            this.tileOptions.Elements.Add(tileItemElement17);
             this.tileOptions.Id = 31;
             this.tileOptions.Name = "tileOptions";
+            // 
+            // tileItemCategory
+            // 
+            tileItemElement18.Text = "Category";
+            this.tileItemCategory.Elements.Add(tileItemElement18);
+            this.tileItemCategory.Id = 32;
+            this.tileItemCategory.Name = "tileItemCategory";
+            this.tileItemCategory.ItemClick += new DevExpress.XtraEditors.TileItemClickEventHandler(this.tileItemCategory_ItemClick);
             // 
             // FormInventory
             // 
@@ -329,6 +336,7 @@
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.LabelControl labelControl3;
+        private DevExpress.XtraEditors.TileItem tileItemCategory;
 
 
     }

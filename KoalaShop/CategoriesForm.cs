@@ -10,17 +10,18 @@ using DevExpress.XtraEditors;
 using KoalaShopLib;
 using KoalaShopLib.Models;
 using KoalaShopLib.Models.ViewModel;
+using System.Linq;
 namespace KoalaShop
 {
     public partial class CategoriesForm : DevExpress.XtraEditors.XtraForm, IDataGridForm
     {
-        public bool IsNew { get; set; }
+        private DataGridFormController controller;
 
         public CategoriesForm()
         {
             InitializeComponent();
             this.RefreshList();
-            this.IsNew = false;
+            this.controller = new DataGridFormController(this.simpleButtonSave, this.checkButtonIsNew, this.gridView1, this);
         }
 
         #region Defined Methods
@@ -40,32 +41,17 @@ namespace KoalaShop
         /// </summary>
         public void MapSelectedObjectToDetailsPane()
         {
-            var selectedObject = (Category)gridView1.GetFocusedRow();
-            this.textEditName.Text = selectedObject.Name;
-        }
+            string id = this.controller.GetSelectedObjectID();
 
-        /// <summary>
-        /// Pag e click ang new nga button tapad sa save sa object details pane.
-        /// </summary>
-        public void ToggleNewObjectButton()
-        {
-            string saveButtonText = "Update";
-
-            IsNew = !IsNew;
-
-            if (IsNew)
+            using (IKoalaShop koalaShop = KoalaShopFactory.CreateKoalaShop())
             {
-                saveButtonText = "Save";
-                //Reset fields
-                textEditName.Text = "";
+                var selectedObject = koalaShop.CategoryRepo.GetAll().Where(c => c.ID == Int32.Parse(id)).SingleOrDefault();
+
+                if(selectedObject != null)
+                {
+                    this.textEditName.Text = selectedObject.Name;
+                }
             }
-
-            simpleButtonSave.Text = saveButtonText;
-        }
-
-        public string GetSelectedObjectID()
-        {
-            return gridView1.GetFocusedDataRow()["ID"].ToString();
         }
 
         /// <summary>
@@ -87,7 +73,7 @@ namespace KoalaShop
             //DB access
             using (var koala = KoalaShopFactory.CreateKoalaShop())
             {
-                if (IsNew)
+                if (this.controller.IsNewObject)
                 {
                     koala.CategoryRepo.Add(category);
                 }
@@ -108,7 +94,7 @@ namespace KoalaShop
 
         private void checkButtonIsNew_CheckedChanged(object sender, EventArgs e)
         {
-            ToggleNewObjectButton();
+            this.controller.ToggleNewObjectButton();
         }
 
         private void gridView1_MouseDown(object sender, MouseEventArgs e)
