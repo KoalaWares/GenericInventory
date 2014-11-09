@@ -13,12 +13,14 @@ using KoalaShopLib.Models.ViewModel;
 using System.Linq;
 namespace KoalaShop
 {
-    public partial class CategoriesForm : DevExpress.XtraEditors.XtraForm, IDataGridForm
+    public partial class FormCustomer : DevExpress.XtraEditors.XtraForm, IDataGridForm
     {
+
         //Declare DataGridFormController
         private DataGridFormController formController;
 
-        public CategoriesForm()
+
+        public FormCustomer()
         {
             InitializeComponent();
             //para ma set ang data sa datgrid
@@ -35,7 +37,7 @@ namespace KoalaShop
         {
             using (var koala = KoalaShopFactory.CreateKoalaShop())
             {
-                this.gridControl1.DataSource = koala.CategoryRepo.GetAll();
+                this.gridControl1.DataSource = koala.CustomerRepo.GetAll();
             }
         }
 
@@ -48,11 +50,12 @@ namespace KoalaShop
 
             using (IKoalaShop koalaShop = KoalaShopFactory.CreateKoalaShop())
             {
-                var selectedObject = koalaShop.CategoryRepo.GetAll().Where(c => c.ID == Int32.Parse(id)).SingleOrDefault();
+                var selectedObject = koalaShop.CustomerRepo.GetAll().Where(c => c.ID == Int32.Parse(id)).SingleOrDefault();
 
-                if(selectedObject != null)
+                if (selectedObject != null)
                 {
                     this.textEditName.Text = selectedObject.Name;
+                    this.textEditAddress.Text = selectedObject.Address;
                 }
             }
         }
@@ -62,12 +65,13 @@ namespace KoalaShop
         /// </summary>
         public void SaveObjectToDB()
         {
-            Category category = new Category();
-            category.ID = int.Parse(gridView1.GetFocusedDataRow()["ID"].ToString());
-            category.Name = textEditName.Text;
+            Customer customer = new Customer();
+            customer.ID = int.Parse(gridView1.GetFocusedDataRow()["ID"].ToString());
+            customer.Name = textEditName.Text;
+            customer.Address = textEditAddress.Text;
 
             //Validation
-            if( category.Name == "")
+            if (customer.Name == "")
             {
                 MessageBox.Show("Empty Name Field");
                 return;
@@ -78,11 +82,11 @@ namespace KoalaShop
             {
                 if (this.formController.IsNewObject)
                 {
-                    koala.CategoryRepo.Add(category);
+                    koala.CustomerRepo.Add(customer);
                 }
                 else
                 {
-                    koala.CategoryRepo.Update(category);
+                    koala.CustomerRepo.Update(customer);
                 }
             }
             //Refresh list to update view.
@@ -90,29 +94,21 @@ namespace KoalaShop
         }
         #endregion
 
-        private void simpleButtonSave_Click(object sender, EventArgs e)
-        {
-            SaveObjectToDB();
-        }
 
-        private void checkButtonIsNew_CheckedChanged(object sender, EventArgs e)
-        {
-            this.formController.ToggleNewObjectButton();
-        }
-
+       
         private void gridView1_MouseDown(object sender, MouseEventArgs e)
         {
             MapSelectedObjectToDetailsPane();
         }
 
-        private void CategoriesForm_Load(object sender, EventArgs e)
+        private void checkButtonIsNew_CheckedChanged_1(object sender, EventArgs e)
         {
-
+            this.formController.ToggleNewObjectButton();
         }
 
-        private void groupControl1_Paint(object sender, PaintEventArgs e)
+        private void simpleButtonSave_Click_1(object sender, EventArgs e)
         {
-
+            SaveObjectToDB();
         }
     }
 }

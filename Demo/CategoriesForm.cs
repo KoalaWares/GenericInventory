@@ -29,5 +29,10 @@ namespace Demo
             }
 
         }
+
+        private void CategoriesForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

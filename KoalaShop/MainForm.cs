@@ -122,6 +122,7 @@ namespace KoalaShop
                 case FormTypes.Account:
                     break;
                 case FormTypes.Customer:
+                    form = new FormCustomer();
                     break;
                 case FormTypes.Employee:
                     break;
