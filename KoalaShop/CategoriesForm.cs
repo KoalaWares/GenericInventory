@@ -35,8 +35,12 @@ namespace KoalaShop
         {
             using (var koala = KoalaShopFactory.CreateKoalaShop())
             {
-                this.gridControl1.DataSource = koala.CategoryRepo.GetAll();
+                var objectList =  koala.CategoryRepo.GetAll();
+
+                this.gridControl1.DataSource = objectList;
             }
+
+            
         }
 
         /// <summary>
@@ -63,7 +67,6 @@ namespace KoalaShop
         public void SaveObjectToDB()
         {
             Category category = new Category();
-            category.ID = int.Parse(gridView1.GetFocusedDataRow()["ID"].ToString());
             category.Name = textEditName.Text;
 
             //Validation
@@ -82,6 +85,7 @@ namespace KoalaShop
                 }
                 else
                 {
+                    category.ID = int.Parse(gridView1.GetFocusedDataRow()["ID"].ToString());
                     koala.CategoryRepo.Update(category);
                 }
             }
@@ -103,16 +107,6 @@ namespace KoalaShop
         private void gridView1_MouseDown(object sender, MouseEventArgs e)
         {
             MapSelectedObjectToDetailsPane();
-        }
-
-        private void CategoriesForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupControl1_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }
