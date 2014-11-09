@@ -15,13 +15,16 @@ namespace KoalaShop
 {
     public partial class CategoriesForm : DevExpress.XtraEditors.XtraForm, IDataGridForm
     {
-        private DataGridFormController controller;
+        //Declare DataGridFormController
+        private DataGridFormController formController;
 
         public CategoriesForm()
         {
             InitializeComponent();
+            //para ma set ang data sa datgrid
             this.RefreshList();
-            this.controller = new DataGridFormController(this.simpleButtonSave, this.checkButtonIsNew, this.gridView1, this);
+            //para ma control sa formController ang button save,tbutton new ug datagrid
+            this.formController = new DataGridFormController(this.simpleButtonSave, this.checkButtonIsNew, this.gridView1, this);
         }
 
         #region Defined Methods
@@ -41,7 +44,7 @@ namespace KoalaShop
         /// </summary>
         public void MapSelectedObjectToDetailsPane()
         {
-            string id = this.controller.GetSelectedObjectID();
+            string id = this.formController.GetSelectedObjectID();
 
             using (IKoalaShop koalaShop = KoalaShopFactory.CreateKoalaShop())
             {
@@ -73,7 +76,7 @@ namespace KoalaShop
             //DB access
             using (var koala = KoalaShopFactory.CreateKoalaShop())
             {
-                if (this.controller.IsNewObject)
+                if (this.formController.IsNewObject)
                 {
                     koala.CategoryRepo.Add(category);
                 }
@@ -94,7 +97,7 @@ namespace KoalaShop
 
         private void checkButtonIsNew_CheckedChanged(object sender, EventArgs e)
         {
-            this.controller.ToggleNewObjectButton();
+            this.formController.ToggleNewObjectButton();
         }
 
         private void gridView1_MouseDown(object sender, MouseEventArgs e)
