@@ -112,7 +112,6 @@
             this.MinimizeBox = false;
             this.Name = "LoginForm";
             this.ShowIcon = false;
-            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Koala Shop";
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();

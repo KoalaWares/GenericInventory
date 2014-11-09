@@ -84,7 +84,7 @@ namespace KoalaShop
                 {
                     try
                     {
-                        category.ID = int.Parse(gridView1.GetFocusedDataRow()["ID"].ToString());
+                        category.ID = int.Parse(this.formController.GetSelectedObjectID());
                         koala.CategoryRepo.Update(category);
                     }
                     catch (Exception)
