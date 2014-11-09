@@ -63,7 +63,7 @@ namespace KoalaShop
         public void SaveObjectToDB()
         {
             Category category = new Category();
-            category.ID = int.Parse(gridView1.GetFocusedDataRow()["ID"].ToString());
+
             category.Name = textEditName.Text;
 
             //Validation
@@ -82,7 +82,17 @@ namespace KoalaShop
                 }
                 else
                 {
-                    koala.CategoryRepo.Update(category);
+                    try
+                    {
+                        category.ID = int.Parse(gridView1.GetFocusedDataRow()["ID"].ToString());
+                        koala.CategoryRepo.Update(category);
+                    }
+                    catch (Exception)
+                    {
+                        MessageBox.Show("Something Went Wrong");
+                        //throw;
+                    }
+                    
                 }
             }
             //Refresh list to update view.
