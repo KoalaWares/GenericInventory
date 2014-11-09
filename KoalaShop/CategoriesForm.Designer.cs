@@ -74,7 +74,6 @@
             this.groupControl1.Size = new System.Drawing.Size(243, 358);
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "Category Details";
-            this.groupControl1.Paint += new System.Windows.Forms.PaintEventHandler(this.groupControl1_Paint);
             // 
             // simpleButtonSave
             // 
@@ -119,7 +118,7 @@
             this.gridControl1.Location = new System.Drawing.Point(0, 0);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(532, 362);
+            this.gridControl1.Size = new System.Drawing.Size(525, 362);
             this.gridControl1.TabIndex = 1;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -143,7 +142,6 @@
             this.Name = "CategoriesForm";
             this.Text = "Categories";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.CategoriesForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).EndInit();
             this.splitContainerControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();

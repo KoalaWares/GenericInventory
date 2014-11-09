@@ -90,7 +90,7 @@
             // 
             this.splitContainer1.Panel2.Controls.Add(this.tileControl1);
             this.splitContainer1.Size = new System.Drawing.Size(796, 523);
-            this.splitContainer1.SplitterDistance = 119;
+            this.splitContainer1.SplitterDistance = 118;
             this.splitContainer1.TabIndex = 6;
             // 
             // labelControl3
@@ -131,7 +131,7 @@
             this.tileControl1.Location = new System.Drawing.Point(0, 0);
             this.tileControl1.MaxId = 34;
             this.tileControl1.Name = "tileControl1";
-            this.tileControl1.Size = new System.Drawing.Size(796, 400);
+            this.tileControl1.Size = new System.Drawing.Size(796, 401);
             this.tileControl1.TabIndex = 3;
             this.tileControl1.Text = "tileControl1";
             // 

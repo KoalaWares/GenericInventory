@@ -105,14 +105,6 @@ namespace KoalaShop
             MapSelectedObjectToDetailsPane();
         }
 
-        private void CategoriesForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupControl1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+        
     }
 }
