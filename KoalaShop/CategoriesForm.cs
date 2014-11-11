@@ -53,6 +53,7 @@ namespace KoalaShop
                 if(selectedObject != null)
                 {
                     this.textEditName.Text = selectedObject.Name;
+                    
                 }
             }
         }
@@ -108,6 +109,7 @@ namespace KoalaShop
         private void checkButtonIsNew_CheckedChanged(object sender, EventArgs e)
         {
             this.formController.ToggleNewObjectButton();
+            this.textEditName.Text = "";
         }
 
         private void gridView1_MouseDown(object sender, MouseEventArgs e)

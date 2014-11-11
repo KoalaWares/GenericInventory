@@ -56,6 +56,9 @@ namespace KoalaShop
                 {
                     this.textEditName.Text = selectedObject.Name;
                     this.textEditAddress.Text = selectedObject.Address;
+                    
+
+
                 }
             }
         }
@@ -66,7 +69,7 @@ namespace KoalaShop
         public void SaveObjectToDB()
         {
             Customer customer = new Customer();
-            customer.ID = int.Parse(gridView1.GetFocusedDataRow()["ID"].ToString());
+
             customer.Name = textEditName.Text;
             customer.Address = textEditAddress.Text;
 
@@ -86,15 +89,23 @@ namespace KoalaShop
                 }
                 else
                 {
-                    koala.CustomerRepo.Update(customer);
+                    try
+                    {
+                        customer.ID = int.Parse(this.formController.GetSelectedObjectID());
+                        koala.CustomerRepo.Update(customer);
+                    }
+                    catch (Exception)
+                    {
+                        MessageBox.Show("Something Went Wrong");
+                        //throw;
+                    }
+
                 }
             }
             //Refresh list to update view.
             RefreshList();
         }
         #endregion
-
-
        
         private void gridView1_MouseDown(object sender, MouseEventArgs e)
         {
@@ -104,6 +115,8 @@ namespace KoalaShop
         private void checkButtonIsNew_CheckedChanged_1(object sender, EventArgs e)
         {
             this.formController.ToggleNewObjectButton();
+            this.textEditAddress.Text = "";
+            this.textEditName.Text = "";
         }
 
         private void simpleButtonSave_Click_1(object sender, EventArgs e)
