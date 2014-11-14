@@ -125,6 +125,7 @@ namespace KoalaShop
                     form = new FormCustomer();
                     break;
                 case FormTypes.Employee:
+                    form = new FormEmployee();
                     break;
                 case FormTypes.Invoice:
                     break;
@@ -138,6 +139,7 @@ namespace KoalaShop
                 case FormTypes.StockRequest:
                     break;
                 case FormTypes.Supplier:
+                    form = new FormSupplier();
                     break;
                 case FormTypes.Inventory:
                     form = new FormInventory(this);

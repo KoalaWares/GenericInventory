@@ -40,6 +40,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.simpleButtonUpdate = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
             this.splitContainerControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
@@ -61,7 +62,7 @@
             this.splitContainerControl1.Panel1.Text = "Panel1";
             this.splitContainerControl1.Panel2.Controls.Add(this.gridControl1);
             this.splitContainerControl1.Panel2.Text = "Panel2";
-            this.splitContainerControl1.Size = new System.Drawing.Size(780, 430);
+            this.splitContainerControl1.Size = new System.Drawing.Size(754, 242);
             this.splitContainerControl1.SplitterPosition = 337;
             this.splitContainerControl1.TabIndex = 4;
             this.splitContainerControl1.Text = "splitContainerControl1";
@@ -70,6 +71,7 @@
             // 
             this.groupControl1.AppearanceCaption.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupControl1.AppearanceCaption.Options.UseFont = true;
+            this.groupControl1.Controls.Add(this.simpleButtonUpdate);
             this.groupControl1.Controls.Add(this.textAddress);
             this.groupControl1.Controls.Add(this.label6);
             this.groupControl1.Controls.Add(this.textName);
@@ -81,7 +83,7 @@
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl1.Location = new System.Drawing.Point(0, 0);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(333, 426);
+            this.groupControl1.Size = new System.Drawing.Size(333, 238);
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "Supplier Details";
             // 
@@ -122,26 +124,30 @@
             // simpleButtonSave
             // 
             this.simpleButtonSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.simpleButtonSave.Location = new System.Drawing.Point(185, 393);
+            this.simpleButtonSave.Location = new System.Drawing.Point(185, 205);
             this.simpleButtonSave.Name = "simpleButtonSave";
             this.simpleButtonSave.Size = new System.Drawing.Size(143, 28);
             this.simpleButtonSave.TabIndex = 10;
             this.simpleButtonSave.Text = "Save";
+            this.simpleButtonSave.Click += new System.EventHandler(this.simpleButtonSave_Click);
             // 
             // checkButtonIsNew
             // 
             this.checkButtonIsNew.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.checkButtonIsNew.Location = new System.Drawing.Point(115, 393);
+            this.checkButtonIsNew.Location = new System.Drawing.Point(115, 205);
             this.checkButtonIsNew.Name = "checkButtonIsNew";
             this.checkButtonIsNew.Size = new System.Drawing.Size(64, 28);
             this.checkButtonIsNew.TabIndex = 9;
             this.checkButtonIsNew.Text = "New";
+            this.checkButtonIsNew.CheckedChanged += new System.EventHandler(this.checkButtonIsNew_CheckedChanged);
             // 
             // textContact
             // 
             this.textContact.Location = new System.Drawing.Point(115, 87);
             this.textContact.Name = "textContact";
             this.textContact.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
+            this.textContact.Properties.Mask.EditMask = "\\d?\\d?\\d?\\d?)\\d\\d\\d-\\d\\d\\d\\d";
+            this.textContact.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Regular;
             this.textContact.Size = new System.Drawing.Size(198, 22);
             this.textContact.TabIndex = 1;
             // 
@@ -160,7 +166,7 @@
             this.gridControl1.Location = new System.Drawing.Point(0, 0);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(438, 430);
+            this.gridControl1.Size = new System.Drawing.Size(412, 242);
             this.gridControl1.TabIndex = 1;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -173,12 +179,23 @@
             this.gridView1.OptionsBehavior.Editable = false;
             this.gridView1.OptionsFind.AlwaysVisible = true;
             this.gridView1.OptionsView.ShowFooter = true;
+            this.gridView1.DoubleClick += new System.EventHandler(this.gridView1_DoubleClick);
+            // 
+            // simpleButtonUpdate
+            // 
+            this.simpleButtonUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.simpleButtonUpdate.Location = new System.Drawing.Point(185, 171);
+            this.simpleButtonUpdate.Name = "simpleButtonUpdate";
+            this.simpleButtonUpdate.Size = new System.Drawing.Size(143, 28);
+            this.simpleButtonUpdate.TabIndex = 23;
+            this.simpleButtonUpdate.Text = "Update";
+            this.simpleButtonUpdate.Click += new System.EventHandler(this.simpleButtonUpdate_Click);
             // 
             // FormSupplier
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(780, 430);
+            this.ClientSize = new System.Drawing.Size(754, 242);
             this.Controls.Add(this.splitContainerControl1);
             this.Name = "FormSupplier";
             this.Text = "FormSupplier";
@@ -210,5 +227,6 @@
         private System.Windows.Forms.Label label1;
         private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraEditors.SimpleButton simpleButtonUpdate;
     }
 }

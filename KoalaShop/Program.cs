@@ -21,7 +21,7 @@ namespace KoalaShop
             DevExpress.UserSkins.BonusSkins.Register();
             UserLookAndFeel.Default.SetSkinStyle("DevExpress Style");
 
-            Application.Run(new FormExpenses());
+            Application.Run(new MainForm());
         }
     }
 }

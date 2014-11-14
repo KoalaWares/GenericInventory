@@ -24,7 +24,7 @@ namespace KoalaShopLib
             //Automapper
             AutoMapper.Mapper.CreateMap<Product, ProductView>();
 
-            #region Seed
+           #region Seed
             //REMOVE ON DEPLOYMENT, THIS IS FOR SEEDING TEST DATA
             if (!(this.dbContext.Emloyees.Count() > 0))
             {
@@ -147,6 +147,16 @@ namespace KoalaShopLib
         public IRepository<Supplier> SupplierRepo
         {
             get { return this.repoFactory.CreateRepo<Supplier>(); }
+        }
+
+        public IRepository<Expenses> ExpensesRepo
+        {
+            get { return this.repoFactory.CreateRepo<Expenses>(); }
+        }
+
+        public IRepository<CashCount> CashCountRepo
+        {
+            get { return this.repoFactory.CreateRepo<CashCount>(); }
         }
         #endregion
 

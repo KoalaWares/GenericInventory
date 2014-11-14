@@ -17,6 +17,7 @@ namespace KoalaShopLib.Models
         public string Lname { get; set; }
         public string Address { get; set; }
         public string Contact { get; set; }
+        public string Position { get; set; }
     
         public virtual ICollection<Account> Accounts { get; set; }
         public virtual ICollection<Invoice> Invoices { get; set; }
