@@ -144,6 +144,9 @@ namespace KoalaShop
                 case FormTypes.Inventory:
                     form = new FormInventory(this);
                     break;
+                case FormTypes.POS:
+                    form = new FormPOS();
+                    break;
                 default:
                     form = new DevExpress.XtraEditors.XtraForm();
                     break;
