@@ -30,14 +30,15 @@
         {
             this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.simpleButtonUpdate = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButtonSave = new DevExpress.XtraEditors.SimpleButton();
+            this.checkButtonIsNew = new DevExpress.XtraEditors.CheckButton();
             this.textEditAddress = new DevExpress.XtraEditors.TextEdit();
             this.label2 = new System.Windows.Forms.Label();
             this.textEditName = new DevExpress.XtraEditors.TextEdit();
             this.label1 = new System.Windows.Forms.Label();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.simpleButtonSave = new DevExpress.XtraEditors.SimpleButton();
-            this.checkButtonIsNew = new DevExpress.XtraEditors.CheckButton();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
             this.splitContainerControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
@@ -67,6 +68,7 @@
             // 
             this.groupControl1.AppearanceCaption.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupControl1.AppearanceCaption.Options.UseFont = true;
+            this.groupControl1.Controls.Add(this.simpleButtonUpdate);
             this.groupControl1.Controls.Add(this.simpleButtonSave);
             this.groupControl1.Controls.Add(this.checkButtonIsNew);
             this.groupControl1.Controls.Add(this.textEditAddress);
@@ -79,6 +81,36 @@
             this.groupControl1.Size = new System.Drawing.Size(255, 273);
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "Customer Details";
+            // 
+            // simpleButtonUpdate
+            // 
+            this.simpleButtonUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.simpleButtonUpdate.Location = new System.Drawing.Point(107, 240);
+            this.simpleButtonUpdate.Name = "simpleButtonUpdate";
+            this.simpleButtonUpdate.Size = new System.Drawing.Size(143, 28);
+            this.simpleButtonUpdate.TabIndex = 11;
+            this.simpleButtonUpdate.Text = "Update";
+            this.simpleButtonUpdate.Click += new System.EventHandler(this.simpleButtonUpdate_Click);
+            // 
+            // simpleButtonSave
+            // 
+            this.simpleButtonSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.simpleButtonSave.Location = new System.Drawing.Point(107, 240);
+            this.simpleButtonSave.Name = "simpleButtonSave";
+            this.simpleButtonSave.Size = new System.Drawing.Size(143, 28);
+            this.simpleButtonSave.TabIndex = 10;
+            this.simpleButtonSave.Text = "Save";
+            this.simpleButtonSave.Click += new System.EventHandler(this.simpleButtonSave_Click_1);
+            // 
+            // checkButtonIsNew
+            // 
+            this.checkButtonIsNew.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.checkButtonIsNew.Location = new System.Drawing.Point(37, 240);
+            this.checkButtonIsNew.Name = "checkButtonIsNew";
+            this.checkButtonIsNew.Size = new System.Drawing.Size(64, 28);
+            this.checkButtonIsNew.TabIndex = 9;
+            this.checkButtonIsNew.Text = "New";
+            this.checkButtonIsNew.CheckedChanged += new System.EventHandler(this.checkButtonIsNew_CheckedChanged_1);
             // 
             // textEditAddress
             // 
@@ -120,7 +152,7 @@
             this.gridControl1.Location = new System.Drawing.Point(0, 0);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(497, 277);
+            this.gridControl1.Size = new System.Drawing.Size(504, 277);
             this.gridControl1.TabIndex = 1;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -133,27 +165,7 @@
             this.gridView1.OptionsBehavior.Editable = false;
             this.gridView1.OptionsFind.AlwaysVisible = true;
             this.gridView1.OptionsView.ShowFooter = true;
-            this.gridView1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.gridView1_MouseDown);
-            // 
-            // simpleButtonSave
-            // 
-            this.simpleButtonSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.simpleButtonSave.Location = new System.Drawing.Point(107, 240);
-            this.simpleButtonSave.Name = "simpleButtonSave";
-            this.simpleButtonSave.Size = new System.Drawing.Size(143, 28);
-            this.simpleButtonSave.TabIndex = 10;
-            this.simpleButtonSave.Text = "Save";
-            this.simpleButtonSave.Click += new System.EventHandler(this.simpleButtonSave_Click_1);
-            // 
-            // checkButtonIsNew
-            // 
-            this.checkButtonIsNew.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.checkButtonIsNew.Location = new System.Drawing.Point(37, 240);
-            this.checkButtonIsNew.Name = "checkButtonIsNew";
-            this.checkButtonIsNew.Size = new System.Drawing.Size(64, 28);
-            this.checkButtonIsNew.TabIndex = 9;
-            this.checkButtonIsNew.Text = "New";
-            this.checkButtonIsNew.CheckedChanged += new System.EventHandler(this.checkButtonIsNew_CheckedChanged_1);
+            this.gridView1.DoubleClick += new System.EventHandler(this.gridView1_DoubleClick);
             // 
             // FormCustomer
             // 
@@ -188,6 +200,7 @@
         private System.Windows.Forms.Label label2;
         private DevExpress.XtraEditors.SimpleButton simpleButtonSave;
         private DevExpress.XtraEditors.CheckButton checkButtonIsNew;
+        private DevExpress.XtraEditors.SimpleButton simpleButtonUpdate;
 
     }
 }

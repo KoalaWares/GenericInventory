@@ -5,34 +5,48 @@ using System.Text;
 using System.Threading.Tasks;
 using DevExpress.XtraEditors;
 using DevExpress.XtraGrid.Views.Grid;
+using System.Drawing;
 namespace KoalaShop
 {
     public class DataGridFormController
     {
         public bool IsNewObject = false;
         SimpleButton SaveButton { set; get; }
+        SimpleButton UpdateButton { set; get; }
         CheckButton NewObjectToggleButton { set; get; }
         GridView GridView { set; get; }
 
-        public DataGridFormController(SimpleButton saveButton, CheckButton newObjectToggle, GridView gridview, XtraForm form)
+        public DataGridFormController(SimpleButton updateButton, SimpleButton saveButton, CheckButton newObjectToggle, GridView gridview, XtraForm form)
         {
             SaveButton = saveButton;
+            UpdateButton = updateButton;
             NewObjectToggleButton = newObjectToggle;
             GridView = gridview;
         }
 
+
+
         public void ToggleNewObjectButton()
         {
-            string saveButtonText = "Update";
+          ////  string saveButtonText = "Update";
 
-            IsNewObject = !IsNewObject;
+          //  IsNewObject = !IsNewObject;
 
-            if (IsNewObject)
-            {
-                saveButtonText = "Save";
-            }
+          //  if (IsNewObject)
+          //  {
+          //    //  saveButtonText = "Save";
+               
+          //  }
 
-            SaveButton.Text = saveButtonText;
+          ////  SaveButton.Text = saveButtonText;
+            SaveButton.Visible = true;
+            UpdateButton.Visible = false;
+        }
+
+        public void UpdateObjectButton()
+        {
+            UpdateButton.Visible = true;
+            SaveButton.Visible = false;
         }
 
         public string GetSelectedObjectID()

@@ -90,11 +90,6 @@
     <Compile Include="Enums\FormTypes.cs" />
     <Compile Include="Contracts\IDataGridForm.cs" />
     <Compile Include="Contracts\IMainForm.cs" />
-    <Compile Include="Expenses.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Expenses.edmx</DependentUpon>
-    </Compile>
     <Compile Include="FormCashCount.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -235,13 +230,6 @@
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.config" />
-    <EntityDeploy Include="Expenses.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Expenses.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <None Include="Expenses.edmx.diagram">
-      <DependentUpon>Expenses.edmx</DependentUpon>
-    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

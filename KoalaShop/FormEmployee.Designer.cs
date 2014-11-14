@@ -30,40 +30,40 @@
         {
             this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.imageEdit1 = new DevExpress.XtraEditors.ImageEdit();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.textPassword = new DevExpress.XtraEditors.TextEdit();
+            this.label6 = new System.Windows.Forms.Label();
+            this.textID = new DevExpress.XtraEditors.TextEdit();
+            this.label5 = new System.Windows.Forms.Label();
+            this.textContact = new DevExpress.XtraEditors.TextEdit();
+            this.label4 = new System.Windows.Forms.Label();
+            this.textAddress = new DevExpress.XtraEditors.TextEdit();
+            this.label3 = new System.Windows.Forms.Label();
             this.simpleButtonSave = new DevExpress.XtraEditors.SimpleButton();
             this.checkButtonIsNew = new DevExpress.XtraEditors.CheckButton();
             this.textLname = new DevExpress.XtraEditors.TextEdit();
             this.label2 = new System.Windows.Forms.Label();
             this.textFName = new DevExpress.XtraEditors.TextEdit();
             this.label1 = new System.Windows.Forms.Label();
+            this.textPosition = new DevExpress.XtraEditors.ComboBoxEdit();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.textAddress = new DevExpress.XtraEditors.TextEdit();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textID = new DevExpress.XtraEditors.TextEdit();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textPassword = new DevExpress.XtraEditors.TextEdit();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.textPosition = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.imageEdit1 = new DevExpress.XtraEditors.ImageEdit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
             this.splitContainerControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imageEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textPassword.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textID.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textContact.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textAddress.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textLname.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textFName.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textPosition.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textAddress.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textID.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textPassword.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textPosition.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imageEdit1.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainerControl1
@@ -92,7 +92,7 @@
             this.groupControl1.Controls.Add(this.label6);
             this.groupControl1.Controls.Add(this.textID);
             this.groupControl1.Controls.Add(this.label5);
-            this.groupControl1.Controls.Add(this.textEdit1);
+            this.groupControl1.Controls.Add(this.textContact);
             this.groupControl1.Controls.Add(this.label4);
             this.groupControl1.Controls.Add(this.textAddress);
             this.groupControl1.Controls.Add(this.label3);
@@ -110,6 +110,104 @@
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "Employee Details";
             // 
+            // imageEdit1
+            // 
+            this.imageEdit1.Location = new System.Drawing.Point(115, 235);
+            this.imageEdit1.Name = "imageEdit1";
+            this.imageEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.imageEdit1.Size = new System.Drawing.Size(198, 20);
+            this.imageEdit1.TabIndex = 22;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(5, 235);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(41, 13);
+            this.label8.TabIndex = 21;
+            this.label8.Text = "Image:";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(5, 207);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(48, 13);
+            this.label7.TabIndex = 19;
+            this.label7.Text = "Position:";
+            // 
+            // textPassword
+            // 
+            this.textPassword.Location = new System.Drawing.Point(115, 59);
+            this.textPassword.Name = "textPassword";
+            this.textPassword.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
+            this.textPassword.Size = new System.Drawing.Size(198, 22);
+            this.textPassword.TabIndex = 18;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(5, 68);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(57, 13);
+            this.label6.TabIndex = 17;
+            this.label6.Text = "Password:";
+            // 
+            // textID
+            // 
+            this.textID.Enabled = false;
+            this.textID.Location = new System.Drawing.Point(115, 31);
+            this.textID.Name = "textID";
+            this.textID.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
+            this.textID.Size = new System.Drawing.Size(198, 22);
+            this.textID.TabIndex = 16;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(5, 40);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(22, 13);
+            this.label5.TabIndex = 15;
+            this.label5.Text = "ID:";
+            // 
+            // textContact
+            // 
+            this.textContact.Location = new System.Drawing.Point(115, 170);
+            this.textContact.Name = "textContact";
+            this.textContact.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
+            this.textContact.Properties.Mask.EditMask = "(\\d?\\d?\\d?)\\d\\d\\d-\\d\\d\\d\\d";
+            this.textContact.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Regular;
+            this.textContact.Size = new System.Drawing.Size(198, 22);
+            this.textContact.TabIndex = 14;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(5, 179);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(89, 13);
+            this.label4.TabIndex = 13;
+            this.label4.Text = "Contact Number:";
+            // 
+            // textAddress
+            // 
+            this.textAddress.Location = new System.Drawing.Point(115, 142);
+            this.textAddress.Name = "textAddress";
+            this.textAddress.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
+            this.textAddress.Size = new System.Drawing.Size(198, 22);
+            this.textAddress.TabIndex = 12;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(5, 151);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(50, 13);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "Address:";
+            // 
             // simpleButtonSave
             // 
             this.simpleButtonSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -118,6 +216,7 @@
             this.simpleButtonSave.Size = new System.Drawing.Size(143, 28);
             this.simpleButtonSave.TabIndex = 10;
             this.simpleButtonSave.Text = "Save";
+            this.simpleButtonSave.Click += new System.EventHandler(this.simpleButtonSave_Click);
             // 
             // checkButtonIsNew
             // 
@@ -127,6 +226,7 @@
             this.checkButtonIsNew.Size = new System.Drawing.Size(64, 28);
             this.checkButtonIsNew.TabIndex = 9;
             this.checkButtonIsNew.Text = "New";
+            this.checkButtonIsNew.CheckedChanged += new System.EventHandler(this.checkButtonIsNew_CheckedChanged);
             // 
             // textLname
             // 
@@ -162,113 +262,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "First Name:";
             // 
-            // gridControl1
-            // 
-            this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl1.Location = new System.Drawing.Point(0, 0);
-            this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(489, 352);
-            this.gridControl1.TabIndex = 1;
-            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
-            this.gridControl1.Click += new System.EventHandler(this.gridControl1_Click);
-            // 
-            // gridView1
-            // 
-            this.gridView1.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
-            this.gridView1.GridControl = this.gridControl1;
-            this.gridView1.Name = "gridView1";
-            this.gridView1.OptionsBehavior.Editable = false;
-            this.gridView1.OptionsFind.AlwaysVisible = true;
-            this.gridView1.OptionsView.ShowFooter = true;
-            // 
-            // textAddress
-            // 
-            this.textAddress.Location = new System.Drawing.Point(115, 142);
-            this.textAddress.Name = "textAddress";
-            this.textAddress.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
-            this.textAddress.Size = new System.Drawing.Size(198, 22);
-            this.textAddress.TabIndex = 12;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(5, 151);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(50, 13);
-            this.label3.TabIndex = 11;
-            this.label3.Text = "Address:";
-            // 
-            // textEdit1
-            // 
-            this.textEdit1.Location = new System.Drawing.Point(115, 170);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
-            this.textEdit1.Size = new System.Drawing.Size(198, 22);
-            this.textEdit1.TabIndex = 14;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(5, 179);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(89, 13);
-            this.label4.TabIndex = 13;
-            this.label4.Text = "Contact Number:";
-            // 
-            // textID
-            // 
-            this.textID.Location = new System.Drawing.Point(115, 31);
-            this.textID.Name = "textID";
-            this.textID.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
-            this.textID.Size = new System.Drawing.Size(198, 22);
-            this.textID.TabIndex = 16;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(5, 40);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(22, 13);
-            this.label5.TabIndex = 15;
-            this.label5.Text = "ID:";
-            // 
-            // textPassword
-            // 
-            this.textPassword.Location = new System.Drawing.Point(115, 59);
-            this.textPassword.Name = "textPassword";
-            this.textPassword.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
-            this.textPassword.Size = new System.Drawing.Size(198, 22);
-            this.textPassword.TabIndex = 18;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(5, 68);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(57, 13);
-            this.label6.TabIndex = 17;
-            this.label6.Text = "Password:";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(5, 207);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(48, 13);
-            this.label7.TabIndex = 19;
-            this.label7.Text = "Position:";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(5, 235);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(41, 13);
-            this.label8.TabIndex = 21;
-            this.label8.Text = "Image:";
-            // 
             // textPosition
             // 
             this.textPosition.Location = new System.Drawing.Point(115, 198);
@@ -281,14 +274,26 @@
             this.textPosition.Size = new System.Drawing.Size(198, 22);
             this.textPosition.TabIndex = 20;
             // 
-            // imageEdit1
+            // gridControl1
             // 
-            this.imageEdit1.Location = new System.Drawing.Point(115, 235);
-            this.imageEdit1.Name = "imageEdit1";
-            this.imageEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.imageEdit1.Size = new System.Drawing.Size(198, 20);
-            this.imageEdit1.TabIndex = 22;
+            this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridControl1.Location = new System.Drawing.Point(0, 0);
+            this.gridControl1.MainView = this.gridView1;
+            this.gridControl1.Name = "gridControl1";
+            this.gridControl1.Size = new System.Drawing.Size(489, 352);
+            this.gridControl1.TabIndex = 1;
+            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView1});
+            // 
+            // gridView1
+            // 
+            this.gridView1.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.gridView1.GridControl = this.gridControl1;
+            this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsBehavior.Editable = false;
+            this.gridView1.OptionsFind.AlwaysVisible = true;
+            this.gridView1.OptionsView.ShowFooter = true;
+            this.gridView1.DoubleClick += new System.EventHandler(this.gridView1_DoubleClick);
             // 
             // FormEmployee
             // 
@@ -303,16 +308,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imageEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textPassword.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textID.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textContact.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textAddress.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textLname.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textFName.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textPosition.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textAddress.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textID.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textPassword.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textPosition.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imageEdit1.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -338,7 +343,7 @@
         private System.Windows.Forms.Label label6;
         private DevExpress.XtraEditors.TextEdit textID;
         private System.Windows.Forms.Label label5;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
+        private DevExpress.XtraEditors.TextEdit textContact;
         private System.Windows.Forms.Label label4;
         private DevExpress.XtraEditors.ComboBoxEdit textPosition;
     }

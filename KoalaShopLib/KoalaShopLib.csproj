@@ -72,9 +72,11 @@
     <Compile Include="KoalaShop.cs" />
     <Compile Include="Factories\KoalaShopFactory.cs" />
     <Compile Include="Models\Account.cs" />
+    <Compile Include="Models\CashCount.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\Employee.cs" />
+    <Compile Include="Models\Expenses.cs" />
     <Compile Include="Models\Invoice.cs" />
     <Compile Include="Models\InvoiceItem.cs" />
     <Compile Include="Models\Product.cs" />
