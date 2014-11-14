@@ -20,6 +20,8 @@ namespace KoalaShopLib
         IRepository<Stock> StockRepo { get; }
         IRepository<StocksRequest> StocksRequestRepo { get; }
         IRepository<Supplier> SupplierRepo { get; }
+        IRepository<Expenses> ExpensesRepo { get; }
+        IRepository<CashCount> CashCountRepo { get; }
 
         IRepository<Product> ProductRepo { get; }
         //TODO: add more if needed

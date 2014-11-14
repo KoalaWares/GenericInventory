@@ -24,7 +24,9 @@ namespace KoalaShop
             //para ma set ang data sa datgrid
             this.RefreshList();
             //para ma control sa formController ang button save,tbutton new ug datagrid
-            this.formController = new DataGridFormController(this.simpleButtonSave, this.checkButtonIsNew, this.gridView1, this);
+            this.formController = new DataGridFormController(this.simpleButtonUpdate,this.simpleButtonSave, this.checkButtonIsNew, this.gridView1, this);
+            //para ma.display ang save button instead sa update button.
+            this.formController.ToggleNewObjectButton();
         }
 
         #region Defined Methods
@@ -53,6 +55,7 @@ namespace KoalaShop
                 if(selectedObject != null)
                 {
                     this.textEditName.Text = selectedObject.Name;
+                    this.formController.UpdateObjectButton();
                     
                 }
             }
@@ -77,45 +80,81 @@ namespace KoalaShop
             //DB access
             using (var koala = KoalaShopFactory.CreateKoalaShop())
             {
-                if (this.formController.IsNewObject)
-                {
+                
                     koala.CategoryRepo.Add(category);
-                }
-                else
-                {
+                    MessageBox.Show("Saved!");
+                    this.textEditName.Text = "";
+                
+                
+            }
+            //Refresh list to update view.
+            RefreshList();
+        }
+
+            public void UpdateObjectToDB()
+        {
+            Category category = new Category();
+
+            category.Name = textEditName.Text; 
+
+            //Validation
+            if( category.Name == "")
+            {
+                MessageBox.Show("Empty Name Field");
+                return;
+            }
+
+            //DB access
+            using (var koala = KoalaShopFactory.CreateKoalaShop())
+            {
+               
                     try
                     {
                         category.ID = int.Parse(this.formController.GetSelectedObjectID());
                         koala.CategoryRepo.Update(category);
+                        MessageBox.Show("Updated!");
+                        this.textEditName.Text = "";
+
                     }
                     catch (Exception)
                     {
                         MessageBox.Show("Something Went Wrong");
                         //throw;
                     }
-                    
-                }
+
+                
             }
+                
             //Refresh list to update view.
             RefreshList();
         }
+
         #endregion
 
         private void simpleButtonSave_Click(object sender, EventArgs e)
         {
             SaveObjectToDB();
+            
         }
 
         private void checkButtonIsNew_CheckedChanged(object sender, EventArgs e)
         {
             this.formController.ToggleNewObjectButton();
-            this.textEditName.Text = "";
+          
         }
 
-        private void gridView1_MouseDown(object sender, MouseEventArgs e)
+       
+        private void simpleButtonUpdate_Click(object sender, EventArgs e)
+        {
+            UpdateObjectToDB();
+        }
+
+        private void gridView1_DoubleClick(object sender, EventArgs e)
         {
             MapSelectedObjectToDetailsPane();
         }
+
+        
 
         
     }

@@ -18,6 +18,8 @@ namespace KoalaShopLib.EFRepositories
         public virtual DbSet<Stock> Stocks { get; set; }
         public virtual DbSet<StocksRequest> StockRequests { get; set; }
         public virtual DbSet<Supplier> Suppliers { get; set; }
+        public virtual DbSet<Expenses> Expenses { get; set; }
+        public virtual DbSet<CashCount> CashCount { get; set; }
         
         public DataAppContext()
             : base("name=DataAppContext")

@@ -36,6 +36,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.simpleButtonUpdate = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
             this.splitContainerControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
@@ -64,6 +65,7 @@
             // 
             this.groupControl1.AppearanceCaption.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupControl1.AppearanceCaption.Options.UseFont = true;
+            this.groupControl1.Controls.Add(this.simpleButtonUpdate);
             this.groupControl1.Controls.Add(this.simpleButtonSave);
             this.groupControl1.Controls.Add(this.checkButtonIsNew);
             this.groupControl1.Controls.Add(this.textEditName);
@@ -131,7 +133,17 @@
             this.gridView1.OptionsBehavior.Editable = false;
             this.gridView1.OptionsFind.AlwaysVisible = true;
             this.gridView1.OptionsView.ShowFooter = true;
-            this.gridView1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.gridView1_MouseDown);
+            this.gridView1.DoubleClick += new System.EventHandler(this.gridView1_DoubleClick);
+            // 
+            // simpleButtonUpdate
+            // 
+            this.simpleButtonUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.simpleButtonUpdate.Location = new System.Drawing.Point(100, 330);
+            this.simpleButtonUpdate.Name = "simpleButtonUpdate";
+            this.simpleButtonUpdate.Size = new System.Drawing.Size(143, 28);
+            this.simpleButtonUpdate.TabIndex = 7;
+            this.simpleButtonUpdate.Text = "Update";
+            this.simpleButtonUpdate.Click += new System.EventHandler(this.simpleButtonUpdate_Click);
             // 
             // CategoriesForm
             // 
@@ -164,5 +176,6 @@
         private System.Windows.Forms.Label label1;
         private DevExpress.XtraEditors.SimpleButton simpleButtonSave;
         private DevExpress.XtraEditors.CheckButton checkButtonIsNew;
+        private DevExpress.XtraEditors.SimpleButton simpleButtonUpdate;
     }
 }
