@@ -55,7 +55,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Factories\ContextFactory.cs" />
-    <Compile Include="DALController.cs" />
     <Compile Include="Factories\DALFactory.cs" />
     <Compile Include="Contracts\IControllerFactory.cs" />
     <Compile Include="Contracts\IKoalaShop.cs" />

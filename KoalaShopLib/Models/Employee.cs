@@ -22,5 +22,7 @@ namespace KoalaShopLib.Models
         public virtual ICollection<Account> Accounts { get; set; }
         public virtual ICollection<Invoice> Invoices { get; set; }
         public virtual ICollection<StocksRequest> StocksRequests { get; set; }
+        public virtual ICollection<Expenses> Expenses { get;set;}
+        public virtual ICollection<CashCount> CashCounts { get; set; }
     }
 }

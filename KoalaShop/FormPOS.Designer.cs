@@ -284,7 +284,7 @@
             this.textEdit1.MaximumSize = new System.Drawing.Size(0, 40);
             this.textEdit1.MinimumSize = new System.Drawing.Size(0, 40);
             this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Size = new System.Drawing.Size(0, 20);
+            this.textEdit1.Size = new System.Drawing.Size(0, 40);
             this.textEdit1.TabIndex = 1;
             // 
             // labelControl4
@@ -646,8 +646,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1362, 623);
+            this.ControlBox = false;
             this.Controls.Add(this.splitContainerControl1);
-            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FormPOS";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Point Of Sale";
