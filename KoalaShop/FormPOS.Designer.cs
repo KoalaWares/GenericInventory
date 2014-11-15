@@ -123,7 +123,7 @@
             this.splitContainerControl1.Panel1.Text = "Panel1";
             this.splitContainerControl1.Panel2.Controls.Add(this.splitContainerControl3);
             this.splitContainerControl1.Panel2.Text = "Panel2";
-            this.splitContainerControl1.Size = new System.Drawing.Size(1362, 623);
+            this.splitContainerControl1.Size = new System.Drawing.Size(1354, 623);
             this.splitContainerControl1.SplitterPosition = 109;
             this.splitContainerControl1.TabIndex = 0;
             this.splitContainerControl1.Text = "splitContainerControl1";
@@ -137,7 +137,7 @@
             this.splitContainerControl2.Panel1.Text = "Panel1";
             this.splitContainerControl2.Panel2.Controls.Add(this.splitContainerControl5);
             this.splitContainerControl2.Panel2.Text = "Panel2";
-            this.splitContainerControl2.Size = new System.Drawing.Size(1362, 109);
+            this.splitContainerControl2.Size = new System.Drawing.Size(1354, 109);
             this.splitContainerControl2.SplitterPosition = 622;
             this.splitContainerControl2.TabIndex = 0;
             this.splitContainerControl2.Text = "splitContainerControl2";
@@ -200,6 +200,7 @@
             this.BtnLogout.Size = new System.Drawing.Size(88, 32);
             this.BtnLogout.TabIndex = 12;
             this.BtnLogout.Text = "Logout";
+            this.BtnLogout.Click += new System.EventHandler(this.BtnLogout_Click_1);
             // 
             // labelControl1
             // 
@@ -228,7 +229,7 @@
             this.splitContainerControl5.Panel1.Text = "Panel1";
             this.splitContainerControl5.Panel2.Controls.Add(this.groupControl5);
             this.splitContainerControl5.Panel2.Text = "Panel2";
-            this.splitContainerControl5.Size = new System.Drawing.Size(735, 109);
+            this.splitContainerControl5.Size = new System.Drawing.Size(727, 109);
             this.splitContainerControl5.SplitterPosition = 519;
             this.splitContainerControl5.TabIndex = 7;
             this.splitContainerControl5.Text = "splitContainerControl5";
@@ -308,7 +309,7 @@
             this.groupControl5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl5.Location = new System.Drawing.Point(0, 0);
             this.groupControl5.Name = "groupControl5";
-            this.groupControl5.Size = new System.Drawing.Size(211, 109);
+            this.groupControl5.Size = new System.Drawing.Size(203, 109);
             this.groupControl5.TabIndex = 4;
             this.groupControl5.Text = "₱";
             // 
@@ -351,7 +352,7 @@
             this.splitContainerControl3.Panel1.Text = "Panel1";
             this.splitContainerControl3.Panel2.Controls.Add(this.splitContainerControl4);
             this.splitContainerControl3.Panel2.Text = "Panel2";
-            this.splitContainerControl3.Size = new System.Drawing.Size(1362, 509);
+            this.splitContainerControl3.Size = new System.Drawing.Size(1354, 509);
             this.splitContainerControl3.SplitterPosition = 325;
             this.splitContainerControl3.TabIndex = 0;
             this.splitContainerControl3.Text = "splitContainerControl3";
@@ -362,7 +363,7 @@
             this.gridControl1.Location = new System.Drawing.Point(0, 0);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(1362, 325);
+            this.gridControl1.Size = new System.Drawing.Size(1354, 325);
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -381,7 +382,7 @@
             this.splitContainerControl4.Panel1.Text = "Panel1";
             this.splitContainerControl4.Panel2.Controls.Add(this.groupControl4);
             this.splitContainerControl4.Panel2.Text = "Panel2";
-            this.splitContainerControl4.Size = new System.Drawing.Size(1362, 179);
+            this.splitContainerControl4.Size = new System.Drawing.Size(1354, 179);
             this.splitContainerControl4.SplitterPosition = 1078;
             this.splitContainerControl4.TabIndex = 0;
             this.splitContainerControl4.Text = "splitContainerControl4";
@@ -540,7 +541,7 @@
             this.groupControl4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl4.Location = new System.Drawing.Point(0, 0);
             this.groupControl4.Name = "groupControl4";
-            this.groupControl4.Size = new System.Drawing.Size(279, 179);
+            this.groupControl4.Size = new System.Drawing.Size(271, 179);
             this.groupControl4.TabIndex = 16;
             this.groupControl4.Text = "Order Totals";
             // 
@@ -645,7 +646,7 @@
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1362, 623);
+            this.ClientSize = new System.Drawing.Size(1354, 623);
             this.ControlBox = false;
             this.Controls.Add(this.splitContainerControl1);
             this.MinimizeBox = false;

@@ -73,7 +73,7 @@
             this.splitContainerControl1.Panel1.Text = "Panel1";
             this.splitContainerControl1.Panel2.Controls.Add(this.splitContainerControl2);
             this.splitContainerControl1.Panel2.Text = "Panel2";
-            this.splitContainerControl1.Size = new System.Drawing.Size(869, 278);
+            this.splitContainerControl1.Size = new System.Drawing.Size(879, 278);
             this.splitContainerControl1.SplitterPosition = 337;
             this.splitContainerControl1.TabIndex = 5;
             this.splitContainerControl1.Text = "splitContainerControl1";
@@ -101,7 +101,7 @@
             // simpleButtonUpdate
             // 
             this.simpleButtonUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.simpleButtonUpdate.Location = new System.Drawing.Point(170, 230);
+            this.simpleButtonUpdate.Location = new System.Drawing.Point(190, 245);
             this.simpleButtonUpdate.Name = "simpleButtonUpdate";
             this.simpleButtonUpdate.Size = new System.Drawing.Size(143, 28);
             this.simpleButtonUpdate.TabIndex = 22;
@@ -111,7 +111,7 @@
             // simpleButtonSave
             // 
             this.simpleButtonSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.simpleButtonSave.Location = new System.Drawing.Point(170, 230);
+            this.simpleButtonSave.Location = new System.Drawing.Point(190, 245);
             this.simpleButtonSave.Name = "simpleButtonSave";
             this.simpleButtonSave.Size = new System.Drawing.Size(143, 28);
             this.simpleButtonSave.TabIndex = 21;
@@ -121,7 +121,7 @@
             // checkButtonIsNew
             // 
             this.checkButtonIsNew.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.checkButtonIsNew.Location = new System.Drawing.Point(100, 230);
+            this.checkButtonIsNew.Location = new System.Drawing.Point(120, 245);
             this.checkButtonIsNew.Name = "checkButtonIsNew";
             this.checkButtonIsNew.Size = new System.Drawing.Size(64, 28);
             this.checkButtonIsNew.TabIndex = 20;
@@ -194,7 +194,7 @@
             this.splitContainerControl2.Panel1.Text = "Panel1";
             this.splitContainerControl2.Panel2.Controls.Add(this.gridControl1);
             this.splitContainerControl2.Panel2.Text = "Panel2";
-            this.splitContainerControl2.Size = new System.Drawing.Size(527, 278);
+            this.splitContainerControl2.Size = new System.Drawing.Size(537, 278);
             this.splitContainerControl2.SplitterPosition = 56;
             this.splitContainerControl2.TabIndex = 2;
             this.splitContainerControl2.Text = "splitContainerControl2";
@@ -245,7 +245,7 @@
             this.gridControl1.Location = new System.Drawing.Point(0, 0);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(527, 217);
+            this.gridControl1.Size = new System.Drawing.Size(537, 217);
             this.gridControl1.TabIndex = 2;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -264,7 +264,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(869, 278);
+            this.ClientSize = new System.Drawing.Size(879, 278);
             this.Controls.Add(this.splitContainerControl1);
             this.Name = "FormExpenses";
             this.Text = "FormExpenses";

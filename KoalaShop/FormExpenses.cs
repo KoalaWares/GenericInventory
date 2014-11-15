@@ -19,7 +19,8 @@ namespace KoalaShop
     {
         //Declare DataGridFormController
         private DataGridFormController formController;
-
+        private MainForm form;
+       
         public FormExpenses()
         {
             InitializeComponent();
@@ -29,6 +30,8 @@ namespace KoalaShop
             this.formController = new DataGridFormController(this.simpleButtonUpdate, this.simpleButtonSave, this.checkButtonIsNew, this.gridView1, this);
             //para ma.display ang save button instead sa update button.
             this.formController.ToggleNewObjectButton();
+
+            
         }
 
         #region Defined Methods
@@ -65,17 +68,21 @@ namespace KoalaShop
             }
         }
 
+      
         /// <summary>
         /// Save sa object sa db.
         /// </summary>
         public void SaveObjectToDB()
         {
+            
             Expenses expenses = new Expenses();
 
             expenses.Name = textName.Text;
             expenses.Amount = Decimal.Parse(textAmount.Text);
             expenses.Purpose = textPurpose.Text;
-
+          //  expenses.EmployeeID = this.form.CurrenUser.EmployeeID; -- NullReferenceException lagi :'(
+          
+            
 
             //Validation
             if (expenses.Name == "" || expenses.Amount == 0 || expenses.Purpose == "")
@@ -106,7 +113,7 @@ namespace KoalaShop
             expenses.Name = textName.Text;
             expenses.Amount = Decimal.Parse(textAmount.Text);
             expenses.Purpose = textPurpose.Text;
-
+            
 
             //Validation
             if (expenses.Name == "" || expenses.Amount == 0 || expenses.Purpose == "")

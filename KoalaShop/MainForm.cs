@@ -9,14 +9,18 @@ using DevExpress.XtraBars;
 
 using KoalaShopLib;
 using KoalaShopLib.Models;
+using System.Linq;
 namespace KoalaShop
 {
     public partial class MainForm : DevExpress.XtraEditors.XtraForm, IMainForm
     {
         public Account CurrenUser { get; set; }
+        public int empID { get; set; }
 
         public MainForm()
         {
+
+            
             InitializeComponent();
             this.splashScreenManager1.ShowWaitForm();
 
@@ -27,13 +31,15 @@ namespace KoalaShop
                 loginForm.ShowDialog();
             }
 
+
             //check if userAccount is null
             if (this.CurrenUser == null)
             {
                 MessageBox.Show("Closing Application");
                 Environment.Exit(0);
             }
-
+            
+            
             //DRE ang checking unsa ng account den display sa form
             switch (this.CurrenUser.AccountType)
             {
@@ -106,6 +112,9 @@ namespace KoalaShop
                 case FormTypes.POS:
                     form = new FormPOS();
                     break;
+                case FormTypes.Expenses:
+                    form = new FormExpenses();
+                    break;
                 default:
                     form = new DevExpress.XtraEditors.XtraForm();
                     break;
@@ -116,6 +125,9 @@ namespace KoalaShop
             form.MdiParent = this;
             form.Show();
         }
+
+      
+       
         #endregion
 
         //NOTE: Please Leave Event handlers here.

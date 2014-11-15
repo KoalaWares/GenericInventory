@@ -26,6 +26,7 @@ namespace KoalaShop
         {
                 this.MainForm.CurrenUser = koalaShop.Login(textEditUsername.Text.ToString(), textEditPassword.Text.ToString());
 
+
                 if (this.MainForm.CurrenUser == null)
                 {
                     MessageBox.Show("Wrong Username or password");

@@ -155,25 +155,25 @@ namespace KoalaShop
         #endregion
    
 
-        private void checkButtonIsNew_CheckedChanged(object sender, EventArgs e)
+     
+        private void gridView1_DoubleClick(object sender, EventArgs e)
+        {
+            MapSelectedObjectToDetailsPane();
+        }
+
+        private void checkButtonIsNew_CheckedChanged_1(object sender, EventArgs e)
         {
             this.formController.ToggleNewObjectButton();
         }
 
-        private void simpleButtonUpdate_Click(object sender, EventArgs e)
+        private void simpleButtonUpdate_Click_1(object sender, EventArgs e)
         {
             UpdateObjectToDB();
-
         }
 
-        private void simpleButtonSave_Click(object sender, EventArgs e)
+        private void simpleButtonSave_Click_1(object sender, EventArgs e)
         {
             SaveObjectToDB();
-        }
-
-        private void gridView1_DoubleClick(object sender, EventArgs e)
-        {
-            MapSelectedObjectToDetailsPane();
         }
     }
 }

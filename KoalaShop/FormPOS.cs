@@ -59,6 +59,11 @@ namespace KoalaShop
             //}
         }
 
+        private void BtnLogout_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
 
     }
 }

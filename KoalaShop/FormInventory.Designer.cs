@@ -57,6 +57,7 @@
             this.tileExpenses = new DevExpress.XtraEditors.TileItem();
             this.tileOptions = new DevExpress.XtraEditors.TileItem();
             this.tileCustomer = new DevExpress.XtraEditors.TileItem();
+            this.tileGroup2 = new DevExpress.XtraEditors.TileGroup();
             ((System.ComponentModel.ISupportInitialize)(this.applicationMenu1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -127,6 +128,7 @@
             this.tileControl1.BackColor = System.Drawing.Color.DarkKhaki;
             this.tileControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tileControl1.Groups.Add(this.tileMain);
+            this.tileControl1.Groups.Add(this.tileGroup2);
             this.tileControl1.ItemSize = 135;
             this.tileControl1.Location = new System.Drawing.Point(0, 0);
             this.tileControl1.MaxId = 34;
@@ -211,7 +213,6 @@
             this.tileEmployee.Elements.Add(tileItemElement4);
             this.tileEmployee.Id = 26;
             this.tileEmployee.Name = "tileEmployee";
-            this.tileEmployee.ItemClick += new DevExpress.XtraEditors.TileItemClickEventHandler(this.tileEmployee_ItemClick);
             this.tileEmployee.ItemDoubleClick += new DevExpress.XtraEditors.TileItemClickEventHandler(this.tileEmployee_ItemDoubleClick);
             // 
             // tileReport
@@ -247,6 +248,7 @@
             this.tileSupplier.Elements.Add(tileItemElement6);
             this.tileSupplier.Id = 28;
             this.tileSupplier.Name = "tileSupplier";
+            this.tileSupplier.ItemDoubleClick += new DevExpress.XtraEditors.TileItemClickEventHandler(this.tileSupplier_ItemDoubleClick);
             // 
             // tileStock
             // 
@@ -299,6 +301,7 @@
             this.tileOptions.Elements.Add(tileItemElement9);
             this.tileOptions.Id = 31;
             this.tileOptions.Name = "tileOptions";
+            this.tileOptions.ItemDoubleClick += new DevExpress.XtraEditors.TileItemClickEventHandler(this.tileOptions_ItemDoubleClick);
             // 
             // tileCustomer
             // 
@@ -307,6 +310,11 @@
             this.tileCustomer.Id = 33;
             this.tileCustomer.Name = "tileCustomer";
             this.tileCustomer.ItemDoubleClick += new DevExpress.XtraEditors.TileItemClickEventHandler(this.tileCustomer_ItemDoubleClick);
+            // 
+            // tileGroup2
+            // 
+            this.tileGroup2.Name = "tileGroup2";
+            this.tileGroup2.Text = null;
             // 
             // FormInventory
             // 
@@ -355,6 +363,7 @@
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private DevExpress.XtraEditors.TileItem tileItemCategory;
         private DevExpress.XtraEditors.TileItem tileCustomer;
+        private DevExpress.XtraEditors.TileGroup tileGroup2;
 
 
     }
