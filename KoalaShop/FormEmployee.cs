@@ -77,21 +77,30 @@ namespace KoalaShop
             Employee employee = new Employee();
             Account account = new Account();
 
-
-           
-            employee.ID = Int32.Parse(textID.Text);
             employee.Fname = textFName.Text;
             employee.Lname = textLname.Text;
             employee.Address = textAddress.Text;
+            employee.Position = ""; // WHY IBUTANG NMU ANG POSITION DRE NGA NKA BUTANG MAN SA ACCOUNT PARA MUSSUPORT UG MULTIPLE ACCOUNT PER USER
+            
             account.Password = textPassword.Text;
-           account.ID = Int32.Parse(textID.Text);
-            //account.AccountType = textPosition.Text.;
-            //image
+            account.Username = textUsername.Text;
 
-
+            //set account type
+            if (textPosition.Text == "Admin")
+            {
+                account.AccountType = AccountType.Admin;
+            }
+            else if (textPosition.Text == "Cashier")
+            {
+                account.AccountType = AccountType.Cashier;
+            }
+            else
+            {
+                account.AccountType = AccountType.Purchaser;
+            }
 
             //Validation
-            if (employee.Fname == "" || employee.Lname =="" || account.Password == "")
+            if (employee.Fname == "" || employee.Lname =="")
             {
                 MessageBox.Show("Empty Name Field");
                 return;
@@ -103,12 +112,13 @@ namespace KoalaShop
                 //saving to employee table
                 koala.EmployeeRepo.Add(employee);
 
+                //set employee refrence to account kay ma update na eya ID kay refrence type ang class
+                account.EmployeeID = employee.ID;
 
                 //saving to account table
                 koala.AccountRepo.Add(account);
+
                 MessageBox.Show("Saved!");
-
-
                 TextboxSetToNull();
 
             }

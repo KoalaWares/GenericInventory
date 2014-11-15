@@ -211,6 +211,7 @@
             this.tileEmployee.Elements.Add(tileItemElement4);
             this.tileEmployee.Id = 26;
             this.tileEmployee.Name = "tileEmployee";
+            this.tileEmployee.ItemClick += new DevExpress.XtraEditors.TileItemClickEventHandler(this.tileEmployee_ItemClick);
             this.tileEmployee.ItemDoubleClick += new DevExpress.XtraEditors.TileItemClickEventHandler(this.tileEmployee_ItemDoubleClick);
             // 
             // tileReport

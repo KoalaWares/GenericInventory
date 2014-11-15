@@ -63,5 +63,10 @@ namespace KoalaShop
         {
             this.mainForm.ChildFormInitializer(FormTypes.POS);
         }
+
+        private void tileEmployee_ItemClick(object sender, TileItemEventArgs e)
+        {
+            this.mainForm.ChildFormInitializer(FormTypes.Employee);
+        }
     }
 }

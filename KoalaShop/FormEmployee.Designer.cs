@@ -30,6 +30,7 @@
         {
             this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.simpleButtonUpdate = new DevExpress.XtraEditors.SimpleButton();
             this.imageEdit1 = new DevExpress.XtraEditors.ImageEdit();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -50,7 +51,8 @@
             this.textPosition = new DevExpress.XtraEditors.ComboBoxEdit();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.simpleButtonUpdate = new DevExpress.XtraEditors.SimpleButton();
+            this.textUsername = new DevExpress.XtraEditors.TextEdit();
+            this.label9 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
             this.splitContainerControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
@@ -65,6 +67,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.textPosition.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textUsername.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainerControl1
@@ -86,6 +89,8 @@
             // 
             this.groupControl1.AppearanceCaption.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupControl1.AppearanceCaption.Options.UseFont = true;
+            this.groupControl1.Controls.Add(this.textUsername);
+            this.groupControl1.Controls.Add(this.label9);
             this.groupControl1.Controls.Add(this.simpleButtonUpdate);
             this.groupControl1.Controls.Add(this.imageEdit1);
             this.groupControl1.Controls.Add(this.label8);
@@ -112,9 +117,19 @@
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "Employee Details";
             // 
+            // simpleButtonUpdate
+            // 
+            this.simpleButtonUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.simpleButtonUpdate.Location = new System.Drawing.Point(185, 315);
+            this.simpleButtonUpdate.Name = "simpleButtonUpdate";
+            this.simpleButtonUpdate.Size = new System.Drawing.Size(143, 28);
+            this.simpleButtonUpdate.TabIndex = 23;
+            this.simpleButtonUpdate.Text = "Update";
+            this.simpleButtonUpdate.Click += new System.EventHandler(this.simpleButtonUpdate_Click_1);
+            // 
             // imageEdit1
             // 
-            this.imageEdit1.Location = new System.Drawing.Point(115, 235);
+            this.imageEdit1.Location = new System.Drawing.Point(115, 266);
             this.imageEdit1.Name = "imageEdit1";
             this.imageEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -124,7 +139,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(5, 235);
+            this.label8.Location = new System.Drawing.Point(5, 266);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(41, 13);
             this.label8.TabIndex = 21;
@@ -133,7 +148,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(5, 207);
+            this.label7.Location = new System.Drawing.Point(5, 238);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(48, 13);
             this.label7.TabIndex = 19;
@@ -141,7 +156,7 @@
             // 
             // textPassword
             // 
-            this.textPassword.Location = new System.Drawing.Point(115, 59);
+            this.textPassword.Location = new System.Drawing.Point(115, 90);
             this.textPassword.Name = "textPassword";
             this.textPassword.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
             this.textPassword.Size = new System.Drawing.Size(198, 22);
@@ -150,7 +165,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(5, 68);
+            this.label6.Location = new System.Drawing.Point(5, 99);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(57, 13);
             this.label6.TabIndex = 17;
@@ -176,7 +191,7 @@
             // 
             // textContact
             // 
-            this.textContact.Location = new System.Drawing.Point(115, 170);
+            this.textContact.Location = new System.Drawing.Point(115, 201);
             this.textContact.Name = "textContact";
             this.textContact.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
             this.textContact.Properties.Mask.EditMask = "(\\d?\\d?\\d?)\\d\\d\\d-\\d\\d\\d\\d";
@@ -187,7 +202,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(5, 179);
+            this.label4.Location = new System.Drawing.Point(5, 210);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(89, 13);
             this.label4.TabIndex = 13;
@@ -195,7 +210,7 @@
             // 
             // textAddress
             // 
-            this.textAddress.Location = new System.Drawing.Point(115, 142);
+            this.textAddress.Location = new System.Drawing.Point(115, 173);
             this.textAddress.Name = "textAddress";
             this.textAddress.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
             this.textAddress.Size = new System.Drawing.Size(198, 22);
@@ -204,7 +219,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(5, 151);
+            this.label3.Location = new System.Drawing.Point(5, 182);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(50, 13);
             this.label3.TabIndex = 11;
@@ -232,7 +247,7 @@
             // 
             // textLname
             // 
-            this.textLname.Location = new System.Drawing.Point(115, 114);
+            this.textLname.Location = new System.Drawing.Point(115, 145);
             this.textLname.Name = "textLname";
             this.textLname.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
             this.textLname.Size = new System.Drawing.Size(198, 22);
@@ -241,7 +256,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(5, 123);
+            this.label2.Location = new System.Drawing.Point(5, 154);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(61, 13);
             this.label2.TabIndex = 7;
@@ -249,7 +264,7 @@
             // 
             // textFName
             // 
-            this.textFName.Location = new System.Drawing.Point(115, 87);
+            this.textFName.Location = new System.Drawing.Point(115, 118);
             this.textFName.Name = "textFName";
             this.textFName.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
             this.textFName.Size = new System.Drawing.Size(198, 22);
@@ -258,7 +273,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(5, 95);
+            this.label1.Location = new System.Drawing.Point(5, 126);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(62, 13);
             this.label1.TabIndex = 0;
@@ -266,11 +281,15 @@
             // 
             // textPosition
             // 
-            this.textPosition.Location = new System.Drawing.Point(115, 198);
+            this.textPosition.Location = new System.Drawing.Point(115, 229);
             this.textPosition.Name = "textPosition";
             this.textPosition.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
             this.textPosition.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.textPosition.Properties.Items.AddRange(new object[] {
+            "Admin",
+            "Cashier",
+            "Purchaser"});
             this.textPosition.Properties.PopupSizeable = true;
             this.textPosition.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.textPosition.Size = new System.Drawing.Size(198, 22);
@@ -297,15 +316,22 @@
             this.gridView1.OptionsView.ShowFooter = true;
             this.gridView1.DoubleClick += new System.EventHandler(this.gridView1_DoubleClick);
             // 
-            // simpleButtonUpdate
+            // textUsername
             // 
-            this.simpleButtonUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.simpleButtonUpdate.Location = new System.Drawing.Point(185, 315);
-            this.simpleButtonUpdate.Name = "simpleButtonUpdate";
-            this.simpleButtonUpdate.Size = new System.Drawing.Size(143, 28);
-            this.simpleButtonUpdate.TabIndex = 23;
-            this.simpleButtonUpdate.Text = "Update";
-            this.simpleButtonUpdate.Click += new System.EventHandler(this.simpleButtonUpdate_Click_1);
+            this.textUsername.Location = new System.Drawing.Point(115, 59);
+            this.textUsername.Name = "textUsername";
+            this.textUsername.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
+            this.textUsername.Size = new System.Drawing.Size(198, 22);
+            this.textUsername.TabIndex = 25;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(5, 68);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(59, 13);
+            this.label9.TabIndex = 24;
+            this.label9.Text = "Username:";
             // 
             // FormEmployee
             // 
@@ -330,6 +356,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.textPosition.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textUsername.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -359,5 +386,7 @@
         private System.Windows.Forms.Label label4;
         private DevExpress.XtraEditors.ComboBoxEdit textPosition;
         private DevExpress.XtraEditors.SimpleButton simpleButtonUpdate;
+        private DevExpress.XtraEditors.TextEdit textUsername;
+        private System.Windows.Forms.Label label9;
     }
 }
