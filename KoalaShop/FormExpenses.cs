@@ -20,8 +20,8 @@ namespace KoalaShop
         //Declare DataGridFormController
         private DataGridFormController formController;
         private MainForm form;
-       
-        public FormExpenses()
+
+        public FormExpenses(MainForm mainform)
         {
             InitializeComponent();
             //para ma set ang data sa datgrid
@@ -31,7 +31,8 @@ namespace KoalaShop
             //para ma.display ang save button instead sa update button.
             this.formController.ToggleNewObjectButton();
 
-            
+            this.form = mainform;
+
         }
 
         #region Defined Methods
@@ -62,7 +63,7 @@ namespace KoalaShop
                     this.textName.Text = selectedObject.Name;
                     this.textAmount.Text = selectedObject.Amount.ToString();
                     this.textPurpose.Text = selectedObject.Purpose;
-                   
+                    this.formController.UpdateObjectButton();
 
                 }
             }
@@ -80,7 +81,9 @@ namespace KoalaShop
             expenses.Name = textName.Text;
             expenses.Amount = Decimal.Parse(textAmount.Text);
             expenses.Purpose = textPurpose.Text;
-          //  expenses.EmployeeID = this.form.CurrenUser.EmployeeID; -- NullReferenceException lagi :'(
+            expenses.EmployeeID = this.form.CurrenUser.EmployeeID;
+            expenses.Date = DateTime.Now;
+
           
             
 
@@ -113,6 +116,8 @@ namespace KoalaShop
             expenses.Name = textName.Text;
             expenses.Amount = Decimal.Parse(textAmount.Text);
             expenses.Purpose = textPurpose.Text;
+            expenses.EmployeeID = this.form.CurrenUser.EmployeeID;
+            expenses.Date = DateTime.Now;
             
 
             //Validation
@@ -131,6 +136,7 @@ namespace KoalaShop
                     expenses.ID = int.Parse(this.formController.GetSelectedObjectID());
                     koala.ExpensesRepo.Update(expenses);
                     MessageBox.Show("Updated!");
+                   
                     
                     TextboxSetToNull();
                 }

@@ -119,7 +119,7 @@
             // simpleButtonUpdate
             // 
             this.simpleButtonUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.simpleButtonUpdate.Location = new System.Drawing.Point(185, 344);
+            this.simpleButtonUpdate.Location = new System.Drawing.Point(185, 378);
             this.simpleButtonUpdate.Name = "simpleButtonUpdate";
             this.simpleButtonUpdate.Size = new System.Drawing.Size(143, 28);
             this.simpleButtonUpdate.TabIndex = 58;

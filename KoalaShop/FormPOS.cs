@@ -7,61 +7,217 @@ using System.Text;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 
+using KoalaShopLib;
+using KoalaShopLib.Models;
+using KoalaShopLib.Models.ViewModel;
+using System.Linq;
+
 namespace KoalaShop
 {
-    public partial class FormPOS : DevExpress.XtraEditors.XtraForm
+    public partial class FormPOS : DevExpress.XtraEditors.XtraForm, IDataGridForm
     {
-        public FormPOS()
+        //Declare DataGridFormController
+        private DataGridFormController formController;
+        MainForm mainForm;
+
+        public FormPOS(MainForm form)
         {
             InitializeComponent();
+            this.mainForm = form;
         }
 
-        private void groupControl4_Paint(object sender, PaintEventArgs e)
+        #region Defined Methods
+        /// <summary>
+        /// Refreshes/updates data list and grid view.
+        /// </summary>
+        public void RefreshList()
         {
-
+            using (var koala = KoalaShopFactory.CreateKoalaShop())
+            {
+                this.gridControl1.DataSource = koala.EmployeeRepo.GetAll();
+            }
         }
 
-        private void textEdit8_EditValueChanged(object sender, EventArgs e)
+        /// <summary>
+        /// Pakita sa details pane sa selected nga oject sa datagrid.
+        /// </summary>
+        public void MapSelectedObjectToDetailsPane()
         {
+            //string id = this.formController.GetSelectedObjectID();
 
-        }
-
-        private void groupControl5_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void simpleButton1_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void BtnChangePass_Click(object sender, EventArgs e)
-        {
-            FormChangePass a = new FormChangePass();
-            a.ShowDialog();
-        }
-
-        private void BtnLogout_Click(object sender, EventArgs e)
-        {
-            //if (User == admin)
+            //using (IKoalaShop koalaShop = KoalaShopFactory.CreateKoalaShop())
             //{
-            //    FormInventory a = new FormInventory();
-            //    this.Close();
-            //    a.Show();
-            //}
+            //    var selectedObject = koalaShop.EmployeeRepo.GetAll().Where(c => c.ID == Int32.Parse(id)).SingleOrDefault();
+            //    var selectedObjectAccount = koalaShop.AccountRepo.GetAll().Where(a => a.ID == Int32.Parse(id)).SingleOrDefault();
 
+            //    if (selectedObject != null)
+            //    {
+            //        this.textID.Text = selectedObject.ID.ToString();
+            //        this.textFName.Text = selectedObject.Fname;
+            //        this.textLname.Text = selectedObject.Lname;
+            //        this.textAddress.Text = selectedObject.Address;
+            //        this.textContact.Text = selectedObject.Contact;
+            //        this.textPosition.Text = selectedObjectAccount.AccountType.ToString();
+            //        this.textUsername.Text = selectedObjectAccount.Username;
+            //        this.formController.UpdateObjectButton();
+
+            //    }
+            //}
+        }
+
+        /// <summary>
+        /// Save sa object sa db.
+        /// </summary>
+        public void SaveObjectToDB()
+        {
+            //Employee employee = new Employee();
+            //Account account = new Account();
+
+            //employee.Fname = textFName.Text;
+            //employee.Lname = textLname.Text;
+            //employee.Address = textAddress.Text;
+            //employee.Contact = textContact.Text;
+
+
+            //account.Password = textPassword.Text;
+            //account.Username = textUsername.Text;
+
+            ////set account type
+            //if (textPosition.Text == "Admin")
+            //{
+            //    account.AccountType = AccountType.Admin;
+            //}
+            //else if (textPosition.Text == "Cashier")
+            //{
+            //    account.AccountType = AccountType.Cashier;
+            //}
             //else
             //{
-            //    FormLogin a = new FormLogin();
-            //    this.Close();
-            //    a.Show();
+            //    account.AccountType = AccountType.Purchaser;
             //}
+
+            ////Validation
+            //if (employee.Fname == "" || employee.Lname == "" || account.Password == "")
+            //{
+            //    MessageBox.Show("Empty Name Field");
+            //    return;
+            //}
+
+            ////DB access
+            //using (var koala = KoalaShopFactory.CreateKoalaShop())
+            //{
+            //    //saving to employee table
+            //    koala.EmployeeRepo.Add(employee);
+
+            //    //set employee refrence to account kay ma update na eya ID kay refrence type ang class
+            //    account.EmployeeID = employee.ID;
+
+            //    //saving to account table
+            //    koala.AccountRepo.Add(account);
+
+            //    MessageBox.Show("Saved!");
+            //    TextboxSetToNull();
+
+            //}
+            ////Refresh list to update view.
+            //RefreshList();
         }
+
+
+
+        public void UpdateObjectToDB()
+        {
+            //Employee employee = new Employee();
+            //Account account = new Account();
+
+            //employee.Fname = textFName.Text;
+            //employee.Lname = textLname.Text;
+            //employee.Address = textAddress.Text;
+            //employee.Contact = textContact.Text;
+
+
+            //account.Password = textPassword.Text;
+            //account.Username = textUsername.Text;
+
+
+            ////set account type
+            //if (textPosition.Text == "Admin")
+            //{
+            //    account.AccountType = AccountType.Admin;
+            //}
+            //else if (textPosition.Text == "Cashier")
+            //{
+            //    account.AccountType = AccountType.Cashier;
+            //}
+            //else
+            //{
+            //    account.AccountType = AccountType.Purchaser;
+            //}
+
+            ////Validation
+            //if (employee.Fname == "" || employee.Lname == "")
+            //{
+            //    MessageBox.Show("Empty Name Field");
+            //    return;
+            //}
+
+
+            ////DB access
+            //using (var koala = KoalaShopFactory.CreateKoalaShop())
+            //{
+
+            //    try
+            //    {
+            //        employee.ID = int.Parse(this.formController.GetSelectedObjectID());
+            //        koala.EmployeeRepo.Update(employee);
+            //        koala.AccountRepo.Update(account);
+            //        MessageBox.Show("Updated!");
+
+            //        TextboxSetToNull();
+            //    }
+            //    catch (Exception)
+            //    {
+            //        MessageBox.Show("Something Went Wrong");
+            //        //throw;
+            //    }
+
+
+            //}
+
+            ////Refresh list to update view.
+            //RefreshList();
+        }
+
+        public void TextboxSetToNull()
+        {
+            ////setting textboxes to null
+            //this.textID.Text = "";
+            //this.textFName.Text = "";
+            //this.textLname.Text = "";
+            //this.textAddress.Text = "";
+            //this.textContact.Text = "";
+            //this.textPosition.Text = "";
+            //this.textPassword.Text = "";
+            //this.textUsername.Text = "";
+        }
+
+
+        #endregion
+     
+
+ 
+
+     
 
         private void BtnLogout_Click_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void BtnChangePass_Click_1(object sender, EventArgs e)
+        {
+            this.mainForm.ChildFormInitializer(FormTypes.ChangePass);
+            
         }
 
 
