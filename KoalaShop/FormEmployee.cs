@@ -6,7 +6,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
-
+using System.Data.SqlClient;
 
 using KoalaShopLib;
 using KoalaShopLib.Models;
@@ -39,8 +39,14 @@ namespace KoalaShop
         {
             using (var koala = KoalaShopFactory.CreateKoalaShop())
             {
-                this.gridControl1.DataSource = koala.EmployeeRepo.GetAll();
+                this.employeesTableAdapter.Fill(this.dataSet1.Employees);
+                this.accountsTableAdapter.Fill(this.dataSet1.Accounts);
+            
+               
+              
+
             }
+            
         }
 
         /// <summary>
@@ -53,7 +59,7 @@ namespace KoalaShop
             using (IKoalaShop koalaShop = KoalaShopFactory.CreateKoalaShop())
             {
                 var selectedObject = koalaShop.EmployeeRepo.GetAll().Where(c => c.ID == Int32.Parse(id)).SingleOrDefault();
-                var selectedObjectAccount = koalaShop.AccountRepo.GetAll().Where(a => a.ID == Int32.Parse(id)).SingleOrDefault();
+                var selectedObjectAccount = koalaShop.AccountRepo.GetAll().Where(a => a.EmployeeID == Int32.Parse(id)).SingleOrDefault();
 
                 if (selectedObject != null)
                 {
@@ -65,6 +71,9 @@ namespace KoalaShop
                     this.textPosition.Text = selectedObjectAccount.AccountType.ToString();
                     this.textUsername.Text = selectedObjectAccount.Username;
                     this.formController.UpdateObjectButton();
+                    this.textPassword.Text = selectedObjectAccount.Password;
+                    this.textPassword.Enabled = false;
+                    this.txtAcct.Text = selectedObjectAccount.ID.ToString();
 
                 }
             }
@@ -86,6 +95,7 @@ namespace KoalaShop
             
             account.Password = textPassword.Text;
             account.Username = textUsername.Text;
+  
 
             //set account type
             if (textPosition.Text == "Admin")
@@ -143,7 +153,7 @@ namespace KoalaShop
 
             account.Password = textPassword.Text;
             account.Username = textUsername.Text;
-
+            account.ID = Int32.Parse(txtAcct.Text);
 
             //set account type
             if (textPosition.Text == "Admin")
@@ -174,15 +184,28 @@ namespace KoalaShop
                 try
                 {
                     employee.ID = int.Parse(this.formController.GetSelectedObjectID());
+                    //saving to employee table
                     koala.EmployeeRepo.Update(employee);
-                    koala.AccountRepo.Update(account);
-                    MessageBox.Show("Updated!");
 
+                    //set employee refrence to account kay ma update na eya ID kay refrence type ang class
+                    account.EmployeeID = employee.ID;
+
+                    if (textPassword.Text == "")
+                    {
+                        //not implemented.
+                    }
+                    else
+                    {
+                        //saving to account table
+                        koala.AccountRepo.Update(account);
+                    }
+                    MessageBox.Show("Updated!");
                     TextboxSetToNull();
                 }
                 catch (Exception)
                 {
-                    MessageBox.Show("Something Went Wrong");
+                    //MessageBox.Show(e.Exception);
+                  MessageBox.Show("Something Went Wrong");
                     //throw;
                 }
 
@@ -233,5 +256,9 @@ namespace KoalaShop
         {
             SaveObjectToDB();
         }
+
+        
+
+       
     }
 }
