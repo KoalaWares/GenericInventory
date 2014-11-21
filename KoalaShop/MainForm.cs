@@ -15,7 +15,7 @@ namespace KoalaShop
     public partial class MainForm : DevExpress.XtraEditors.XtraForm, IMainForm
     {
         public Account CurrenUser { get; set; }
-        public int empID { get; set; }
+        
 
         public MainForm()
         {
@@ -27,6 +27,7 @@ namespace KoalaShop
             //display login form
             using (var loginForm = new LoginForm())
             {
+                
                 loginForm.MainForm = this;
                 loginForm.ShowDialog();
             }
