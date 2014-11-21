@@ -9,8 +9,7 @@ using DevExpress.XtraEditors;
 using KoalaShopLib;
 using KoalaShopLib.Models;
 
-using KoalaShopLib;
-using KoalaShopLib.Models;
+
 using KoalaShopLib.Models.ViewModel;
 using System.Linq;
 
@@ -42,6 +41,7 @@ namespace KoalaShop
             using (var koala = KoalaShopFactory.CreateKoalaShop())
             {
                 this.gridControl1.DataSource = koala.GetProductsForView();
+                this.gridControl1.DataSource = koala.StocksRequestRepo.GetAll(); ;
 
                 this.textEditCategory.Properties.DataSource = koala.CategoryRepo.GetAll();
                 this.textEditCategory.Properties.DisplayMember = "Name";
@@ -53,6 +53,7 @@ namespace KoalaShop
             }
         }
 
+       
         /// <summary>
         /// Pakita sa details pane sa selected nga oject sa datagrid.
         /// </summary>

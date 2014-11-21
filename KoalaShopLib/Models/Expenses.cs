@@ -13,6 +13,7 @@ namespace KoalaShopLib.Models
         public decimal Amount { get; set; }
         public string Purpose { get; set; }
         public System.DateTime Date { get; set; }
+        public string Category { get; set; }
 
         public int EmployeeID { get; set; }
 

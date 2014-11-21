@@ -174,6 +174,7 @@
             this.BtnChangePass.Size = new System.Drawing.Size(114, 32);
             this.BtnChangePass.TabIndex = 15;
             this.BtnChangePass.Text = "Change Password";
+            this.BtnChangePass.Click += new System.EventHandler(this.BtnChangePass_Click_1);
             // 
             // labelControl9
             // 

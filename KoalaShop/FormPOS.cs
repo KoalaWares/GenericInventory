@@ -7,61 +7,76 @@ using System.Text;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 
+using KoalaShopLib;
+using KoalaShopLib.Models;
+using KoalaShopLib.Models.ViewModel;
+using System.Linq;
+
 namespace KoalaShop
 {
-    public partial class FormPOS : DevExpress.XtraEditors.XtraForm
+    public partial class FormPOS : DevExpress.XtraEditors.XtraForm, IDataGridForm
     {
-        public FormPOS()
+
+        //Declare DataGridFormController
+        private DataGridFormController formController;
+        MainForm mainForm;
+
+        public FormPOS(MainForm form)
         {
             InitializeComponent();
+            this.mainForm = form;
         }
 
-        private void groupControl4_Paint(object sender, PaintEventArgs e)
+        #region Defined Methods
+        /// <summary>
+        /// Refreshes/updates data list and grid view.
+        /// </summary>
+        public void RefreshList()
         {
-
+            //Not Yet Implemented.
         }
 
-        private void textEdit8_EditValueChanged(object sender, EventArgs e)
+        /// <summary>
+        /// Pakita sa details pane sa selected nga oject sa datagrid.
+        /// </summary>
+        public void MapSelectedObjectToDetailsPane()
         {
-
+            //Not Yet Implemented.
         }
 
-        private void groupControl5_Paint(object sender, PaintEventArgs e)
+        /// <summary>
+        /// Save sa object sa db.
+        /// </summary>
+        public void SaveObjectToDB()
         {
-
+            //Not Yet Implemented.
         }
 
-        private void simpleButton1_Click(object sender, EventArgs e)
+
+
+        public void UpdateObjectToDB()
         {
-            
+            //Not Yet Implemented.
         }
 
-        private void BtnChangePass_Click(object sender, EventArgs e)
+        public void TextboxSetToNull()
         {
-            FormChangePass a = new FormChangePass();
-            a.ShowDialog();
+          //Not Yet Implemented.
         }
 
-        private void BtnLogout_Click(object sender, EventArgs e)
-        {
-            //if (User == admin)
-            //{
-            //    FormInventory a = new FormInventory();
-            //    this.Close();
-            //    a.Show();
-            //}
 
-            //else
-            //{
-            //    FormLogin a = new FormLogin();
-            //    this.Close();
-            //    a.Show();
-            //}
-        }
+        #endregion
+     
 
+       
         private void BtnLogout_Click_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void BtnChangePass_Click_1(object sender, EventArgs e)
+        {
+            this.mainForm.ChildFormInitializer(FormTypes.ChangePass);
         }
 
 

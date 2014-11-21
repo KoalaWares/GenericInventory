@@ -28,24 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
-            this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.label6 = new System.Windows.Forms.Label();
-            this.textEditBarCode = new DevExpress.XtraEditors.TextEdit();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textEditVariant = new DevExpress.XtraEditors.TextEdit();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textEditWeight = new DevExpress.XtraEditors.TextEdit();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textEditName = new DevExpress.XtraEditors.TextEdit();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textEditCategory = new DevExpress.XtraEditors.LookUpEdit();
-            this.textEditDescription = new DevExpress.XtraEditors.MemoEdit();
+            this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.textEditPrice = new DevExpress.XtraEditors.TextEdit();
-            this.label12 = new System.Windows.Forms.Label();
+            this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
+            this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.simpleButtonUpdate = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButtonSave = new DevExpress.XtraEditors.SimpleButton();
             this.checkButtonIsNew = new DevExpress.XtraEditors.CheckButton();
@@ -59,26 +46,69 @@
             this.label10 = new System.Windows.Forms.Label();
             this.textQuantity = new DevExpress.XtraEditors.TextEdit();
             this.label11 = new System.Windows.Forms.Label();
+            this.textEditPrice = new DevExpress.XtraEditors.TextEdit();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.textEditBarCode = new DevExpress.XtraEditors.TextEdit();
+            this.label5 = new System.Windows.Forms.Label();
+            this.textEditVariant = new DevExpress.XtraEditors.TextEdit();
+            this.label4 = new System.Windows.Forms.Label();
+            this.textEditWeight = new DevExpress.XtraEditors.TextEdit();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textEditName = new DevExpress.XtraEditors.TextEdit();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textEditCategory = new DevExpress.XtraEditors.LookUpEdit();
+            this.textEditDescription = new DevExpress.XtraEditors.MemoEdit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
             this.splitContainerControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEditBarCode.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEditVariant.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEditWeight.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEditName.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEditCategory.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEditDescription.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEditPrice.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textSupplier.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateExpires.Properties.VistaTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateExpires.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textTotal.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textCost.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textQuantity.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEditPrice.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEditBarCode.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEditVariant.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEditWeight.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEditName.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEditCategory.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEditDescription.Properties)).BeginInit();
             this.SuspendLayout();
+            // 
+            // gridView2
+            // 
+            this.gridView2.GridControl = this.gridControl1;
+            this.gridView2.Name = "gridView2";
+            this.gridView2.VertScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
+            // 
+            // gridControl1
+            // 
+            this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridControl1.Location = new System.Drawing.Point(0, 0);
+            this.gridControl1.MainView = this.gridView1;
+            this.gridControl1.Name = "gridControl1";
+            this.gridControl1.Size = new System.Drawing.Size(640, 497);
+            this.gridControl1.TabIndex = 1;
+            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView1,
+            this.gridView2});
+            // 
+            // gridView1
+            // 
+            this.gridView1.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.gridView1.GridControl = this.gridControl1;
+            this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsBehavior.Editable = false;
+            this.gridView1.OptionsFind.AlwaysVisible = true;
+            this.gridView1.OptionsView.ShowFooter = true;
+            this.gridView1.DoubleClick += new System.EventHandler(this.gridView1_DoubleClick);
             // 
             // splitContainerControl1
             // 
@@ -129,6 +159,150 @@
             this.groupControl1.Size = new System.Drawing.Size(334, 497);
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "Product Details";
+            // 
+            // simpleButtonUpdate
+            // 
+            this.simpleButtonUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.simpleButtonUpdate.Location = new System.Drawing.Point(186, 466);
+            this.simpleButtonUpdate.Name = "simpleButtonUpdate";
+            this.simpleButtonUpdate.Size = new System.Drawing.Size(143, 28);
+            this.simpleButtonUpdate.TabIndex = 55;
+            this.simpleButtonUpdate.Text = "Update";
+            this.simpleButtonUpdate.Click += new System.EventHandler(this.simpleButtonUpdate_Click);
+            // 
+            // simpleButtonSave
+            // 
+            this.simpleButtonSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.simpleButtonSave.Location = new System.Drawing.Point(186, 465);
+            this.simpleButtonSave.Name = "simpleButtonSave";
+            this.simpleButtonSave.Size = new System.Drawing.Size(143, 28);
+            this.simpleButtonSave.TabIndex = 54;
+            this.simpleButtonSave.Text = "Save";
+            this.simpleButtonSave.Click += new System.EventHandler(this.simpleButtonSave_Click_1);
+            // 
+            // checkButtonIsNew
+            // 
+            this.checkButtonIsNew.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.checkButtonIsNew.Location = new System.Drawing.Point(116, 465);
+            this.checkButtonIsNew.Name = "checkButtonIsNew";
+            this.checkButtonIsNew.Size = new System.Drawing.Size(64, 28);
+            this.checkButtonIsNew.TabIndex = 53;
+            this.checkButtonIsNew.Text = "New";
+            this.checkButtonIsNew.CheckedChanged += new System.EventHandler(this.checkButtonIsNew_CheckedChanged_2);
+            // 
+            // textSupplier
+            // 
+            this.textSupplier.Location = new System.Drawing.Point(100, 379);
+            this.textSupplier.Name = "textSupplier";
+            this.textSupplier.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
+            this.textSupplier.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.textSupplier.Properties.NullText = "";
+            this.textSupplier.Size = new System.Drawing.Size(205, 22);
+            this.textSupplier.TabIndex = 52;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(9, 381);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(49, 13);
+            this.label9.TabIndex = 51;
+            this.label9.Text = "Supplier:";
+            // 
+            // dateExpires
+            // 
+            this.dateExpires.EditValue = null;
+            this.dateExpires.Location = new System.Drawing.Point(100, 351);
+            this.dateExpires.Name = "dateExpires";
+            this.dateExpires.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
+            this.dateExpires.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateExpires.Properties.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton()});
+            this.dateExpires.Size = new System.Drawing.Size(205, 20);
+            this.dateExpires.TabIndex = 50;
+            // 
+            // textTotal
+            // 
+            this.textTotal.Location = new System.Drawing.Point(100, 323);
+            this.textTotal.Name = "textTotal";
+            this.textTotal.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
+            this.textTotal.Size = new System.Drawing.Size(205, 22);
+            this.textTotal.TabIndex = 49;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(9, 355);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(85, 13);
+            this.label8.TabIndex = 48;
+            this.label8.Text = "Expiration Date:";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(9, 327);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(60, 13);
+            this.label7.TabIndex = 47;
+            this.label7.Text = "Total Cost:";
+            // 
+            // textCost
+            // 
+            this.textCost.Location = new System.Drawing.Point(100, 295);
+            this.textCost.Name = "textCost";
+            this.textCost.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
+            this.textCost.Properties.Mask.EditMask = "(\\d?\\d?\\d?)\\d\\d\\d-\\d\\d\\d\\d";
+            this.textCost.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Regular;
+            this.textCost.Size = new System.Drawing.Size(205, 22);
+            this.textCost.TabIndex = 46;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(9, 299);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(33, 13);
+            this.label10.TabIndex = 45;
+            this.label10.Text = "Cost:";
+            // 
+            // textQuantity
+            // 
+            this.textQuantity.Location = new System.Drawing.Point(100, 267);
+            this.textQuantity.Name = "textQuantity";
+            this.textQuantity.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
+            this.textQuantity.Size = new System.Drawing.Size(205, 22);
+            this.textQuantity.TabIndex = 44;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(9, 271);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(53, 13);
+            this.label11.TabIndex = 43;
+            this.label11.Text = "Quantity:";
+            // 
+            // textEditPrice
+            // 
+            this.textEditPrice.Location = new System.Drawing.Point(100, 238);
+            this.textEditPrice.Name = "textEditPrice";
+            this.textEditPrice.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
+            this.textEditPrice.Properties.Mask.EditMask = "c";
+            this.textEditPrice.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.textEditPrice.Size = new System.Drawing.Size(205, 22);
+            this.textEditPrice.TabIndex = 42;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(9, 242);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(34, 13);
+            this.label12.TabIndex = 41;
+            this.label12.Text = "Price:";
             // 
             // label6
             // 
@@ -235,171 +409,6 @@
             this.textEditDescription.Size = new System.Drawing.Size(205, 69);
             this.textEditDescription.TabIndex = 16;
             // 
-            // gridControl1
-            // 
-            this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl1.Location = new System.Drawing.Point(0, 0);
-            this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(640, 497);
-            this.gridControl1.TabIndex = 1;
-            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
-            // 
-            // gridView1
-            // 
-            this.gridView1.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
-            this.gridView1.GridControl = this.gridControl1;
-            this.gridView1.Name = "gridView1";
-            this.gridView1.OptionsBehavior.Editable = false;
-            this.gridView1.OptionsFind.AlwaysVisible = true;
-            this.gridView1.OptionsView.ShowFooter = true;
-            this.gridView1.DoubleClick += new System.EventHandler(this.gridView1_DoubleClick);
-            // 
-            // textEditPrice
-            // 
-            this.textEditPrice.Location = new System.Drawing.Point(100, 238);
-            this.textEditPrice.Name = "textEditPrice";
-            this.textEditPrice.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
-            this.textEditPrice.Properties.Mask.EditMask = "c";
-            this.textEditPrice.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.textEditPrice.Size = new System.Drawing.Size(205, 22);
-            this.textEditPrice.TabIndex = 42;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(9, 242);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(34, 13);
-            this.label12.TabIndex = 41;
-            this.label12.Text = "Price:";
-            // 
-            // simpleButtonUpdate
-            // 
-            this.simpleButtonUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.simpleButtonUpdate.Location = new System.Drawing.Point(186, 466);
-            this.simpleButtonUpdate.Name = "simpleButtonUpdate";
-            this.simpleButtonUpdate.Size = new System.Drawing.Size(143, 28);
-            this.simpleButtonUpdate.TabIndex = 55;
-            this.simpleButtonUpdate.Text = "Update";
-            this.simpleButtonUpdate.Click += new System.EventHandler(this.simpleButtonUpdate_Click);
-            // 
-            // simpleButtonSave
-            // 
-            this.simpleButtonSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.simpleButtonSave.Location = new System.Drawing.Point(186, 465);
-            this.simpleButtonSave.Name = "simpleButtonSave";
-            this.simpleButtonSave.Size = new System.Drawing.Size(143, 28);
-            this.simpleButtonSave.TabIndex = 54;
-            this.simpleButtonSave.Text = "Save";
-            this.simpleButtonSave.Click += new System.EventHandler(this.simpleButtonSave_Click_1);
-            // 
-            // checkButtonIsNew
-            // 
-            this.checkButtonIsNew.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.checkButtonIsNew.Location = new System.Drawing.Point(116, 465);
-            this.checkButtonIsNew.Name = "checkButtonIsNew";
-            this.checkButtonIsNew.Size = new System.Drawing.Size(64, 28);
-            this.checkButtonIsNew.TabIndex = 53;
-            this.checkButtonIsNew.Text = "New";
-            this.checkButtonIsNew.CheckedChanged += new System.EventHandler(this.checkButtonIsNew_CheckedChanged_2);
-            // 
-            // textSupplier
-            // 
-            this.textSupplier.Location = new System.Drawing.Point(100, 379);
-            this.textSupplier.Name = "textSupplier";
-            this.textSupplier.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
-            this.textSupplier.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.textSupplier.Properties.NullText = "";
-            this.textSupplier.Size = new System.Drawing.Size(205, 22);
-            this.textSupplier.TabIndex = 52;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(9, 381);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(49, 13);
-            this.label9.TabIndex = 51;
-            this.label9.Text = "Supplier:";
-            // 
-            // dateExpires
-            // 
-            this.dateExpires.EditValue = null;
-            this.dateExpires.Location = new System.Drawing.Point(100, 351);
-            this.dateExpires.Name = "dateExpires";
-            this.dateExpires.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
-            this.dateExpires.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateExpires.Properties.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.dateExpires.Size = new System.Drawing.Size(205, 22);
-            this.dateExpires.TabIndex = 50;
-            // 
-            // textTotal
-            // 
-            this.textTotal.Location = new System.Drawing.Point(100, 323);
-            this.textTotal.Name = "textTotal";
-            this.textTotal.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
-            this.textTotal.Size = new System.Drawing.Size(205, 22);
-            this.textTotal.TabIndex = 49;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(9, 355);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(85, 13);
-            this.label8.TabIndex = 48;
-            this.label8.Text = "Expiration Date:";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(9, 327);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(60, 13);
-            this.label7.TabIndex = 47;
-            this.label7.Text = "Total Cost:";
-            // 
-            // textCost
-            // 
-            this.textCost.Location = new System.Drawing.Point(100, 295);
-            this.textCost.Name = "textCost";
-            this.textCost.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
-            this.textCost.Properties.Mask.EditMask = "(\\d?\\d?\\d?)\\d\\d\\d-\\d\\d\\d\\d";
-            this.textCost.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Regular;
-            this.textCost.Size = new System.Drawing.Size(205, 22);
-            this.textCost.TabIndex = 46;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(9, 299);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(33, 13);
-            this.label10.TabIndex = 45;
-            this.label10.Text = "Cost:";
-            // 
-            // textQuantity
-            // 
-            this.textQuantity.Location = new System.Drawing.Point(100, 267);
-            this.textQuantity.Name = "textQuantity";
-            this.textQuantity.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
-            this.textQuantity.Size = new System.Drawing.Size(205, 22);
-            this.textQuantity.TabIndex = 44;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(9, 271);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(53, 13);
-            this.label11.TabIndex = 43;
-            this.label11.Text = "Quantity:";
-            // 
             // ProductsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -410,26 +419,27 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Products";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).EndInit();
             this.splitContainerControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEditBarCode.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEditVariant.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEditWeight.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEditName.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEditCategory.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEditDescription.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEditPrice.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textSupplier.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateExpires.Properties.VistaTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateExpires.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textTotal.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textCost.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textQuantity.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEditPrice.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEditBarCode.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEditVariant.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEditWeight.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEditName.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEditCategory.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEditDescription.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -467,5 +477,6 @@
         private System.Windows.Forms.Label label11;
         private DevExpress.XtraEditors.TextEdit textEditPrice;
         private System.Windows.Forms.Label label12;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
     }
 }

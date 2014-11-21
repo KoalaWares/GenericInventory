@@ -29,6 +29,8 @@ namespace KoalaShop
             this.formController = new DataGridFormController(this.simpleButtonUpdate, this.simpleButtonSave, this.checkButtonIsNew, this.gridView1, this);
             //para ma.display ang save button instead sa update button.
             this.formController.ToggleNewObjectButton();
+            
+
         }
 
         #region Defined Methods
@@ -39,7 +41,11 @@ namespace KoalaShop
         {
             using (var koala = KoalaShopFactory.CreateKoalaShop())
             {
-                this.gridControl1.DataSource = koala.EmployeeRepo.GetAll();
+                // TODO: This line of code loads data into the 'dataSet1.Employees' table. You can move, or remove it, as needed.
+                this.employeesTableAdapter1.Fill(this.dataSet1.Employees);
+                this.accountsTableAdapter2.Fill(this.dataSet1.Accounts);              
+                
+
             }
         }
 
@@ -53,7 +59,7 @@ namespace KoalaShop
             using (IKoalaShop koalaShop = KoalaShopFactory.CreateKoalaShop())
             {
                 var selectedObject = koalaShop.EmployeeRepo.GetAll().Where(c => c.ID == Int32.Parse(id)).SingleOrDefault();
-                var selectedObjectAccount = koalaShop.AccountRepo.GetAll().Where(a => a.ID == Int32.Parse(id)).SingleOrDefault();
+                var selectedObjectAccount = koalaShop.AccountRepo.GetAll().Where(a => a.EmployeeID == Int32.Parse(id)).SingleOrDefault();
 
                 if (selectedObject != null)
                 {
@@ -65,7 +71,10 @@ namespace KoalaShop
                     this.textPosition.Text = selectedObjectAccount.AccountType.ToString();
                     this.textUsername.Text = selectedObjectAccount.Username;
                     this.formController.UpdateObjectButton();
-
+                    this.textPassword.Text = selectedObjectAccount.Password;
+                    this.txtAcct.Text = selectedObjectAccount.ID.ToString();
+                    DisableTextbox();
+                   
                 }
             }
         }
@@ -82,10 +91,11 @@ namespace KoalaShop
             employee.Lname = textLname.Text;
             employee.Address = textAddress.Text;
             employee.Contact = textContact.Text;
-         
-            
+
+
             account.Password = textPassword.Text;
             account.Username = textUsername.Text;
+
 
             //set account type
             if (textPosition.Text == "Admin")
@@ -143,7 +153,7 @@ namespace KoalaShop
 
             account.Password = textPassword.Text;
             account.Username = textUsername.Text;
-
+            account.ID = Int32.Parse(txtAcct.Text);
 
             //set account type
             if (textPosition.Text == "Admin")
@@ -160,7 +170,7 @@ namespace KoalaShop
             }
 
             //Validation
-            if (employee.Fname == "" || employee.Lname == "" )
+            if (employee.Fname == "" || employee.Lname == "")
             {
                 MessageBox.Show("Empty Name Field");
                 return;
@@ -174,14 +184,22 @@ namespace KoalaShop
                 try
                 {
                     employee.ID = int.Parse(this.formController.GetSelectedObjectID());
+                    //saving to employee table
                     koala.EmployeeRepo.Update(employee);
-                    koala.AccountRepo.Update(account);
-                    MessageBox.Show("Updated!");
 
+                    //set employee refrence to account kay ma update na eya ID kay refrence type ang class
+                    account.EmployeeID = employee.ID;
+
+                    
+                        //saving to account table
+                        koala.AccountRepo.Update(account);
+                    
+                    MessageBox.Show("Updated!");
                     TextboxSetToNull();
                 }
                 catch (Exception)
                 {
+                    //MessageBox.Show(e.Exception);
                     MessageBox.Show("Something Went Wrong");
                     //throw;
                 }
@@ -206,6 +224,12 @@ namespace KoalaShop
             this.textUsername.Text = "";
         }
 
+        public void DisableTextbox()
+        {
+            this.textUsername.Enabled = false;
+            this.textPassword.Enabled = false;
+        }
+
 
         #endregion
      
@@ -222,6 +246,7 @@ namespace KoalaShop
         private void checkButtonIsNew_CheckedChanged_1(object sender, EventArgs e)
         {
             this.formController.ToggleNewObjectButton();
+           
         }
 
         private void simpleButtonUpdate_Click(object sender, EventArgs e)
@@ -233,5 +258,7 @@ namespace KoalaShop
         {
             SaveObjectToDB();
         }
+
+        
     }
 }

@@ -20,8 +20,8 @@ namespace KoalaShop
         //Declare DataGridFormController
         private DataGridFormController formController;
         private MainForm form;
-       
-        public FormExpenses()
+
+        public FormExpenses(MainForm mainform)
         {
             InitializeComponent();
             //para ma set ang data sa datgrid
@@ -31,6 +31,7 @@ namespace KoalaShop
             //para ma.display ang save button instead sa update button.
             this.formController.ToggleNewObjectButton();
 
+            this.form = mainform;
             
         }
 
@@ -80,7 +81,8 @@ namespace KoalaShop
             expenses.Name = textName.Text;
             expenses.Amount = Decimal.Parse(textAmount.Text);
             expenses.Purpose = textPurpose.Text;
-          //  expenses.EmployeeID = this.form.CurrenUser.EmployeeID; -- NullReferenceException lagi :'(
+          expenses.EmployeeID = this.form.CurrenUser.EmployeeID;
+          expenses.Date = DateTime.Now;
           
             
 
@@ -113,7 +115,8 @@ namespace KoalaShop
             expenses.Name = textName.Text;
             expenses.Amount = Decimal.Parse(textAmount.Text);
             expenses.Purpose = textPurpose.Text;
-            
+            expenses.EmployeeID = this.form.CurrenUser.EmployeeID;
+            expenses.Date = DateTime.Now;
 
             //Validation
             if (expenses.Name == "" || expenses.Amount == 0 || expenses.Purpose == "")

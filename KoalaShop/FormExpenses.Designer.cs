@@ -215,9 +215,9 @@
             // 
             this.labelControl2.Location = new System.Drawing.Point(287, 21);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(54, 13);
+            this.labelControl2.Size = new System.Drawing.Size(42, 13);
             this.labelControl2.TabIndex = 6;
-            this.labelControl2.Text = "Date From:";
+            this.labelControl2.Text = "Date To:";
             // 
             // dateFrom
             // 
