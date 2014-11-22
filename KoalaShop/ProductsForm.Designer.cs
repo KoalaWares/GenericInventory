@@ -28,15 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.buttonAddCategory = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButtonAdd = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButtonUpdate = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButtonSave = new DevExpress.XtraEditors.SimpleButton();
             this.checkButtonIsNew = new DevExpress.XtraEditors.CheckButton();
             this.textSupplier = new DevExpress.XtraEditors.LookUpEdit();
+            this.suppliersBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSet5 = new KoalaShop.DataSet5();
             this.label9 = new System.Windows.Forms.Label();
             this.dateExpires = new DevExpress.XtraEditors.DateEdit();
             this.textTotal = new DevExpress.XtraEditors.TextEdit();
@@ -44,11 +49,8 @@
             this.label7 = new System.Windows.Forms.Label();
             this.textCost = new DevExpress.XtraEditors.TextEdit();
             this.label10 = new System.Windows.Forms.Label();
-            this.textQuantity = new DevExpress.XtraEditors.TextEdit();
             this.label11 = new System.Windows.Forms.Label();
-            this.textEditPrice = new DevExpress.XtraEditors.TextEdit();
             this.label12 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.textEditBarCode = new DevExpress.XtraEditors.TextEdit();
             this.label5 = new System.Windows.Forms.Label();
             this.textEditVariant = new DevExpress.XtraEditors.TextEdit();
@@ -59,7 +61,19 @@
             this.textEditName = new DevExpress.XtraEditors.TextEdit();
             this.label1 = new System.Windows.Forms.Label();
             this.textEditCategory = new DevExpress.XtraEditors.LookUpEdit();
-            this.textEditDescription = new DevExpress.XtraEditors.MemoEdit();
+            this.categoriesBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSet6 = new KoalaShop.DataSet6();
+            this.textQuantity = new DevExpress.XtraEditors.SpinEdit();
+            this.textEditPrice = new DevExpress.XtraEditors.TextEdit();
+            this.categoriesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSet4 = new KoalaShop.DataSet4();
+            this.suppliersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSet2 = new KoalaShop.DataSet2();
+            this.suppliersTableAdapter = new KoalaShop.DataSet2TableAdapters.SuppliersTableAdapter();
+            this.categoriesTableAdapter = new KoalaShop.DataSet4TableAdapters.CategoriesTableAdapter();
+            this.suppliersTableAdapter1 = new KoalaShop.DataSet5TableAdapters.SuppliersTableAdapter();
+            this.categoriesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.categoriesTableAdapter1 = new KoalaShop.DataSet6TableAdapters.CategoriesTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
@@ -68,18 +82,26 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.textSupplier.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.suppliersBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateExpires.Properties.VistaTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateExpires.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textTotal.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textCost.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textQuantity.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEditPrice.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditBarCode.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditVariant.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditWeight.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditCategory.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEditDescription.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.categoriesBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textQuantity.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEditPrice.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.categoriesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.suppliersBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.categoriesBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // gridView2
@@ -126,6 +148,8 @@
             // 
             // groupControl1
             // 
+            this.groupControl1.Controls.Add(this.buttonAddCategory);
+            this.groupControl1.Controls.Add(this.simpleButtonAdd);
             this.groupControl1.Controls.Add(this.simpleButtonUpdate);
             this.groupControl1.Controls.Add(this.simpleButtonSave);
             this.groupControl1.Controls.Add(this.checkButtonIsNew);
@@ -137,11 +161,8 @@
             this.groupControl1.Controls.Add(this.label7);
             this.groupControl1.Controls.Add(this.textCost);
             this.groupControl1.Controls.Add(this.label10);
-            this.groupControl1.Controls.Add(this.textQuantity);
             this.groupControl1.Controls.Add(this.label11);
-            this.groupControl1.Controls.Add(this.textEditPrice);
             this.groupControl1.Controls.Add(this.label12);
-            this.groupControl1.Controls.Add(this.label6);
             this.groupControl1.Controls.Add(this.textEditBarCode);
             this.groupControl1.Controls.Add(this.label5);
             this.groupControl1.Controls.Add(this.textEditVariant);
@@ -152,13 +173,32 @@
             this.groupControl1.Controls.Add(this.textEditName);
             this.groupControl1.Controls.Add(this.label1);
             this.groupControl1.Controls.Add(this.textEditCategory);
-            this.groupControl1.Controls.Add(this.textEditDescription);
+            this.groupControl1.Controls.Add(this.textQuantity);
+            this.groupControl1.Controls.Add(this.textEditPrice);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl1.Location = new System.Drawing.Point(0, 0);
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.Size = new System.Drawing.Size(334, 497);
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "Product Details";
+            // 
+            // buttonAddCategory
+            // 
+            this.buttonAddCategory.Location = new System.Drawing.Point(307, 58);
+            this.buttonAddCategory.Name = "buttonAddCategory";
+            this.buttonAddCategory.Size = new System.Drawing.Size(22, 23);
+            this.buttonAddCategory.TabIndex = 57;
+            this.buttonAddCategory.Text = "+";
+            this.buttonAddCategory.Click += new System.EventHandler(this.buttonAddCategory_Click);
+            // 
+            // simpleButtonAdd
+            // 
+            this.simpleButtonAdd.Location = new System.Drawing.Point(307, 300);
+            this.simpleButtonAdd.Name = "simpleButtonAdd";
+            this.simpleButtonAdd.Size = new System.Drawing.Size(22, 23);
+            this.simpleButtonAdd.TabIndex = 56;
+            this.simpleButtonAdd.Text = "+";
+            this.simpleButtonAdd.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // simpleButtonUpdate
             // 
@@ -192,19 +232,35 @@
             // 
             // textSupplier
             // 
-            this.textSupplier.Location = new System.Drawing.Point(100, 379);
+            this.textSupplier.Location = new System.Drawing.Point(100, 301);
             this.textSupplier.Name = "textSupplier";
             this.textSupplier.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
             this.textSupplier.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.textSupplier.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("ID", "ID", 34, DevExpress.Utils.FormatType.Numeric, "", true, DevExpress.Utils.HorzAlignment.Far),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "Name", 37, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near)});
+            this.textSupplier.Properties.DataSource = this.suppliersBindingSource1;
+            this.textSupplier.Properties.DisplayMember = "Name";
             this.textSupplier.Properties.NullText = "";
+            this.textSupplier.Properties.ValueMember = "Name";
             this.textSupplier.Size = new System.Drawing.Size(205, 22);
             this.textSupplier.TabIndex = 52;
+            // 
+            // suppliersBindingSource1
+            // 
+            this.suppliersBindingSource1.DataMember = "Suppliers";
+            this.suppliersBindingSource1.DataSource = this.dataSet5;
+            // 
+            // dataSet5
+            // 
+            this.dataSet5.DataSetName = "DataSet5";
+            this.dataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(9, 381);
+            this.label9.Location = new System.Drawing.Point(9, 303);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(49, 13);
             this.label9.TabIndex = 51;
@@ -213,7 +269,7 @@
             // dateExpires
             // 
             this.dateExpires.EditValue = null;
-            this.dateExpires.Location = new System.Drawing.Point(100, 351);
+            this.dateExpires.Location = new System.Drawing.Point(100, 273);
             this.dateExpires.Name = "dateExpires";
             this.dateExpires.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
             this.dateExpires.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -225,16 +281,19 @@
             // 
             // textTotal
             // 
-            this.textTotal.Location = new System.Drawing.Point(100, 323);
+            this.textTotal.Enabled = false;
+            this.textTotal.Location = new System.Drawing.Point(100, 245);
             this.textTotal.Name = "textTotal";
             this.textTotal.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
+            this.textTotal.Properties.Mask.EditMask = "f";
+            this.textTotal.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.textTotal.Size = new System.Drawing.Size(205, 22);
             this.textTotal.TabIndex = 49;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(9, 355);
+            this.label8.Location = new System.Drawing.Point(9, 277);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(85, 13);
             this.label8.TabIndex = 48;
@@ -243,7 +302,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(9, 327);
+            this.label7.Location = new System.Drawing.Point(9, 249);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(60, 13);
             this.label7.TabIndex = 47;
@@ -251,70 +310,47 @@
             // 
             // textCost
             // 
-            this.textCost.Location = new System.Drawing.Point(100, 295);
+            this.textCost.EditValue = "";
+            this.textCost.Location = new System.Drawing.Point(100, 217);
             this.textCost.Name = "textCost";
             this.textCost.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
-            this.textCost.Properties.Mask.EditMask = "(\\d?\\d?\\d?)\\d\\d\\d-\\d\\d\\d\\d";
-            this.textCost.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Regular;
+            this.textCost.Properties.Mask.BeepOnError = true;
+            this.textCost.Properties.Mask.EditMask = "f";
+            this.textCost.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.textCost.Size = new System.Drawing.Size(205, 22);
             this.textCost.TabIndex = 46;
+            this.textCost.EditValueChanged += new System.EventHandler(this.textCost_EditValueChanged);
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(9, 299);
+            this.label10.Location = new System.Drawing.Point(9, 221);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(33, 13);
             this.label10.TabIndex = 45;
             this.label10.Text = "Cost:";
             // 
-            // textQuantity
-            // 
-            this.textQuantity.Location = new System.Drawing.Point(100, 267);
-            this.textQuantity.Name = "textQuantity";
-            this.textQuantity.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
-            this.textQuantity.Size = new System.Drawing.Size(205, 22);
-            this.textQuantity.TabIndex = 44;
-            // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(9, 271);
+            this.label11.Location = new System.Drawing.Point(9, 193);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(53, 13);
             this.label11.TabIndex = 43;
             this.label11.Text = "Quantity:";
             // 
-            // textEditPrice
-            // 
-            this.textEditPrice.Location = new System.Drawing.Point(100, 238);
-            this.textEditPrice.Name = "textEditPrice";
-            this.textEditPrice.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
-            this.textEditPrice.Properties.Mask.EditMask = "c";
-            this.textEditPrice.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.textEditPrice.Size = new System.Drawing.Size(205, 22);
-            this.textEditPrice.TabIndex = 42;
-            // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(9, 242);
+            this.label12.Location = new System.Drawing.Point(9, 164);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(34, 13);
             this.label12.TabIndex = 41;
             this.label12.Text = "Price:";
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(9, 161);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(60, 13);
-            this.label6.TabIndex = 15;
-            this.label6.Text = "Description";
-            // 
             // textEditBarCode
             // 
+            this.textEditBarCode.EditValue = "123412321";
             this.textEditBarCode.Location = new System.Drawing.Point(100, 132);
             this.textEditBarCode.Name = "textEditBarCode";
             this.textEditBarCode.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
@@ -332,6 +368,7 @@
             // 
             // textEditVariant
             // 
+            this.textEditVariant.EditValue = "chilli mansi";
             this.textEditVariant.Location = new System.Drawing.Point(100, 106);
             this.textEditVariant.Name = "textEditVariant";
             this.textEditVariant.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
@@ -349,9 +386,12 @@
             // 
             // textEditWeight
             // 
+            this.textEditWeight.EditValue = "12";
             this.textEditWeight.Location = new System.Drawing.Point(100, 80);
             this.textEditWeight.Name = "textEditWeight";
             this.textEditWeight.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
+            this.textEditWeight.Properties.Mask.EditMask = "f";
+            this.textEditWeight.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.textEditWeight.Size = new System.Drawing.Size(205, 22);
             this.textEditWeight.TabIndex = 10;
             // 
@@ -375,6 +415,7 @@
             // 
             // textEditName
             // 
+            this.textEditName.EditValue = "Pancit";
             this.textEditName.Location = new System.Drawing.Point(100, 28);
             this.textEditName.Name = "textEditName";
             this.textEditName.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
@@ -397,17 +438,101 @@
             this.textEditCategory.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
             this.textEditCategory.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.textEditCategory.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("ID", "ID", 34, DevExpress.Utils.FormatType.Numeric, "", true, DevExpress.Utils.HorzAlignment.Far),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "Name", 37, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near)});
+            this.textEditCategory.Properties.DataSource = this.categoriesBindingSource2;
+            this.textEditCategory.Properties.DisplayMember = "Name";
             this.textEditCategory.Properties.NullText = "";
+            this.textEditCategory.Properties.ValueMember = "Name";
             this.textEditCategory.Size = new System.Drawing.Size(205, 22);
             this.textEditCategory.TabIndex = 8;
+            this.textEditCategory.EditValueChanged += new System.EventHandler(this.textEditCategory_EditValueChanged);
             // 
-            // textEditDescription
+            // categoriesBindingSource2
             // 
-            this.textEditDescription.Location = new System.Drawing.Point(100, 163);
-            this.textEditDescription.Name = "textEditDescription";
-            this.textEditDescription.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
-            this.textEditDescription.Size = new System.Drawing.Size(205, 69);
-            this.textEditDescription.TabIndex = 16;
+            this.categoriesBindingSource2.DataMember = "Categories";
+            this.categoriesBindingSource2.DataSource = this.dataSet6;
+            // 
+            // dataSet6
+            // 
+            this.dataSet6.DataSetName = "DataSet6";
+            this.dataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // textQuantity
+            // 
+            this.textQuantity.EditValue = new decimal(new int[] {
+            12,
+            0,
+            0,
+            0});
+            this.textQuantity.Location = new System.Drawing.Point(100, 189);
+            this.textQuantity.Name = "textQuantity";
+            this.textQuantity.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
+            this.textQuantity.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton()});
+            this.textQuantity.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.Default;
+            this.textQuantity.Properties.Mask.BeepOnError = true;
+            this.textQuantity.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
+            this.textQuantity.Size = new System.Drawing.Size(205, 22);
+            this.textQuantity.TabIndex = 44;
+            // 
+            // textEditPrice
+            // 
+            this.textEditPrice.EditValue = new decimal(new int[] {
+            12,
+            0,
+            0,
+            0});
+            this.textEditPrice.Location = new System.Drawing.Point(100, 160);
+            this.textEditPrice.Name = "textEditPrice";
+            this.textEditPrice.Properties.AutoHeight = false;
+            this.textEditPrice.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
+            this.textEditPrice.Properties.Mask.EditMask = "f";
+            this.textEditPrice.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.textEditPrice.Size = new System.Drawing.Size(205, 22);
+            this.textEditPrice.TabIndex = 42;
+            // 
+            // categoriesBindingSource
+            // 
+            this.categoriesBindingSource.DataMember = "Categories";
+            this.categoriesBindingSource.DataSource = this.dataSet4;
+            // 
+            // dataSet4
+            // 
+            this.dataSet4.DataSetName = "DataSet4";
+            this.dataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // suppliersBindingSource
+            // 
+            this.suppliersBindingSource.DataMember = "Suppliers";
+            this.suppliersBindingSource.DataSource = this.dataSet2;
+            // 
+            // dataSet2
+            // 
+            this.dataSet2.DataSetName = "DataSet2";
+            this.dataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // suppliersTableAdapter
+            // 
+            this.suppliersTableAdapter.ClearBeforeFill = true;
+            // 
+            // categoriesTableAdapter
+            // 
+            this.categoriesTableAdapter.ClearBeforeFill = true;
+            // 
+            // suppliersTableAdapter1
+            // 
+            this.suppliersTableAdapter1.ClearBeforeFill = true;
+            // 
+            // categoriesBindingSource1
+            // 
+            this.categoriesBindingSource1.DataMember = "Categories";
+            this.categoriesBindingSource1.DataSource = this.dataSet6;
+            // 
+            // categoriesTableAdapter1
+            // 
+            this.categoriesTableAdapter1.ClearBeforeFill = true;
             // 
             // ProductsForm
             // 
@@ -428,18 +553,26 @@
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.textSupplier.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.suppliersBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateExpires.Properties.VistaTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateExpires.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textTotal.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textCost.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textQuantity.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEditPrice.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditBarCode.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditVariant.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditWeight.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditCategory.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEditDescription.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.categoriesBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textQuantity.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEditPrice.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.categoriesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.suppliersBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.categoriesBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -460,8 +593,6 @@
         private System.Windows.Forms.Label label4;
         private DevExpress.XtraEditors.TextEdit textEditBarCode;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private DevExpress.XtraEditors.MemoEdit textEditDescription;
         private DevExpress.XtraEditors.SimpleButton simpleButtonUpdate;
         private DevExpress.XtraEditors.SimpleButton simpleButtonSave;
         private DevExpress.XtraEditors.CheckButton checkButtonIsNew;
@@ -473,10 +604,25 @@
         private System.Windows.Forms.Label label7;
         private DevExpress.XtraEditors.TextEdit textCost;
         private System.Windows.Forms.Label label10;
-        private DevExpress.XtraEditors.TextEdit textQuantity;
         private System.Windows.Forms.Label label11;
-        private DevExpress.XtraEditors.TextEdit textEditPrice;
         private System.Windows.Forms.Label label12;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
+        private DevExpress.XtraEditors.SimpleButton simpleButtonAdd;
+        private DevExpress.XtraEditors.SimpleButton buttonAddCategory;
+        private DataSet2 dataSet2;
+        private System.Windows.Forms.BindingSource suppliersBindingSource;
+        private DataSet2TableAdapters.SuppliersTableAdapter suppliersTableAdapter;
+        private DataSet4 dataSet4;
+        private System.Windows.Forms.BindingSource categoriesBindingSource;
+        private DataSet4TableAdapters.CategoriesTableAdapter categoriesTableAdapter;
+        private DataSet5 dataSet5;
+        private System.Windows.Forms.BindingSource suppliersBindingSource1;
+        private DataSet5TableAdapters.SuppliersTableAdapter suppliersTableAdapter1;
+        private DataSet6 dataSet6;
+        private System.Windows.Forms.BindingSource categoriesBindingSource1;
+        private DataSet6TableAdapters.CategoriesTableAdapter categoriesTableAdapter1;
+        private System.Windows.Forms.BindingSource categoriesBindingSource2;
+        private DevExpress.XtraEditors.SpinEdit textQuantity;
+        private DevExpress.XtraEditors.TextEdit textEditPrice;
     }
 }

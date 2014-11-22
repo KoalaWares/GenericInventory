@@ -50,7 +50,7 @@ namespace Demo
                 //Set product data
                 //MAP VIEW To Model
                 this.product.Name = this.textBoxName.Text;
-                this.product.Description = this.textBoxDescription.Text;
+                //this.product.Description = this.textBoxDescription.Text;
                 this.product.CategoryID = Convert.ToInt32(this.comboBoxCategory.SelectedValue);
 
                 //INSERT to DB
@@ -69,7 +69,7 @@ namespace Demo
         {
             //Map model to view
             this.textBoxName.Text = this.product.Name;
-            this.textBoxDescription.Text = this.product.Description;
+            //this.textBoxDescription.Text = this.product.Description;
             this.comboBoxCategory.SelectedValue = this.product.CategoryID;
         }
 

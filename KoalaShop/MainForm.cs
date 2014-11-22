@@ -98,14 +98,14 @@ namespace KoalaShop
                 case FormTypes.InvoiceItem:
                     break;
                 case FormTypes.Product:
-                    form = new ProductsForm();
+                    form = new ProductsForm(this);
                     break;
                 case FormTypes.Stock:
                     break;
                 case FormTypes.StockRequest:
                     break;
                 case FormTypes.Supplier:
-                    form = new FormSupplier();
+                    form = new FormSupplier(this);
                     break;
                 case FormTypes.Inventory:
                     form = new FormInventory(this);
@@ -126,7 +126,7 @@ namespace KoalaShop
                    
             }
 
-            this.KillChildren();
+           this.KillChildren();
             form.MdiParent = this;
             form.Show();
         }

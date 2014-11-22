@@ -18,8 +18,11 @@ namespace KoalaShop
     {
         //Declare DataGridFormController
         private DataGridFormController formController;
+       // MainForm mainform;
+      
 
-        public FormSupplier()
+
+        public FormSupplier(MainForm form)
         {
             InitializeComponent();
             //para ma set ang data sa datgrid
@@ -59,7 +62,7 @@ namespace KoalaShop
                     this.textName.Text = selectedObject.Name;
                     this.textAddress.Text = selectedObject.Address;
                     this.textContact.Text = selectedObject.Contact;
-                   
+                    this.formController.UpdateObjectButton();
 
 
                 }
@@ -91,7 +94,7 @@ namespace KoalaShop
 
                 koala.SupplierRepo.Add(supplier);
                 MessageBox.Show("Saved!");
-
+             
                 TextboxSetToNull();
 
 
@@ -125,7 +128,7 @@ namespace KoalaShop
                     supplier.ID = int.Parse(this.formController.GetSelectedObjectID());
                     koala.SupplierRepo.Update(supplier);
                     MessageBox.Show("Updated!");
-
+               
                     TextboxSetToNull();
                 }
                 catch (Exception)
@@ -174,6 +177,13 @@ namespace KoalaShop
         private void simpleButtonSave_Click_1(object sender, EventArgs e)
         {
             SaveObjectToDB();
+        }
+
+        private void FormSupplier_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'dataSet3.Suppliers' table. You can move, or remove it, as needed.
+            this.suppliersTableAdapter.Fill(this.dataSet3.Suppliers);
+
         }
     }
 }

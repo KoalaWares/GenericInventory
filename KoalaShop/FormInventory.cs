@@ -44,24 +44,21 @@ namespace KoalaShop
             this.mainForm.ChildFormInitializer(FormTypes.Category);
         }
 
-        private void tileCustomer_ItemDoubleClick(object sender, TileItemEventArgs e)
+        private void tileSupplier_ItemClick(object sender, TileItemEventArgs e)
         {
-            this.mainForm.ChildFormInitializer(FormTypes.Customer);
+            this.mainForm.ChildFormInitializer(FormTypes.Supplier);
         }
 
-        private void tileExpenses_ItemDoubleClick(object sender, TileItemEventArgs e)
-        {
-            this.mainForm.ChildFormInitializer(FormTypes.Expenses);
-        }
+       
 
-        private void tileEmployee_ItemDoubleClick(object sender, TileItemEventArgs e)
-        {
-            this.mainForm.ChildFormInitializer(FormTypes.Employee);
-        }
-
-        private void tilePos_ItemDoubleClick(object sender, TileItemEventArgs e)
+        private void tilePos_ItemClick(object sender, TileItemEventArgs e)
         {
             this.mainForm.ChildFormInitializer(FormTypes.POS);
+        }
+
+        private void tileCustomer_ItemClick(object sender, TileItemEventArgs e)
+        {
+            this.mainForm.ChildFormInitializer(FormTypes.Customer);
         }
 
         private void tileEmployee_ItemClick(object sender, TileItemEventArgs e)
@@ -69,14 +66,16 @@ namespace KoalaShop
             this.mainForm.ChildFormInitializer(FormTypes.Employee);
         }
 
-        private void tileSupplier_ItemDoubleClick(object sender, TileItemEventArgs e)
+        private void tileStock_ItemClick(object sender, TileItemEventArgs e)
         {
-            this.mainForm.ChildFormInitializer(FormTypes.Supplier);
+            this.mainForm.ChildFormInitializer(FormTypes.Product);
         }
 
-        private void tileOptions_ItemDoubleClick(object sender, TileItemEventArgs e)
+        private void tileExpenses_ItemClick(object sender, TileItemEventArgs e)
         {
-
+            this.mainForm.ChildFormInitializer(FormTypes.Expenses);
         }
+
+      
     }
 }

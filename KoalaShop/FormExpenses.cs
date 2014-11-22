@@ -83,6 +83,7 @@ namespace KoalaShop
             expenses.Purpose = textPurpose.Text;
           expenses.EmployeeID = this.form.CurrenUser.EmployeeID;
           expenses.Date = DateTime.Now;
+          expenses.Category = "Petty Cash Fund";
           
             
 

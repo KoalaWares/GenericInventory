@@ -195,7 +195,7 @@
             this.tilePos.Elements.Add(tileItemElement3);
             this.tilePos.Id = 25;
             this.tilePos.Name = "tilePos";
-            this.tilePos.ItemDoubleClick += new DevExpress.XtraEditors.TileItemClickEventHandler(this.tilePos_ItemDoubleClick);
+            this.tilePos.ItemClick += new DevExpress.XtraEditors.TileItemClickEventHandler(this.tilePos_ItemClick);
             // 
             // tileEmployee
             // 
@@ -213,7 +213,7 @@
             this.tileEmployee.Elements.Add(tileItemElement4);
             this.tileEmployee.Id = 26;
             this.tileEmployee.Name = "tileEmployee";
-            this.tileEmployee.ItemDoubleClick += new DevExpress.XtraEditors.TileItemClickEventHandler(this.tileEmployee_ItemDoubleClick);
+            this.tileEmployee.ItemClick += new DevExpress.XtraEditors.TileItemClickEventHandler(this.tileEmployee_ItemClick);
             // 
             // tileReport
             // 
@@ -248,7 +248,7 @@
             this.tileSupplier.Elements.Add(tileItemElement6);
             this.tileSupplier.Id = 28;
             this.tileSupplier.Name = "tileSupplier";
-            this.tileSupplier.ItemDoubleClick += new DevExpress.XtraEditors.TileItemClickEventHandler(this.tileSupplier_ItemDoubleClick);
+            this.tileSupplier.ItemClick += new DevExpress.XtraEditors.TileItemClickEventHandler(this.tileSupplier_ItemClick);
             // 
             // tileStock
             // 
@@ -266,6 +266,7 @@
             this.tileStock.Elements.Add(tileItemElement7);
             this.tileStock.Id = 29;
             this.tileStock.Name = "tileStock";
+            this.tileStock.ItemClick += new DevExpress.XtraEditors.TileItemClickEventHandler(this.tileStock_ItemClick);
             // 
             // tileExpenses
             // 
@@ -283,7 +284,7 @@
             this.tileExpenses.Elements.Add(tileItemElement8);
             this.tileExpenses.Id = 30;
             this.tileExpenses.Name = "tileExpenses";
-            this.tileExpenses.ItemDoubleClick += new DevExpress.XtraEditors.TileItemClickEventHandler(this.tileExpenses_ItemDoubleClick);
+            this.tileExpenses.ItemClick += new DevExpress.XtraEditors.TileItemClickEventHandler(this.tileExpenses_ItemClick);
             // 
             // tileOptions
             // 
@@ -301,7 +302,6 @@
             this.tileOptions.Elements.Add(tileItemElement9);
             this.tileOptions.Id = 31;
             this.tileOptions.Name = "tileOptions";
-            this.tileOptions.ItemDoubleClick += new DevExpress.XtraEditors.TileItemClickEventHandler(this.tileOptions_ItemDoubleClick);
             // 
             // tileCustomer
             // 
@@ -309,7 +309,7 @@
             this.tileCustomer.Elements.Add(tileItemElement10);
             this.tileCustomer.Id = 33;
             this.tileCustomer.Name = "tileCustomer";
-            this.tileCustomer.ItemDoubleClick += new DevExpress.XtraEditors.TileItemClickEventHandler(this.tileCustomer_ItemDoubleClick);
+            this.tileCustomer.ItemClick += new DevExpress.XtraEditors.TileItemClickEventHandler(this.tileCustomer_ItemClick);
             // 
             // tileGroup2
             // 

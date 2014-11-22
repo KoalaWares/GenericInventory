@@ -86,9 +86,9 @@ namespace KoalaShopLib
             //SEED Product
             if (!(this.dbContext.Products.Count() > 0))
             {
-                this.dbContext.Products.Add(new Product() { Name = "Canton Chili", Description = "Chili Falvor", CategoryID = 1 });
-                this.dbContext.Products.Add(new Product() { Name = "Canton Calamansi", Description = "Calamansi Falvor", CategoryID = 1 });
-                this.dbContext.Products.Add(new Product() { Name = "PUKA PORN Condom", Description = "Make PUKA PORN!", CategoryID = 1 });
+                this.dbContext.Products.Add(new Product() { Name = "Canton Chili", CategoryID = 1 });
+                this.dbContext.Products.Add(new Product() { Name = "Canton Calamansi",  CategoryID = 1 });
+                this.dbContext.Products.Add(new Product() { Name = "PUKA PORN Condom", CategoryID = 1 });
                 this.dbContext.SaveChanges();
             }
             #endregion
