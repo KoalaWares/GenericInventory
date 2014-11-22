@@ -28,17 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
-            this.stocksBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataSet7 = new KoalaShop.DataSet7();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.colID = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colQuantity = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colPrice = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colStocksRequestID = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colProductID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.buttonAddCategory = new DevExpress.XtraEditors.SimpleButton();
@@ -47,8 +36,6 @@
             this.simpleButtonSave = new DevExpress.XtraEditors.SimpleButton();
             this.checkButtonIsNew = new DevExpress.XtraEditors.CheckButton();
             this.comboBoxSupplier = new DevExpress.XtraEditors.LookUpEdit();
-            this.suppliersBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.dataSet5 = new KoalaShop.DataSet5();
             this.label9 = new System.Windows.Forms.Label();
             this.dateExpires = new DevExpress.XtraEditors.DateEdit();
             this.textTotal = new DevExpress.XtraEditors.TextEdit();
@@ -68,32 +55,15 @@
             this.textEditName = new DevExpress.XtraEditors.TextEdit();
             this.label1 = new System.Windows.Forms.Label();
             this.comboboxCategory = new DevExpress.XtraEditors.LookUpEdit();
-            this.categoriesBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.dataSet6 = new KoalaShop.DataSet6();
             this.textQuantity = new DevExpress.XtraEditors.SpinEdit();
             this.textEditPrice = new DevExpress.XtraEditors.TextEdit();
-            this.categoriesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataSet4 = new KoalaShop.DataSet4();
-            this.suppliersBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataSet2 = new KoalaShop.DataSet2();
-            this.suppliersTableAdapter = new KoalaShop.DataSet2TableAdapters.SuppliersTableAdapter();
-            this.categoriesTableAdapter = new KoalaShop.DataSet4TableAdapters.CategoriesTableAdapter();
-            this.suppliersTableAdapter1 = new KoalaShop.DataSet5TableAdapters.SuppliersTableAdapter();
-            this.categoriesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.categoriesTableAdapter1 = new KoalaShop.DataSet6TableAdapters.CategoriesTableAdapter();
-            this.stocksTableAdapter = new KoalaShop.DataSet7TableAdapters.StocksTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.stocksBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
             this.splitContainerControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxSupplier.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.suppliersBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateExpires.Properties.VistaTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateExpires.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textTotal.Properties)).BeginInit();
@@ -103,97 +73,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.textEditWeight.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.comboboxCategory.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.categoriesBindingSource2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textQuantity.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditPrice.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.categoriesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.suppliersBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.categoriesBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // gridView2
-            // 
-            this.gridView2.GridControl = this.gridControl1;
-            this.gridView2.Name = "gridView2";
-            this.gridView2.VertScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
-            // 
-            // gridControl1
-            // 
-            this.gridControl1.DataSource = this.stocksBindingSource;
-            this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl1.Location = new System.Drawing.Point(0, 0);
-            this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(640, 497);
-            this.gridControl1.TabIndex = 1;
-            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1,
-            this.gridView2});
-            // 
-            // stocksBindingSource
-            // 
-            this.stocksBindingSource.DataMember = "Stocks";
-            this.stocksBindingSource.DataSource = this.dataSet7;
-            // 
-            // dataSet7
-            // 
-            this.dataSet7.DataSetName = "DataSet7";
-            this.dataSet7.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // gridView1
-            // 
-            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.colID,
-            this.colQuantity,
-            this.colPrice,
-            this.colStocksRequestID,
-            this.colProductID});
-            this.gridView1.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
-            this.gridView1.GridControl = this.gridControl1;
-            this.gridView1.Name = "gridView1";
-            this.gridView1.OptionsBehavior.Editable = false;
-            this.gridView1.OptionsFind.AlwaysVisible = true;
-            this.gridView1.OptionsView.ShowFooter = true;
-            this.gridView1.DoubleClick += new System.EventHandler(this.gridView1_DoubleClick);
-            // 
-            // colID
-            // 
-            this.colID.FieldName = "ID";
-            this.colID.Name = "colID";
-            this.colID.OptionsColumn.ReadOnly = true;
-            this.colID.Visible = true;
-            this.colID.VisibleIndex = 0;
-            // 
-            // colQuantity
-            // 
-            this.colQuantity.FieldName = "Quantity";
-            this.colQuantity.Name = "colQuantity";
-            this.colQuantity.Visible = true;
-            this.colQuantity.VisibleIndex = 1;
-            // 
-            // colPrice
-            // 
-            this.colPrice.FieldName = "Price";
-            this.colPrice.Name = "colPrice";
-            this.colPrice.Visible = true;
-            this.colPrice.VisibleIndex = 2;
-            // 
-            // colStocksRequestID
-            // 
-            this.colStocksRequestID.FieldName = "StocksRequestID";
-            this.colStocksRequestID.Name = "colStocksRequestID";
-            this.colStocksRequestID.Visible = true;
-            this.colStocksRequestID.VisibleIndex = 3;
-            // 
-            // colProductID
-            // 
-            this.colProductID.FieldName = "ProductID";
-            this.colProductID.Name = "colProductID";
-            this.colProductID.Visible = true;
-            this.colProductID.VisibleIndex = 4;
             // 
             // splitContainerControl1
             // 
@@ -256,7 +140,7 @@
             // 
             // simpleButtonAdd
             // 
-            this.simpleButtonAdd.Location = new System.Drawing.Point(283, 340);
+            this.simpleButtonAdd.Location = new System.Drawing.Point(307, 300);
             this.simpleButtonAdd.Name = "simpleButtonAdd";
             this.simpleButtonAdd.Size = new System.Drawing.Size(22, 23);
             this.simpleButtonAdd.TabIndex = 56;
@@ -303,22 +187,11 @@
             this.comboBoxSupplier.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("ID", "ID", 34, DevExpress.Utils.FormatType.Numeric, "", true, DevExpress.Utils.HorzAlignment.Far),
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "Name", 37, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near)});
-            this.comboBoxSupplier.Properties.DataSource = this.suppliersBindingSource1;
             this.comboBoxSupplier.Properties.DisplayMember = "Name";
             this.comboBoxSupplier.Properties.NullText = "";
             this.comboBoxSupplier.Properties.ValueMember = "Name";
             this.comboBoxSupplier.Size = new System.Drawing.Size(205, 22);
             this.comboBoxSupplier.TabIndex = 52;
-            // 
-            // suppliersBindingSource1
-            // 
-            this.suppliersBindingSource1.DataMember = "Suppliers";
-            this.suppliersBindingSource1.DataSource = this.dataSet5;
-            // 
-            // dataSet5
-            // 
-            this.dataSet5.DataSetName = "DataSet5";
-            this.dataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label9
             // 
@@ -504,22 +377,11 @@
             this.comboboxCategory.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("ID", "ID", 34, DevExpress.Utils.FormatType.Numeric, "", true, DevExpress.Utils.HorzAlignment.Far),
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "Name", 37, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near)});
-            this.comboboxCategory.Properties.DataSource = this.categoriesBindingSource2;
             this.comboboxCategory.Properties.DisplayMember = "Name";
             this.comboboxCategory.Properties.NullText = "";
             this.comboboxCategory.Properties.ValueMember = "Name";
             this.comboboxCategory.Size = new System.Drawing.Size(205, 22);
             this.comboboxCategory.TabIndex = 8;
-            // 
-            // categoriesBindingSource2
-            // 
-            this.categoriesBindingSource2.DataMember = "Categories";
-            this.categoriesBindingSource2.DataSource = this.dataSet6;
-            // 
-            // dataSet6
-            // 
-            this.dataSet6.DataSetName = "DataSet6";
-            this.dataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // textQuantity
             // 
@@ -555,50 +417,25 @@
             this.textEditPrice.Size = new System.Drawing.Size(205, 22);
             this.textEditPrice.TabIndex = 42;
             // 
-            // categoriesBindingSource
+            // gridControl1
             // 
-            this.categoriesBindingSource.DataMember = "Categories";
-            this.categoriesBindingSource.DataSource = this.dataSet4;
+            this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridControl1.Location = new System.Drawing.Point(0, 0);
+            this.gridControl1.MainView = this.gridView1;
+            this.gridControl1.Name = "gridControl1";
+            this.gridControl1.Size = new System.Drawing.Size(640, 497);
+            this.gridControl1.TabIndex = 3;
+            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView1});
             // 
-            // dataSet4
+            // gridView1
             // 
-            this.dataSet4.DataSetName = "DataSet4";
-            this.dataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // suppliersBindingSource
-            // 
-            this.suppliersBindingSource.DataMember = "Suppliers";
-            this.suppliersBindingSource.DataSource = this.dataSet2;
-            // 
-            // dataSet2
-            // 
-            this.dataSet2.DataSetName = "DataSet2";
-            this.dataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // suppliersTableAdapter
-            // 
-            this.suppliersTableAdapter.ClearBeforeFill = true;
-            // 
-            // categoriesTableAdapter
-            // 
-            this.categoriesTableAdapter.ClearBeforeFill = true;
-            // 
-            // suppliersTableAdapter1
-            // 
-            this.suppliersTableAdapter1.ClearBeforeFill = true;
-            // 
-            // categoriesBindingSource1
-            // 
-            this.categoriesBindingSource1.DataMember = "Categories";
-            this.categoriesBindingSource1.DataSource = this.dataSet6;
-            // 
-            // categoriesTableAdapter1
-            // 
-            this.categoriesTableAdapter1.ClearBeforeFill = true;
-            // 
-            // stocksTableAdapter
-            // 
-            this.stocksTableAdapter.ClearBeforeFill = true;
+            this.gridView1.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.gridView1.GridControl = this.gridControl1;
+            this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsBehavior.Editable = false;
+            this.gridView1.OptionsFind.AlwaysVisible = true;
+            this.gridView1.OptionsView.ShowFooter = true;
             // 
             // ProductsForm
             // 
@@ -611,19 +448,12 @@
             this.Text = "Products";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.ProductsForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.stocksBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).EndInit();
             this.splitContainerControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxSupplier.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.suppliersBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateExpires.Properties.VistaTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateExpires.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textTotal.Properties)).EndInit();
@@ -633,15 +463,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.textEditWeight.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.comboboxCategory.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.categoriesBindingSource2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textQuantity.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditPrice.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.categoriesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.suppliersBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.categoriesBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -652,8 +477,6 @@
         private DevExpress.XtraEditors.GroupControl groupControl1;
         private DevExpress.XtraEditors.TextEdit textEditName;
         private System.Windows.Forms.Label label1;
-        private DevExpress.XtraGrid.GridControl gridControl1;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraEditors.TextEdit textEditWeight;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
@@ -675,31 +498,12 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
         private DevExpress.XtraEditors.SimpleButton simpleButtonAdd;
         private DevExpress.XtraEditors.SimpleButton buttonAddCategory;
-        private DataSet2 dataSet2;
-        private System.Windows.Forms.BindingSource suppliersBindingSource;
-        private DataSet2TableAdapters.SuppliersTableAdapter suppliersTableAdapter;
-        private DataSet4 dataSet4;
-        private System.Windows.Forms.BindingSource categoriesBindingSource;
-        private DataSet4TableAdapters.CategoriesTableAdapter categoriesTableAdapter;
-        private DataSet5 dataSet5;
-        private System.Windows.Forms.BindingSource suppliersBindingSource1;
-        private DataSet5TableAdapters.SuppliersTableAdapter suppliersTableAdapter1;
-        private DataSet6 dataSet6;
-        private System.Windows.Forms.BindingSource categoriesBindingSource1;
-        private DataSet6TableAdapters.CategoriesTableAdapter categoriesTableAdapter1;
-        private System.Windows.Forms.BindingSource categoriesBindingSource2;
+
         private DevExpress.XtraEditors.SpinEdit textQuantity;
         private DevExpress.XtraEditors.TextEdit textEditPrice;
-        private DataSet7 dataSet7;
-        private System.Windows.Forms.BindingSource stocksBindingSource;
-        private DataSet7TableAdapters.StocksTableAdapter stocksTableAdapter;
-        private DevExpress.XtraGrid.Columns.GridColumn colID;
-        private DevExpress.XtraGrid.Columns.GridColumn colQuantity;
-        private DevExpress.XtraGrid.Columns.GridColumn colPrice;
-        private DevExpress.XtraGrid.Columns.GridColumn colStocksRequestID;
-        private DevExpress.XtraGrid.Columns.GridColumn colProductID;
+        private DevExpress.XtraGrid.GridControl gridControl1;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
     }
 }

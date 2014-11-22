@@ -28,20 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
-            this.employeesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.dataSet1 = new KoalaShop.DataSet1();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colFname = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colLname = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colAddress = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colContact = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.dataSet4BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.employeesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.simpleButtonUpdate = new DevExpress.XtraEditors.SimpleButton();
@@ -65,22 +59,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.accountsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataSet3BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.accountsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.accountsBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.accountsBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
-            this.accountsTableAdapter2 = new KoalaShop.DataSet1TableAdapters.AccountsTableAdapter();
-            this.tableAdapterManager = new KoalaShop.DataSet1TableAdapters.TableAdapterManager();
-            this.employeesTableAdapter1 = new KoalaShop.DataSet1TableAdapters.EmployeesTableAdapter();
             this.txtAcct = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.employeesBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet4BindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.employeesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
             this.splitContainerControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
@@ -93,11 +75,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.textPassword.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textUsername.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textID.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.accountsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet3BindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.accountsBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.accountsBindingSource2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.accountsBindingSource3)).BeginInit();
             this.SuspendLayout();
             // 
             // gridView2
@@ -107,11 +84,7 @@
             // 
             // gridControl1
             // 
-            this.gridControl1.DataSource = this.employeesBindingSource1;
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            gridLevelNode1.RelationName = "FK_Employees_Accounts";
-            this.gridControl1.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode1});
             this.gridControl1.Location = new System.Drawing.Point(0, 0);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
@@ -120,16 +93,6 @@
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1,
             this.gridView2});
-            // 
-            // employeesBindingSource1
-            // 
-            this.employeesBindingSource1.DataMember = "Employees";
-            this.employeesBindingSource1.DataSource = this.dataSet1;
-            // 
-            // dataSet1
-            // 
-            this.dataSet1.DataSetName = "DataSet1";
-            this.dataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // gridView1
             // 
@@ -424,26 +387,6 @@
             this.label1.TabIndex = 26;
             this.label1.Text = "First Name:";
             // 
-            // accountsBindingSource3
-            // 
-            this.accountsBindingSource3.DataMember = "Accounts";
-            this.accountsBindingSource3.DataSource = this.dataSet1;
-            // 
-            // accountsTableAdapter2
-            // 
-            this.accountsTableAdapter2.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.AccountsTableAdapter = this.accountsTableAdapter2;
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.EmployeesTableAdapter = this.employeesTableAdapter1;
-            this.tableAdapterManager.UpdateOrder = KoalaShop.DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            // 
-            // employeesTableAdapter1
-            // 
-            this.employeesTableAdapter1.ClearBeforeFill = true;
-            // 
             // txtAcct
             // 
             this.txtAcct.Location = new System.Drawing.Point(120, 266);
@@ -462,11 +405,7 @@
             this.Text = "FormEmployee";
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.employeesBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet4BindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.employeesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).EndInit();
             this.splitContainerControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
@@ -480,11 +419,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.textPassword.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textUsername.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textID.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.accountsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet3BindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.accountsBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.accountsBindingSource2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.accountsBindingSource3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -522,24 +456,12 @@
         private DevExpress.XtraGrid.Columns.GridColumn colLname;
         private DevExpress.XtraGrid.Columns.GridColumn colAddress;
         private DevExpress.XtraGrid.Columns.GridColumn colContact;
-      //  private DataSet3 dataSet3;
-        private System.Windows.Forms.BindingSource employeesBindingSource;
-      //  private DataSet3TableAdapters.EmployeesTableAdapter employeesTableAdapter;
-        private System.Windows.Forms.BindingSource accountsBindingSource;
-      //  private DataSet3TableAdapters.AccountsTableAdapter accountsTableAdapter;
-        private System.Windows.Forms.BindingSource dataSet3BindingSource;
-      //  private DataSet4 dataSet4;
-        private System.Windows.Forms.BindingSource accountsBindingSource1;
-     //   private DataSet4TableAdapters.AccountsTableAdapter accountsTableAdapter1;
-        private System.Windows.Forms.BindingSource dataSet4BindingSource;
-        private System.Windows.Forms.BindingSource accountsBindingSource2;
-        private DataSet1 dataSet1;
-        private System.Windows.Forms.BindingSource accountsBindingSource3;
-        private DataSet1TableAdapters.AccountsTableAdapter accountsTableAdapter2;
-        private DataSet1TableAdapters.TableAdapterManager tableAdapterManager;
-      //  private DataSet4TableAdapters.TableAdapterManager tableAdapterManager1;
-        private DataSet1TableAdapters.EmployeesTableAdapter employeesTableAdapter1;
-        private System.Windows.Forms.BindingSource employeesBindingSource1;
+        //  private DataSet3 dataSet3;
+        //  private DataSet3TableAdapters.EmployeesTableAdapter employeesTableAdapter;
+        //  private DataSet3TableAdapters.AccountsTableAdapter accountsTableAdapter;
+        //  private DataSet4 dataSet4;
+        //   private DataSet4TableAdapters.AccountsTableAdapter accountsTableAdapter1;
+        //  private DataSet4TableAdapters.TableAdapterManager tableAdapterManager1;
         private DevExpress.XtraEditors.LabelControl txtAcct;
     }
 }

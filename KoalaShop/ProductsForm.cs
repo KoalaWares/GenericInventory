@@ -49,13 +49,13 @@ namespace KoalaShop
         {
             using (var koala = KoalaShopFactory.CreateKoalaShop())
             {
-                this.gridControl1.DataSource = koala.GetProductsForView();
-                this.gridControl1.DataSource = koala.StocksRequestRepo.GetAll(); ;
+                //this.gridControl1.DataSource = koala.GetProductsForView();
+                //this.gridControl1.DataSource = koala.StocksRequestRepo.GetAll();
+                
+                //this.gridControl1.DataSource = koala.GetProductsForView();
+                this.gridControl1.DataSource = koala.StockRepo.GetAll();
 
-                //// TODO: This line of code loads data into the 'dataSet6.Categories' table. You can move, or remove it, as needed.
-                //this.categoriesTableAdapter1.Fill(this.dataSet6.Categories);
-                // TODO: This line of code loads data into the 'dataSet5.Suppliers' table. You can move, or remove it, as needed.
-                //this.suppliersTableAdapter1.Fill(this.dataSet5.Suppliers);
+             
 
                 //Mas simple way, kay kung mg data set maypa wala ga EF.lantaw lage Tutorial sa EF Basics
                 //http://www.codeproject.com/Articles/363040/An-Introduction-to-Entity-Framework-for-Absolute-B

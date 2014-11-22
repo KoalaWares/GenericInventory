@@ -42,8 +42,8 @@ namespace KoalaShop
             using (var koala = KoalaShopFactory.CreateKoalaShop())
             {
                 // TODO: This line of code loads data into the 'dataSet1.Employees' table. You can move, or remove it, as needed.
-                this.employeesTableAdapter1.Fill(this.dataSet1.Employees);
-                this.accountsTableAdapter2.Fill(this.dataSet1.Accounts);              
+                this.gridControl1.DataSource = koala.EmployeeRepo.GetAll();
+                
                 
 
             }
