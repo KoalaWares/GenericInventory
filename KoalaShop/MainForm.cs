@@ -19,8 +19,6 @@ namespace KoalaShop
 
         public MainForm()
         {
-
-            
             InitializeComponent();
             this.splashScreenManager1.ShowWaitForm();
 

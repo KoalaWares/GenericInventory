@@ -31,7 +31,14 @@
             this.components = new System.ComponentModel.Container();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.stocksBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSet7 = new KoalaShop.DataSet7();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colID = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colQuantity = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colPrice = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colStocksRequestID = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colProductID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.buttonAddCategory = new DevExpress.XtraEditors.SimpleButton();
@@ -39,7 +46,7 @@
             this.simpleButtonUpdate = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButtonSave = new DevExpress.XtraEditors.SimpleButton();
             this.checkButtonIsNew = new DevExpress.XtraEditors.CheckButton();
-            this.textSupplier = new DevExpress.XtraEditors.LookUpEdit();
+            this.comboBoxSupplier = new DevExpress.XtraEditors.LookUpEdit();
             this.suppliersBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.dataSet5 = new KoalaShop.DataSet5();
             this.label9 = new System.Windows.Forms.Label();
@@ -60,7 +67,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.textEditName = new DevExpress.XtraEditors.TextEdit();
             this.label1 = new System.Windows.Forms.Label();
-            this.textEditCategory = new DevExpress.XtraEditors.LookUpEdit();
+            this.comboboxCategory = new DevExpress.XtraEditors.LookUpEdit();
             this.categoriesBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.dataSet6 = new KoalaShop.DataSet6();
             this.textQuantity = new DevExpress.XtraEditors.SpinEdit();
@@ -74,22 +81,17 @@
             this.suppliersTableAdapter1 = new KoalaShop.DataSet5TableAdapters.SuppliersTableAdapter();
             this.categoriesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.categoriesTableAdapter1 = new KoalaShop.DataSet6TableAdapters.CategoriesTableAdapter();
-            this.dataSet7 = new KoalaShop.DataSet7();
-            this.stocksBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.stocksTableAdapter = new KoalaShop.DataSet7TableAdapters.StocksTableAdapter();
-            this.colID = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colQuantity = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colPrice = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colStocksRequestID = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colProductID = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.stocksBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
             this.splitContainerControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textSupplier.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.comboBoxSupplier.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.suppliersBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateExpires.Properties.VistaTimeProperties)).BeginInit();
@@ -100,7 +102,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.textEditVariant.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditWeight.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditName.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEditCategory.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.comboboxCategory.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.categoriesBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textQuantity.Properties)).BeginInit();
@@ -110,8 +112,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.suppliersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.categoriesBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.stocksBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // gridView2
@@ -133,6 +133,16 @@
             this.gridView1,
             this.gridView2});
             // 
+            // stocksBindingSource
+            // 
+            this.stocksBindingSource.DataMember = "Stocks";
+            this.stocksBindingSource.DataSource = this.dataSet7;
+            // 
+            // dataSet7
+            // 
+            this.dataSet7.DataSetName = "DataSet7";
+            this.dataSet7.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // gridView1
             // 
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
@@ -148,6 +158,42 @@
             this.gridView1.OptionsFind.AlwaysVisible = true;
             this.gridView1.OptionsView.ShowFooter = true;
             this.gridView1.DoubleClick += new System.EventHandler(this.gridView1_DoubleClick);
+            // 
+            // colID
+            // 
+            this.colID.FieldName = "ID";
+            this.colID.Name = "colID";
+            this.colID.OptionsColumn.ReadOnly = true;
+            this.colID.Visible = true;
+            this.colID.VisibleIndex = 0;
+            // 
+            // colQuantity
+            // 
+            this.colQuantity.FieldName = "Quantity";
+            this.colQuantity.Name = "colQuantity";
+            this.colQuantity.Visible = true;
+            this.colQuantity.VisibleIndex = 1;
+            // 
+            // colPrice
+            // 
+            this.colPrice.FieldName = "Price";
+            this.colPrice.Name = "colPrice";
+            this.colPrice.Visible = true;
+            this.colPrice.VisibleIndex = 2;
+            // 
+            // colStocksRequestID
+            // 
+            this.colStocksRequestID.FieldName = "StocksRequestID";
+            this.colStocksRequestID.Name = "colStocksRequestID";
+            this.colStocksRequestID.Visible = true;
+            this.colStocksRequestID.VisibleIndex = 3;
+            // 
+            // colProductID
+            // 
+            this.colProductID.FieldName = "ProductID";
+            this.colProductID.Name = "colProductID";
+            this.colProductID.Visible = true;
+            this.colProductID.VisibleIndex = 4;
             // 
             // splitContainerControl1
             // 
@@ -170,7 +216,7 @@
             this.groupControl1.Controls.Add(this.simpleButtonUpdate);
             this.groupControl1.Controls.Add(this.simpleButtonSave);
             this.groupControl1.Controls.Add(this.checkButtonIsNew);
-            this.groupControl1.Controls.Add(this.textSupplier);
+            this.groupControl1.Controls.Add(this.comboBoxSupplier);
             this.groupControl1.Controls.Add(this.label9);
             this.groupControl1.Controls.Add(this.dateExpires);
             this.groupControl1.Controls.Add(this.textTotal);
@@ -189,7 +235,7 @@
             this.groupControl1.Controls.Add(this.label2);
             this.groupControl1.Controls.Add(this.textEditName);
             this.groupControl1.Controls.Add(this.label1);
-            this.groupControl1.Controls.Add(this.textEditCategory);
+            this.groupControl1.Controls.Add(this.comboboxCategory);
             this.groupControl1.Controls.Add(this.textQuantity);
             this.groupControl1.Controls.Add(this.textEditPrice);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -210,7 +256,7 @@
             // 
             // simpleButtonAdd
             // 
-            this.simpleButtonAdd.Location = new System.Drawing.Point(307, 300);
+            this.simpleButtonAdd.Location = new System.Drawing.Point(283, 340);
             this.simpleButtonAdd.Name = "simpleButtonAdd";
             this.simpleButtonAdd.Size = new System.Drawing.Size(22, 23);
             this.simpleButtonAdd.TabIndex = 56;
@@ -247,22 +293,22 @@
             this.checkButtonIsNew.Text = "New";
             this.checkButtonIsNew.CheckedChanged += new System.EventHandler(this.checkButtonIsNew_CheckedChanged_2);
             // 
-            // textSupplier
+            // comboBoxSupplier
             // 
-            this.textSupplier.Location = new System.Drawing.Point(100, 301);
-            this.textSupplier.Name = "textSupplier";
-            this.textSupplier.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
-            this.textSupplier.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.comboBoxSupplier.Location = new System.Drawing.Point(100, 301);
+            this.comboBoxSupplier.Name = "comboBoxSupplier";
+            this.comboBoxSupplier.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
+            this.comboBoxSupplier.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.textSupplier.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            this.comboBoxSupplier.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("ID", "ID", 34, DevExpress.Utils.FormatType.Numeric, "", true, DevExpress.Utils.HorzAlignment.Far),
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "Name", 37, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near)});
-            this.textSupplier.Properties.DataSource = this.suppliersBindingSource1;
-            this.textSupplier.Properties.DisplayMember = "Name";
-            this.textSupplier.Properties.NullText = "";
-            this.textSupplier.Properties.ValueMember = "Name";
-            this.textSupplier.Size = new System.Drawing.Size(205, 22);
-            this.textSupplier.TabIndex = 52;
+            this.comboBoxSupplier.Properties.DataSource = this.suppliersBindingSource1;
+            this.comboBoxSupplier.Properties.DisplayMember = "Name";
+            this.comboBoxSupplier.Properties.NullText = "";
+            this.comboBoxSupplier.Properties.ValueMember = "Name";
+            this.comboBoxSupplier.Size = new System.Drawing.Size(205, 22);
+            this.comboBoxSupplier.TabIndex = 52;
             // 
             // suppliersBindingSource1
             // 
@@ -448,22 +494,22 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Name";
             // 
-            // textEditCategory
+            // comboboxCategory
             // 
-            this.textEditCategory.Location = new System.Drawing.Point(100, 54);
-            this.textEditCategory.Name = "textEditCategory";
-            this.textEditCategory.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
-            this.textEditCategory.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.comboboxCategory.Location = new System.Drawing.Point(100, 54);
+            this.comboboxCategory.Name = "comboboxCategory";
+            this.comboboxCategory.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
+            this.comboboxCategory.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.textEditCategory.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            this.comboboxCategory.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("ID", "ID", 34, DevExpress.Utils.FormatType.Numeric, "", true, DevExpress.Utils.HorzAlignment.Far),
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "Name", 37, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near)});
-            this.textEditCategory.Properties.DataSource = this.categoriesBindingSource2;
-            this.textEditCategory.Properties.DisplayMember = "Name";
-            this.textEditCategory.Properties.NullText = "";
-            this.textEditCategory.Properties.ValueMember = "Name";
-            this.textEditCategory.Size = new System.Drawing.Size(205, 22);
-            this.textEditCategory.TabIndex = 8;
+            this.comboboxCategory.Properties.DataSource = this.categoriesBindingSource2;
+            this.comboboxCategory.Properties.DisplayMember = "Name";
+            this.comboboxCategory.Properties.NullText = "";
+            this.comboboxCategory.Properties.ValueMember = "Name";
+            this.comboboxCategory.Size = new System.Drawing.Size(205, 22);
+            this.comboboxCategory.TabIndex = 8;
             // 
             // categoriesBindingSource2
             // 
@@ -550,55 +596,9 @@
             // 
             this.categoriesTableAdapter1.ClearBeforeFill = true;
             // 
-            // dataSet7
-            // 
-            this.dataSet7.DataSetName = "DataSet7";
-            this.dataSet7.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // stocksBindingSource
-            // 
-            this.stocksBindingSource.DataMember = "Stocks";
-            this.stocksBindingSource.DataSource = this.dataSet7;
-            // 
             // stocksTableAdapter
             // 
             this.stocksTableAdapter.ClearBeforeFill = true;
-            // 
-            // colID
-            // 
-            this.colID.FieldName = "ID";
-            this.colID.Name = "colID";
-            this.colID.OptionsColumn.ReadOnly = true;
-            this.colID.Visible = true;
-            this.colID.VisibleIndex = 0;
-            // 
-            // colQuantity
-            // 
-            this.colQuantity.FieldName = "Quantity";
-            this.colQuantity.Name = "colQuantity";
-            this.colQuantity.Visible = true;
-            this.colQuantity.VisibleIndex = 1;
-            // 
-            // colPrice
-            // 
-            this.colPrice.FieldName = "Price";
-            this.colPrice.Name = "colPrice";
-            this.colPrice.Visible = true;
-            this.colPrice.VisibleIndex = 2;
-            // 
-            // colStocksRequestID
-            // 
-            this.colStocksRequestID.FieldName = "StocksRequestID";
-            this.colStocksRequestID.Name = "colStocksRequestID";
-            this.colStocksRequestID.Visible = true;
-            this.colStocksRequestID.VisibleIndex = 3;
-            // 
-            // colProductID
-            // 
-            this.colProductID.FieldName = "ProductID";
-            this.colProductID.Name = "colProductID";
-            this.colProductID.Visible = true;
-            this.colProductID.VisibleIndex = 4;
             // 
             // ProductsForm
             // 
@@ -613,13 +613,15 @@
             this.Load += new System.EventHandler(this.ProductsForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.stocksBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).EndInit();
             this.splitContainerControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textSupplier.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.comboBoxSupplier.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.suppliersBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateExpires.Properties.VistaTimeProperties)).EndInit();
@@ -630,7 +632,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.textEditVariant.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditWeight.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditName.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEditCategory.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.comboboxCategory.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.categoriesBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textQuantity.Properties)).EndInit();
@@ -640,8 +642,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.suppliersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.categoriesBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.stocksBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -657,7 +657,7 @@
         private DevExpress.XtraEditors.TextEdit textEditWeight;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private DevExpress.XtraEditors.LookUpEdit textEditCategory;
+        private DevExpress.XtraEditors.LookUpEdit comboboxCategory;
         private DevExpress.XtraEditors.TextEdit textEditVariant;
         private System.Windows.Forms.Label label4;
         private DevExpress.XtraEditors.TextEdit textEditBarCode;
@@ -665,7 +665,7 @@
         private DevExpress.XtraEditors.SimpleButton simpleButtonUpdate;
         private DevExpress.XtraEditors.SimpleButton simpleButtonSave;
         private DevExpress.XtraEditors.CheckButton checkButtonIsNew;
-        private DevExpress.XtraEditors.LookUpEdit textSupplier;
+        private DevExpress.XtraEditors.LookUpEdit comboBoxSupplier;
         private System.Windows.Forms.Label label9;
         private DevExpress.XtraEditors.DateEdit dateExpires;
         private DevExpress.XtraEditors.TextEdit textTotal;

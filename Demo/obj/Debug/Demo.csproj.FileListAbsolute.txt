@@ -284,3 +284,4 @@ C:\Users\reykobai\Desktop\AJRv1.3\inventory1\Demo\obj\Debug\Demo.Properties.Reso
 C:\Users\reykobai\Desktop\AJRv1.3\inventory1\Demo\obj\Debug\Demo.csproj.GenerateResource.Cache
 C:\Users\reykobai\Desktop\AJRv1.3\inventory1\Demo\obj\Debug\Demo.exe
 C:\Users\reykobai\Desktop\AJRv1.3\inventory1\Demo\obj\Debug\Demo.pdb
+F:\_KOALAWARES\KoalaShop\Demo\bin\Debug\AutoMapper.Net4.dll

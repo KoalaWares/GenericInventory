@@ -15,6 +15,9 @@ using System.Linq;
 
 namespace KoalaShop
 {
+    /// <summary>
+    /// Para display ra sa list sa products, dli para edit sa dsata
+    /// </summary>
     public partial class ProductsForm : DevExpress.XtraEditors.XtraForm, IDataGridForm
     {
 
@@ -49,10 +52,21 @@ namespace KoalaShop
                 this.gridControl1.DataSource = koala.GetProductsForView();
                 this.gridControl1.DataSource = koala.StocksRequestRepo.GetAll(); ;
 
-                // TODO: This line of code loads data into the 'dataSet6.Categories' table. You can move, or remove it, as needed.
-                this.categoriesTableAdapter1.Fill(this.dataSet6.Categories);
+                //// TODO: This line of code loads data into the 'dataSet6.Categories' table. You can move, or remove it, as needed.
+                //this.categoriesTableAdapter1.Fill(this.dataSet6.Categories);
                 // TODO: This line of code loads data into the 'dataSet5.Suppliers' table. You can move, or remove it, as needed.
-                this.suppliersTableAdapter1.Fill(this.dataSet5.Suppliers);
+                //this.suppliersTableAdapter1.Fill(this.dataSet5.Suppliers);
+
+                //Mas simple way, kay kung mg data set maypa wala ga EF.lantaw lage Tutorial sa EF Basics
+                //http://www.codeproject.com/Articles/363040/An-Introduction-to-Entity-Framework-for-Absolute-B
+                this.comboboxCategory.Properties.DataSource = koala.CategoryRepo.GetAll();
+                this.comboboxCategory.Properties.DisplayMember = "Name";
+                this.comboboxCategory.Properties.ValueMember = "ID";
+
+                //
+                this.comboBoxSupplier.Properties.DataSource = koala.SupplierRepo.GetAll();
+                this.comboBoxSupplier.Properties.DisplayMember = "Name";
+                this.comboBoxSupplier.Properties.ValueMember = "ID";
             }
         }
 
@@ -94,8 +108,8 @@ namespace KoalaShop
             Stock stock = new Stock();
             StocksRequest stockrequest = new StocksRequest();
 
-            string id = this.textEditCategory.Text;
-            string supplierID = this.textSupplier.Text;
+            string id = this.comboboxCategory.Text;
+            string supplierID = this.comboBoxSupplier.Text;
 
             using (IKoalaShop koalaShop = KoalaShopFactory.CreateKoalaShop())
             {
@@ -189,25 +203,6 @@ namespace KoalaShop
                     //adding ProductID to stock
                     stock.ProductID = product.ID;
 
-                    
-
-                    
-
-
-                    //MessageBox.Show("ID " + stockrequest.ID.ToString());
-                    //MessageBox.Show("Quantity " + stockrequest.Quantity.ToString());
-                    //MessageBox.Show("Cost " + stockrequest.Cost.ToString());
-                    //MessageBox.Show("TotalCost " + stockrequest.TotalCost.ToString());
-                    //MessageBox.Show("Date " + stockrequest.Date.ToString());
-                    //MessageBox.Show("ExpiresOn " + stockrequest.ExpiresOn.ToString());
-                    //MessageBox.Show("IsRecieved " + stockrequest.IsRecieved.ToString());
-                    //MessageBox.Show("QuantityRecieved " + stockrequest.QuantityRecieved.ToString());
-                    //MessageBox.Show("ProductID " + stockrequest.ProductID.ToString());
-                    //MessageBox.Show("EmployeeID " + stockrequest.EmployeeID.ToString());
-                    //MessageBox.Show("SuppliersID " + stockrequest.SuppliersID.ToString());
-
-                   
-
                     //saving to stocks table
                     koala.StockRepo.Add(stock);
 
@@ -248,7 +243,7 @@ namespace KoalaShop
             //convert to datetime
             DateTime dt = Convert.ToDateTime(dateExpires);
 
-            stockrequest.ExpiresOn = dt;
+            //stockrequest.ExpiresOn = dt;
             stockrequest.Quantity = Int32.Parse(textQuantity.Text);
             stockrequest.TotalCost = Decimal.Parse(textTotal.Text);
          
@@ -304,13 +299,13 @@ namespace KoalaShop
             textEditWeight.Text = "";
             textEditVariant.Text  = "";
            
-           textEditCategory.Text = "";
+           comboboxCategory.Text = "";
            textEditPrice.Text = "";
             textCost.Text = "";
             dateExpires.Text  = "";
             textQuantity.Text  = "";
             textTotal.Text  = "";
-            textSupplier.Text = "";
+            comboBoxSupplier.Text = "";
         }
 
         public void getTotal()
@@ -372,7 +367,8 @@ namespace KoalaShop
         private void ProductsForm_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'dataSet7.Stocks' table. You can move, or remove it, as needed.
-            this.stocksTableAdapter.Fill(this.dataSet7.Stocks);
+            //this.stocksTableAdapter.Fill(this.dataSet7.Stocks); TRY THIS
+
 
         }
 
