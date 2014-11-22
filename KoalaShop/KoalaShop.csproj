@@ -118,6 +118,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet6.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet7.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Enums\FormTypes.cs" />
     <Compile Include="Contracts\IDataGridForm.cs" />
     <Compile Include="Contracts\IMainForm.cs" />
@@ -326,6 +331,17 @@
     </None>
     <None Include="DataSet6.xss">
       <DependentUpon>DataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet7.xsc">
+      <DependentUpon>DataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSet7.xss">
+      <DependentUpon>DataSet7.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

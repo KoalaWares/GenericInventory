@@ -74,6 +74,14 @@
             this.suppliersTableAdapter1 = new KoalaShop.DataSet5TableAdapters.SuppliersTableAdapter();
             this.categoriesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.categoriesTableAdapter1 = new KoalaShop.DataSet6TableAdapters.CategoriesTableAdapter();
+            this.dataSet7 = new KoalaShop.DataSet7();
+            this.stocksBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.stocksTableAdapter = new KoalaShop.DataSet7TableAdapters.StocksTableAdapter();
+            this.colID = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colQuantity = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colPrice = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colStocksRequestID = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colProductID = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
@@ -102,6 +110,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.suppliersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.categoriesBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.stocksBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // gridView2
@@ -112,6 +122,7 @@
             // 
             // gridControl1
             // 
+            this.gridControl1.DataSource = this.stocksBindingSource;
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridControl1.Location = new System.Drawing.Point(0, 0);
             this.gridControl1.MainView = this.gridView1;
@@ -124,6 +135,12 @@
             // 
             // gridView1
             // 
+            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colID,
+            this.colQuantity,
+            this.colPrice,
+            this.colStocksRequestID,
+            this.colProductID});
             this.gridView1.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
@@ -447,7 +464,6 @@
             this.textEditCategory.Properties.ValueMember = "Name";
             this.textEditCategory.Size = new System.Drawing.Size(205, 22);
             this.textEditCategory.TabIndex = 8;
-            this.textEditCategory.EditValueChanged += new System.EventHandler(this.textEditCategory_EditValueChanged);
             // 
             // categoriesBindingSource2
             // 
@@ -534,6 +550,56 @@
             // 
             this.categoriesTableAdapter1.ClearBeforeFill = true;
             // 
+            // dataSet7
+            // 
+            this.dataSet7.DataSetName = "DataSet7";
+            this.dataSet7.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // stocksBindingSource
+            // 
+            this.stocksBindingSource.DataMember = "Stocks";
+            this.stocksBindingSource.DataSource = this.dataSet7;
+            // 
+            // stocksTableAdapter
+            // 
+            this.stocksTableAdapter.ClearBeforeFill = true;
+            // 
+            // colID
+            // 
+            this.colID.FieldName = "ID";
+            this.colID.Name = "colID";
+            this.colID.OptionsColumn.ReadOnly = true;
+            this.colID.Visible = true;
+            this.colID.VisibleIndex = 0;
+            // 
+            // colQuantity
+            // 
+            this.colQuantity.FieldName = "Quantity";
+            this.colQuantity.Name = "colQuantity";
+            this.colQuantity.Visible = true;
+            this.colQuantity.VisibleIndex = 1;
+            // 
+            // colPrice
+            // 
+            this.colPrice.FieldName = "Price";
+            this.colPrice.Name = "colPrice";
+            this.colPrice.Visible = true;
+            this.colPrice.VisibleIndex = 2;
+            // 
+            // colStocksRequestID
+            // 
+            this.colStocksRequestID.FieldName = "StocksRequestID";
+            this.colStocksRequestID.Name = "colStocksRequestID";
+            this.colStocksRequestID.Visible = true;
+            this.colStocksRequestID.VisibleIndex = 3;
+            // 
+            // colProductID
+            // 
+            this.colProductID.FieldName = "ProductID";
+            this.colProductID.Name = "colProductID";
+            this.colProductID.Visible = true;
+            this.colProductID.VisibleIndex = 4;
+            // 
             // ProductsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -544,6 +610,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Products";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.ProductsForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
@@ -573,6 +640,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.suppliersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.categoriesBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.stocksBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -624,5 +693,13 @@
         private System.Windows.Forms.BindingSource categoriesBindingSource2;
         private DevExpress.XtraEditors.SpinEdit textQuantity;
         private DevExpress.XtraEditors.TextEdit textEditPrice;
+        private DataSet7 dataSet7;
+        private System.Windows.Forms.BindingSource stocksBindingSource;
+        private DataSet7TableAdapters.StocksTableAdapter stocksTableAdapter;
+        private DevExpress.XtraGrid.Columns.GridColumn colID;
+        private DevExpress.XtraGrid.Columns.GridColumn colQuantity;
+        private DevExpress.XtraGrid.Columns.GridColumn colPrice;
+        private DevExpress.XtraGrid.Columns.GridColumn colStocksRequestID;
+        private DevExpress.XtraGrid.Columns.GridColumn colProductID;
     }
 }

@@ -95,11 +95,15 @@ namespace KoalaShop
             StocksRequest stockrequest = new StocksRequest();
 
             string id = this.textEditCategory.Text;
+            string supplierID = this.textSupplier.Text;
 
             using (IKoalaShop koalaShop = KoalaShopFactory.CreateKoalaShop())
             {
                  var selectedObjectCategory = koalaShop.CategoryRepo.GetAll().Where(a => a.Name == id).SingleOrDefault();
-                 var selectedObjectSupplier = koalaShop.SupplierRepo.GetAll().Where(a => a.Name == id).SingleOrDefault();
+                 var selectedObjectSupplier = koalaShop.SupplierRepo.GetAll().Where(a => a.Name == supplierID).SingleOrDefault();
+
+                
+                 
 
                 if (selectedObjectCategory != null)
                 {
@@ -124,11 +128,11 @@ namespace KoalaShop
 
             //Stocks
             stock.Quantity = stock.Quantity + Int32.Parse(textQuantity.Text);
-            stock.Price = Decimal.Parse(textEditPrice.Text);
+      
 
             decimal price;
-            Decimal.TryParse(textCost.Text, out price);
-            stockrequest.Cost = price;
+            Decimal.TryParse(textEditPrice.Text, out price);
+            stock.Price = price;
          
 
             //StocksRequest
@@ -145,7 +149,7 @@ namespace KoalaShop
             stockrequest.Quantity = Int32.Parse(textQuantity.Text);
             
 
-            stockrequest.TotalCost = Decimal.Parse(textTotal.Text);
+            
             decimal total;
             Decimal.TryParse(textTotal.Text, out total);
             stockrequest.TotalCost = total;
@@ -160,7 +164,7 @@ namespace KoalaShop
 
 
             //Validation
-                if (product.BarCode == "" || product.Name == "" || stock.Price == 0)
+                if (product.BarCode == "" || product.Name == "")
             {
                 MessageBox.Show("Empty Name Field");
                 return;
@@ -367,14 +371,14 @@ namespace KoalaShop
 
         private void ProductsForm_Load(object sender, EventArgs e)
         {
-          
+            // TODO: This line of code loads data into the 'dataSet7.Stocks' table. You can move, or remove it, as needed.
+            this.stocksTableAdapter.Fill(this.dataSet7.Stocks);
 
         }
 
-        private void textEditCategory_EditValueChanged(object sender, EventArgs e)
-        {
+      
 
-        }
+       
 
        
 
