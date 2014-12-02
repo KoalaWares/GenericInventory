@@ -6,6 +6,8 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using System.Globalization;
+using System.Threading;
 
 
 using KoalaShopLib;
@@ -17,8 +19,10 @@ namespace KoalaShop
 {
     public partial class FormEmployee : DevExpress.XtraEditors.XtraForm, IDataGridForm
     {
+
         //Declare DataGridFormController
         private DataGridFormController formController;
+
 
         public FormEmployee()
         {
@@ -29,9 +33,8 @@ namespace KoalaShop
             this.formController = new DataGridFormController(this.simpleButtonUpdate, this.simpleButtonSave, this.checkButtonIsNew, this.gridView1, this);
             //para ma.display ang save button instead sa update button.
             this.formController.ToggleNewObjectButton();
-            
-
         }
+
 
         #region Defined Methods
         /// <summary>
@@ -41,10 +44,16 @@ namespace KoalaShop
         {
             using (var koala = KoalaShopFactory.CreateKoalaShop())
             {
+                
+              //  this.gridControl1.DataSource = koala.EmployeeRepo.GetAll();
+
+                
                 // TODO: This line of code loads data into the 'dataSet1.Employees' table. You can move, or remove it, as needed.
-                this.gridControl1.DataSource = koala.EmployeeRepo.GetAll();
-                
-                
+                this.employeesTableAdapter.Fill(this.dataSet1.Employees);
+
+                // TODO: This line of code loads data into the 'dataSet1.Accounts' table. You can move, or remove it, as needed.
+                this.accountsTableAdapter.Fill(this.dataSet1.Accounts);
+
 
             }
         }
@@ -74,7 +83,7 @@ namespace KoalaShop
                     this.textPassword.Text = selectedObjectAccount.Password;
                     this.txtAcct.Text = selectedObjectAccount.ID.ToString();
                     DisableTextbox();
-                   
+
                 }
             }
         }
@@ -138,7 +147,7 @@ namespace KoalaShop
             RefreshList();
         }
 
-       
+
 
         public void UpdateObjectToDB()
         {
@@ -190,10 +199,10 @@ namespace KoalaShop
                     //set employee refrence to account kay ma update na eya ID kay refrence type ang class
                     account.EmployeeID = employee.ID;
 
-                    
-                        //saving to account table
-                        koala.AccountRepo.Update(account);
-                    
+
+                    //saving to account table
+                    koala.AccountRepo.Update(account);
+
                     MessageBox.Show("Updated!");
                     TextboxSetToNull();
                 }
@@ -230,23 +239,103 @@ namespace KoalaShop
             this.textPassword.Enabled = false;
         }
 
+        public void UpperCaseFname()
+        {
+            int TextLength = textFName.Text.Length;
+            if (TextLength == 1)
+            {
+                CultureInfo cultureInfo = Thread.CurrentThread.CurrentCulture;
+                TextInfo textInfo = cultureInfo.TextInfo;
+                textFName.Text = textInfo.ToTitleCase(textFName.Text);
+                textFName.SelectionStart = 1;
+            }
+            else if (TextLength > 1 && textFName.SelectionStart < TextLength)
+            {
+                int x = textFName.SelectionStart;
+                CultureInfo cultureInfo = Thread.CurrentThread.CurrentCulture;
+                TextInfo textInfo = cultureInfo.TextInfo;
+                textFName.Text = textInfo.ToTitleCase(textFName.Text);
+                textFName.SelectionStart = x;
+            }
+            else if (TextLength > 1 && textFName.SelectionStart >= TextLength)
+            {
+                CultureInfo cultureInfo = Thread.CurrentThread.CurrentCulture;
+                TextInfo textInfo = cultureInfo.TextInfo;
+                textFName.Text = textInfo.ToTitleCase(textFName.Text);
+                textFName.SelectionStart = TextLength;
+            }
+        }
+
+        public void UpperCaseLname()
+        {
+            int TextLength = textLname.Text.Length;
+            if (TextLength == 1)
+            {
+                CultureInfo cultureInfo = Thread.CurrentThread.CurrentCulture;
+                TextInfo textInfo = cultureInfo.TextInfo;
+                textLname.Text = textInfo.ToTitleCase(textLname.Text);
+                textLname.SelectionStart = 1;
+            }
+            else if (TextLength > 1 && textLname.SelectionStart < TextLength)
+            {
+                int x = textLname.SelectionStart;
+                CultureInfo cultureInfo = Thread.CurrentThread.CurrentCulture;
+                TextInfo textInfo = cultureInfo.TextInfo;
+                textLname.Text = textInfo.ToTitleCase(textLname.Text);
+                textLname.SelectionStart = x;
+            }
+            else if (TextLength > 1 && textLname.SelectionStart >= TextLength)
+            {
+                CultureInfo cultureInfo = Thread.CurrentThread.CurrentCulture;
+                TextInfo textInfo = cultureInfo.TextInfo;
+                textLname.Text = textInfo.ToTitleCase(textLname.Text);
+                textLname.SelectionStart = TextLength;
+            }
+        }
+
+             public void UpperCaseAddress()
+        {
+            int TextLength = textAddress.Text.Length;
+            if (TextLength == 1)
+            {
+                CultureInfo cultureInfo = Thread.CurrentThread.CurrentCulture;
+                TextInfo textInfo = cultureInfo.TextInfo;
+                textAddress.Text = textInfo.ToTitleCase(textAddress.Text);
+                textAddress.SelectionStart = 1;
+            }
+            else if (TextLength > 1 && textAddress.SelectionStart < TextLength)
+            {
+                int x = textAddress.SelectionStart;
+                CultureInfo cultureInfo = Thread.CurrentThread.CurrentCulture;
+                TextInfo textInfo = cultureInfo.TextInfo;
+                textAddress.Text = textInfo.ToTitleCase(textAddress.Text);
+                textAddress.SelectionStart = x;
+            }
+            else if (TextLength > 1 && textAddress.SelectionStart >= TextLength)
+            {
+                CultureInfo cultureInfo = Thread.CurrentThread.CurrentCulture;
+                TextInfo textInfo = cultureInfo.TextInfo;
+                textAddress.Text = textInfo.ToTitleCase(textAddress.Text);
+                textAddress.SelectionStart = TextLength;
+            }
+        }
+
 
         #endregion
-     
 
+        private void checkButtonIsNew_CheckedChanged(object sender, EventArgs e)
+        {
+            this.formController.ToggleNewObjectButton();
+        }
 
-
+        private void simpleButtonSave_Click(object sender, EventArgs e)
+        {
+            SaveObjectToDB();
+        }
 
         private void gridView1_DoubleClick(object sender, EventArgs e)
         {
             MapSelectedObjectToDetailsPane();
-        }
-   
-
-        private void checkButtonIsNew_CheckedChanged_1(object sender, EventArgs e)
-        {
-            this.formController.ToggleNewObjectButton();
-           
         }
 
         private void simpleButtonUpdate_Click(object sender, EventArgs e)
@@ -254,11 +343,30 @@ namespace KoalaShop
             UpdateObjectToDB();
         }
 
-        private void simpleButtonSave_Click_1(object sender, EventArgs e)
+        private void FormEmployee_Load(object sender, EventArgs e)
         {
-            SaveObjectToDB();
+           
+
         }
 
-        
+        private void textFName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            UpperCaseFname();
+        }
+
+        private void textLname_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            UpperCaseLname();
+        }
+
+        private void textAddress_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            UpperCaseAddress();
+        }
+
+        private void textLname_EditValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

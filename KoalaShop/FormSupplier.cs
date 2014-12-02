@@ -6,6 +6,8 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using System.Globalization;
+using System.Threading;
 
 using KoalaShopLib;
 using KoalaShopLib.Models;
@@ -155,6 +157,59 @@ namespace KoalaShop
 
         }
 
+        public void UpperCaseName()
+        {
+            int TextLength = textName.Text.Length;
+            if (TextLength == 1)
+            {
+                CultureInfo cultureInfo = Thread.CurrentThread.CurrentCulture;
+                TextInfo textInfo = cultureInfo.TextInfo;
+                textName.Text = textInfo.ToTitleCase(textName.Text);
+                textName.SelectionStart = 1;
+            }
+            else if (TextLength > 1 && textName.SelectionStart < TextLength)
+            {
+                int x = textName.SelectionStart;
+                CultureInfo cultureInfo = Thread.CurrentThread.CurrentCulture;
+                TextInfo textInfo = cultureInfo.TextInfo;
+                textName.Text = textInfo.ToTitleCase(textName.Text);
+                textName.SelectionStart = x;
+            }
+            else if (TextLength > 1 && textName.SelectionStart >= TextLength)
+            {
+                CultureInfo cultureInfo = Thread.CurrentThread.CurrentCulture;
+                TextInfo textInfo = cultureInfo.TextInfo;
+                textName.Text = textInfo.ToTitleCase(textName.Text);
+                textName.SelectionStart = TextLength;
+            }
+        }
+
+        public void UpperCaseAddress()
+        {
+            int TextLength = textAddress.Text.Length;
+            if (TextLength == 1)
+            {
+                CultureInfo cultureInfo = Thread.CurrentThread.CurrentCulture;
+                TextInfo textInfo = cultureInfo.TextInfo;
+                textAddress.Text = textInfo.ToTitleCase(textAddress.Text);
+                textAddress.SelectionStart = 1;
+            }
+            else if (TextLength > 1 && textAddress.SelectionStart < TextLength)
+            {
+                int x = textAddress.SelectionStart;
+                CultureInfo cultureInfo = Thread.CurrentThread.CurrentCulture;
+                TextInfo textInfo = cultureInfo.TextInfo;
+                textAddress.Text = textInfo.ToTitleCase(textAddress.Text);
+                textAddress.SelectionStart = x;
+            }
+            else if (TextLength > 1 && textAddress.SelectionStart >= TextLength)
+            {
+                CultureInfo cultureInfo = Thread.CurrentThread.CurrentCulture;
+                TextInfo textInfo = cultureInfo.TextInfo;
+                textAddress.Text = textInfo.ToTitleCase(textAddress.Text);
+                textAddress.SelectionStart = TextLength;
+            }
+        }
         #endregion
    
 
@@ -179,11 +234,14 @@ namespace KoalaShop
             SaveObjectToDB();
         }
 
-        private void FormSupplier_Load(object sender, EventArgs e)
+        private void textName_KeyPress(object sender, KeyPressEventArgs e)
         {
-            // TODO: This line of code loads data into the 'dataSet3.Suppliers' table. You can move, or remove it, as needed.
-            this.suppliersTableAdapter.Fill(this.dataSet3.Suppliers);
+            UpperCaseName();
+        }
 
+        private void textAddress_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            UpperCaseAddress();
         }
     }
 }

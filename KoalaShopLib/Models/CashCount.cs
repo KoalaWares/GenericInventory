@@ -11,7 +11,7 @@ namespace KoalaShopLib.Models
         public int ID { get; set; }
         public System.DateTime Date { get; set; }
         public System.DateTime TimeIn { get; set; }
-        public System.DateTime TimeOut { get; set; }
+        public System.DateTime TimeOuts { get; set; }
         public decimal Count { get; set; }
 
         public int EmployeeID { get; set; }

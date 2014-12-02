@@ -18,7 +18,7 @@ namespace KoalaShop
     {
 
         //Declare DataGridFormController
-        private DataGridFormController formController;
+        //private DataGridFormController formController;
         MainForm mainForm;
 
         public FormPOS(MainForm form)
@@ -71,7 +71,7 @@ namespace KoalaShop
        
         private void BtnLogout_Click_1(object sender, EventArgs e)
         {
-
+            this.Close();
         }
 
         private void BtnChangePass_Click_1(object sender, EventArgs e)

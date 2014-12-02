@@ -42,13 +42,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.dataSet3 = new KoalaShop.DataSet3();
-            this.suppliersBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.suppliersTableAdapter = new KoalaShop.DataSet3TableAdapters.SuppliersTableAdapter();
             this.colID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colAddress = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colContact = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.suppliersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
             this.splitContainerControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
@@ -58,7 +56,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.textName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.suppliersBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -144,6 +141,7 @@
             this.textAddress.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
             this.textAddress.Size = new System.Drawing.Size(198, 22);
             this.textAddress.TabIndex = 63;
+            this.textAddress.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textAddress_KeyPress);
             // 
             // textName
             // 
@@ -152,6 +150,7 @@
             this.textName.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
             this.textName.Size = new System.Drawing.Size(198, 22);
             this.textName.TabIndex = 62;
+            this.textName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textName_KeyPress);
             // 
             // label6
             // 
@@ -182,7 +181,6 @@
             // 
             // gridControl1
             // 
-            this.gridControl1.DataSource = this.suppliersBindingSource;
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridControl1.Location = new System.Drawing.Point(0, 0);
             this.gridControl1.MainView = this.gridView1;
@@ -206,20 +204,6 @@
             this.gridView1.OptionsFind.AlwaysVisible = true;
             this.gridView1.OptionsView.ShowFooter = true;
             this.gridView1.DoubleClick += new System.EventHandler(this.gridView1_DoubleClick);
-            // 
-            // dataSet3
-            // 
-            this.dataSet3.DataSetName = "DataSet3";
-            this.dataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // suppliersBindingSource
-            // 
-            this.suppliersBindingSource.DataMember = "Suppliers";
-            this.suppliersBindingSource.DataSource = this.dataSet3;
-            // 
-            // suppliersTableAdapter
-            // 
-            this.suppliersTableAdapter.ClearBeforeFill = true;
             // 
             // colID
             // 
@@ -262,7 +246,6 @@
             this.Controls.Add(this.splitContainerControl1);
             this.Name = "FormSupplier";
             this.Text = "FormSupplier";
-            this.Load += new System.EventHandler(this.FormSupplier_Load);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).EndInit();
             this.splitContainerControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
@@ -273,7 +256,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.textName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.suppliersBindingSource)).EndInit();
             this.ResumeLayout(false);
 
@@ -294,9 +276,9 @@
         private DevExpress.XtraEditors.SimpleButton simpleButtonUpdate;
         private DevExpress.XtraEditors.SimpleButton simpleButtonSave;
         private DevExpress.XtraEditors.CheckButton checkButtonIsNew;
-        private DataSet3 dataSet3;
+     //   private DataSet3 dataSet3;
         private System.Windows.Forms.BindingSource suppliersBindingSource;
-        private DataSet3TableAdapters.SuppliersTableAdapter suppliersTableAdapter;
+     //   private DataSet3TableAdapters.SuppliersTableAdapter suppliersTableAdapter;
         private DevExpress.XtraGrid.Columns.GridColumn colID;
         private DevExpress.XtraGrid.Columns.GridColumn colName;
         private DevExpress.XtraGrid.Columns.GridColumn colAddress;

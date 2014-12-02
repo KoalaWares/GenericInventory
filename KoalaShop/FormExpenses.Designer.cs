@@ -154,6 +154,7 @@
             this.textName.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
             this.textName.Size = new System.Drawing.Size(198, 22);
             this.textName.TabIndex = 16;
+            this.textName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textName_KeyPress);
             // 
             // label5
             // 

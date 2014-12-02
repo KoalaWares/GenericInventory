@@ -6,6 +6,8 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using System.Globalization;
+using System.Threading;
 
 
 using KoalaShopLib;
@@ -160,6 +162,33 @@ namespace KoalaShop
 
         }
 
+        public void UpperCaseName()
+        {
+            int TextLength = textName.Text.Length;
+            if (TextLength == 1)
+            {
+                CultureInfo cultureInfo = Thread.CurrentThread.CurrentCulture;
+                TextInfo textInfo = cultureInfo.TextInfo;
+                textName.Text = textInfo.ToTitleCase(textName.Text);
+                textName.SelectionStart = 1;
+            }
+            else if (TextLength > 1 && textName.SelectionStart < TextLength)
+            {
+                int x = textName.SelectionStart;
+                CultureInfo cultureInfo = Thread.CurrentThread.CurrentCulture;
+                TextInfo textInfo = cultureInfo.TextInfo;
+                textName.Text = textInfo.ToTitleCase(textName.Text);
+                textName.SelectionStart = x;
+            }
+            else if (TextLength > 1 && textName.SelectionStart >= TextLength)
+            {
+                CultureInfo cultureInfo = Thread.CurrentThread.CurrentCulture;
+                TextInfo textInfo = cultureInfo.TextInfo;
+                textName.Text = textInfo.ToTitleCase(textName.Text);
+                textName.SelectionStart = TextLength;
+            }
+        }
+
         #endregion
     
        
@@ -183,6 +212,11 @@ namespace KoalaShop
         private void gridView1_DoubleClick(object sender, EventArgs e)
         {
             MapSelectedObjectToDetailsPane();
+        }
+
+        private void textName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            UpperCaseName();
         }
     }
 }
